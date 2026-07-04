@@ -1,0 +1,228 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f1f1f;
+    background: #ffffff;
+}
+
+header {
+    padding: 28px 6%;
+}
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+nav a {
+    color: #1f1f1f;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+main section {
+    min-height: 80vh;
+    padding: 100px 8%;
+}
+
+h1 {
+    max-width: 1000px;
+    margin: 0 0 30px;
+    font-size: clamp(48px, 6vw, 92px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+}
+
+p {
+    max-width: 760px;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+main a {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 16px 28px;
+    background: #1f1f1f;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+}
+.fakten {
+    margin-top: 160px;
+}
+
+.fakten h2 {
+    font-size: 22px;
+    margin-bottom: 50px;
+}
+
+.fakten-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px;
+    max-width: 900px;
+}
+
+.fakt-zahl {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.fakt-text {
+    font-size: 20px;
+    line-height: 1.5;
+    max-width: 360px;
+}
+.fakt-zahl {
+    white-space: nowrap;
+}
+.loesung {
+    background: #1f1f1f;
+    color: #ffffff;
+}
+
+.loesung > p:first-child {
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+.loesung h2 {
+    max-width: 1000px;
+    margin: 0 0 50px;
+    font-size: clamp(42px, 5vw, 76px);
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.loesung-intro {
+    max-width: 760px;
+    margin-bottom: 100px;
+}
+
+.loesung-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+.loesung-grid span {
+    display: block;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.loesung-grid h3 {
+    margin: 0 0 20px;
+    font-size: 28px;
+}
+
+.loesung-grid p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+.forderungen {
+    background: #ffffff;
+    color: #1f1f1f;
+}
+
+.forderungen > p:first-child {
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+.forderungen h2 {
+    margin: 0 0 90px;
+    font-size: clamp(48px, 6vw, 92px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+}
+
+.forderungen-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    max-width: 1200px;
+}
+
+.forderung {
+    padding: 50px 60px 60px 0;
+    border-top: 1px solid #1f1f1f;
+}
+
+.forderung:nth-child(even) {
+    padding-left: 60px;
+}
+
+.forderung span {
+    display: block;
+    margin-bottom: 45px;
+    font-size: 16px;
+}
+
+.forderung h3 {
+    max-width: 480px;
+    margin: 0 0 25px;
+    font-size: 32px;
+    line-height: 1.1;
+}
+
+.forderung p {
+    max-width: 480px;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5;
+}
+.mitmachen {
+    background: #1f1f1f;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mitmachen > p:first-child {
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+.mitmachen h2 {
+    max-width: 1100px;
+    margin: 0 0 45px;
+    font-size: clamp(52px, 7vw, 110px);
+    line-height: 0.92;
+    letter-spacing: -0.05em;
+}
+
+.mitmachen-text {
+    max-width: 650px;
+    margin: 0 0 40px;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.mitmachen .petition-button {
+    align-self: flex-start;
+    margin-top: 10px;
+    padding: 18px 32px;
+    background: #ffffff;
+    color: #1f1f1f;
+}
+footer {
+    padding: 50px 8%;
+    background: #ffffff;
+    color: #1f1f1f;
+    border-top: 1px solid #1f1f1f;
+}
+
+footer p {
+    margin: 0 0 10px;
+    font-size: 16px;
+}
