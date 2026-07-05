@@ -818,3 +818,31 @@ footer .footer-links a:visited {
     display: none;
   }
 }
+.petition-button {
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  header {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  header > nav,
+  header > nav > nav {
+    width: 100vw !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box;
+    align-items: center !important;
+  }
+
+  header .logo {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    align-self: center !important;
+    transform: none !important;
+  }
+}
