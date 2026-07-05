@@ -697,3 +697,14 @@ footer .footer-links a:visited {
     bottom: 18px;
   }
 }
+@media (max-width: 768px) {
+  .loesung h2,
+  .hero h1,
+  .forderungen h2 {
+    max-width: 100%;
+    font-size: clamp(38px, 11vw, 52px);
+    line-height: 0.95;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}
