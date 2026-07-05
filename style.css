@@ -845,5 +845,9 @@ footer .footer-links a:visited {
     align-self: center !important;
     transform: none !important;
   }
+  
+  .forderung:nth-child(even) {
+    padding-left: 0;
+}
 }
 .hero .petition-button, .mitmachen .petition-button { font-weight: 700 !important; }
