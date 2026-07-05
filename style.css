@@ -846,3 +846,4 @@ footer .footer-links a:visited {
     transform: none !important;
   }
 }
+.hero .petition-button, .mitmachen .petition-button { font-weight: 700 !important; }
