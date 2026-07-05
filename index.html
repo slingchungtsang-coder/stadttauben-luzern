@@ -2,22 +2,32 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stadttauben Luzern</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
     <nav>
-        <a href="index.html">Startseite</a>
-        <a href="#ausgangslage">Ausgangslage</a>
-        <a href="#loesung">Lösung</a>
-        <a href="#mitmachen">Mitmachen</a>
+       <nav>
+    <a href="#start" class="logo">
+        <img src="Luzern_Sektionslogo.svg" alt="Stadttauben Schweiz – Sektion Luzern">
+    </a>
+
+    <a href="#start">Startseite</a>
+    <a href="#ausgangslage">Ausgangslage</a>
+    <a href="#loesung">Lösung</a>
+    <a href="#mitmachen">Mitmachen</a>
+</nav>
     </nav>
 </header>
 
 <main>
-    <section>
+   <section id="start" class="hero">
         <p>Petition an Stadtrat und Grossen Stadtrat Luzern</p>
 
         <h1>Für ein tiergerechtes Stadttaubenmanagement in Luzern</h1>
@@ -27,7 +37,7 @@
             gleichermassen gerecht wird.
         </p>
 
-        <a href="#mitmachen">Petition unterstützen</a>
+        <a href="#petition-formular">Petition unterstützen</a>
     </section>
 
     <section id="ausgangslage">
@@ -54,10 +64,10 @@
         Ohne ein aufeinander abgestimmtes Gesamtkonzept bleiben Verschmutzung,
         Konflikte und Tierleid bestehen.
     </p>
-
+<a href="#start" class="back-to-top">↑ Nach oben</a>
 </section>
 
-<section>
+<section id="warum-es-nicht-reicht">
 
   <h2>Warum es nicht reicht</h2>
 
@@ -68,11 +78,15 @@
     </div>
 
     <div>
-        <p class="fakt-zahl">rund 180 Paare</p>
+        <p class="fakt-zahl">180 Paare</p>
         <p class="fakt-text">finden in den bestehenden Taubenschlägen Brutplätze.</p>
     </div>
 </div>
 
+</section>
+
+<section class="taubenbild">
+    <img src="20250609_Stadttauben_Schweiz_4.jpg" alt="Stadttaube">
 </section>
 
 <section id="loesung" class="loesung">
@@ -106,9 +120,37 @@
             <p>Ein grosser Teil des Kots fällt dort an, wo die Tauben betreut werden.</p>
         </div>
     </div>
+    <a href="#start" class="back-to-top">↑ Nach oben</a>
 </section>
 
-<section class="forderungen">
+<section id="fuetterung" class="fuetterung">
+    <p>Warum Fütterung dazugehört</p>
+
+    <h2>Ohne Fütterung fehlt die Bindung.</h2>
+
+    <div class="fuetterung-text">
+        <p>
+            Betreute Taubenschläge funktionieren nicht allein durch das Bereitstellen
+            von Brutplätzen. Eine kontrollierte und artgerechte Fütterung ist ein
+            zentraler Bestandteil des Konzepts.
+        </p>
+
+        <p>
+            Werden die Tauben im Schlag gefüttert, verbringen sie einen grossen Teil
+            ihrer Zeit dort. Sie müssen weniger im öffentlichen Raum nach Nahrung
+            suchen und können gezielt an die betreuten Standorte gebunden werden.
+        </p>
+
+        <p>
+            Genau diese Bindung schafft die Voraussetzung dafür, Eier konsequent
+            gegen Attrappen auszutauschen und einen grossen Teil des Kots dort
+            aufzufangen, wo er kontrolliert entfernt werden kann.
+        </p>
+    </div>
+    <a href="#start" class="back-to-top">↑ Nach oben</a>
+</section>
+
+<section id="forderungen" class="forderungen">
     <p>Unsere Petition</p>
 
     <h2>Was wir fordern.</h2>
@@ -153,6 +195,7 @@
             </p>
         </div>
     </div>
+<a href="#start" class="back-to-top">↑ Nach oben</a>
 </section>
 
 <section id="mitmachen" class="mitmachen">
@@ -165,15 +208,37 @@
         Stadttaubenmanagement in Luzern.
     </p>
 
-    <a href="#" class="petition-button">Petition unterstützen</a>
+    <div id="petition-formular" class="petition-widget-placeholder">
+  <p class="petition-widget-title">Petitionsformular</p>
+  <p>Das Unterschriftenformular wird hier eingebunden.</p>
+</div>
+
+    <a href="#petition-formular" class="petition-button">Petition unterstützen</a>
+  <a href="#start" class="back-to-top">↑ Nach oben</a>
 </section>
 
 </main>
 
 <footer>
-    <p>Stadttauben Luzern</p>
+<img src="Luzern_Sektionslogo.svg" alt="Stadttauben Luzern" class="footer-logo">
+
+    <p><strong>Stadttauben Schweiz · Sektion Luzern</strong></p>
     <p>Petition für ein tiergerechtes Stadttaubenmanagement in Luzern.</p>
+
+<p class="footer-links">
+    <a href="mailto:luzern@stadttauben.ch">Kontakt</a>
+    <span>·</span>
+    <a href="https://www.instagram.com/stadttauben_luzern/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <span>·</span>
+    <a href="https://stadttauben.ch/sektion-luzern/" target="_blank" rel="noopener noreferrer">Stadttauben Schweiz</a>
+</p>
+
+    <p class="copyright">© 2026 Stadttauben Schweiz · Sektion Luzern</p>
 </footer>
+
+<a href="#petition-formular" class="mobile-sticky-petition">
+  Petition unterschreiben
+</a>
 
 </body>
 </html>

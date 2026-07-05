@@ -1,16 +1,18 @@
-* {
+** {
     box-sizing: border-box;
 }
-
+html {
+    cursor: url("petition-cursor.png") 16 16, auto;
+}
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #1f1f1f;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    color: #3D3938;
     background: #ffffff;
 }
 
 header {
-    padding: 28px 6%;
+    padding: 28px 8%;
 }
 
 nav {
@@ -19,7 +21,7 @@ nav {
 }
 
 nav a {
-    color: #1f1f1f;
+    color: #3D3938;
     text-decoration: none;
     font-size: 16px;
 }
@@ -47,11 +49,12 @@ main a {
     display: inline-block;
     margin-top: 25px;
     padding: 16px 28px;
-    background: #1f1f1f;
+    background: #3D3938;
     color: white;
     text-decoration: none;
     border-radius: 50px;
 }
+
 .fakten {
     margin-top: 160px;
 }
@@ -73,6 +76,8 @@ main a {
     font-weight: 700;
     line-height: 1;
     margin-bottom: 20px;
+    white-space: nowrap;
+    color: #F9F6EB;
 }
 
 .fakt-text {
@@ -80,13 +85,12 @@ main a {
     line-height: 1.5;
     max-width: 360px;
 }
-.fakt-zahl {
-    white-space: nowrap;
-}
+
 .loesung {
-    background: #1f1f1f;
-    color: #ffffff;
+    background: #FFFFFF;
+    color: #3D3938;
 }
+
 
 .loesung > p:first-child {
     font-size: 20px;
@@ -127,9 +131,10 @@ main a {
     font-size: 18px;
     line-height: 1.5;
 }
+
 .forderungen {
     background: #ffffff;
-    color: #1f1f1f;
+    color: #3D3938;
 }
 
 .forderungen > p:first-child {
@@ -152,8 +157,17 @@ main a {
 }
 
 .forderung {
-    padding: 50px 60px 60px 0;
-    border-top: 1px solid #1f1f1f;
+  padding: 50px 60px 60px 0;
+  position: relative;
+}
+
+.forderung::before {
+  content: "";
+  display: block;
+  width: 82%;
+  height: 1px;
+  background: #3D3938;
+  margin-bottom: 50px;
 }
 
 .forderung:nth-child(even) {
@@ -179,13 +193,18 @@ main a {
     font-size: 18px;
     line-height: 1.5;
 }
+
 .mitmachen {
-    background: #1f1f1f;
-    color: #ffffff;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  background: #B0C1A9;
+  color: #F4EBDD;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mitmachen a {
+  color: #F4EBDD;
 }
 
 .mitmachen > p:first-child {
@@ -208,21 +227,430 @@ main a {
     line-height: 1.5;
 }
 
+.petition-widget-placeholder {
+  width: min(100%, 760px);
+  min-height: 460px;
+  margin: 0 0 40px;
+  padding: 40px;
+  background: #ffffff;
+  color: #3D3938;
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.petition-widget-title {
+  margin: 0 0 12px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.petition-widget-placeholder p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
 .mitmachen .petition-button {
     align-self: flex-start;
     margin-top: 10px;
     padding: 18px 32px;
-    background: #ffffff;
-    color: #1f1f1f;
+    background: #F4EBDD;
+    color: #3D3938;
 }
+
 footer {
-    padding: 50px 8%;
-    background: #ffffff;
-    color: #1f1f1f;
-    border-top: 1px solid #1f1f1f;
+    padding: 70px 8%;
+    background: #3D3938;
+    color: #FFFFFF;
 }
 
 footer p {
-    margin: 0 0 10px;
-    font-size: 16px;
+    margin: 0 0 14px;
+    font-size: 18px;
+}
+
+.footer-links a {
+    margin-top: 35px;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer-links a:visited {
+    color: #FFFFFF;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 35px;
+    filter: brightness(0) invert(1);
+}
+
+.copyright {
+    margin-top: 35px;
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+#ausgangslage {
+    background: #F9F6EB;
+}
+
+#warum-es-nicht-reicht {
+    background: #3A305B;
+    color: #F9F6EB;
+}
+
+.hero {
+    background: #B0C1A9;
+}
+.fuetterung {
+    background: #f9f6eb;
+    color: #3d3938;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+    align-items: start;
+}
+
+.fuetterung > p:first-child {
+    grid-column: 1 / -1;
+    font-size: 18px;
+    margin: 0 0 35px;
+}
+
+.fuetterung h2 {
+    grid-column: 1;
+    max-width: 650px;
+    margin: 0;
+    font-size: clamp(52px, 6vw, 90px);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+    color: #3a305b;
+}
+
+.fuetterung-text {
+    grid-column: 2;
+    max-width: 620px;
+    margin: 0;
+    padding-top: 5px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.fuetterung-text p {
+    margin: 0 0 28px;
+}
+
+.fuetterung-text p:first-child {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+h1,
+.loesung h2,
+.forderungen h2,
+.mitmachen h2,
+.fuetterung h2 {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: clamp(48px, 6vw, 92px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    font-weight: 700;
+}
+header {
+    background: #B0C1A9;
+}
+
+nav a {
+    color: #3A305B;
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+.fakten-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.fakten-grid > div {
+    border-top: 2px solid #3A305B;
+    padding-top: 28px;
+}
+
+.fakt-zahl {
+    margin: 0 0 18px;
+    font-size: clamp(48px, 6vw, 88px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: #FFFFF;
+}
+
+.fakt-text {
+    margin: 0;
+    max-width: 500px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+.loesung {
+    background: #3A305B;
+    color: #FFFFFF;
+}
+
+.loesung > p:first-child {
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+.loesung h2 {
+    max-width: 1000px;
+    margin: 0 0 40px;
+    font-size: clamp(48px, 6vw, 92px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+}
+
+.loesung-intro {
+    max-width: 760px;
+    margin: 0 0 70px;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.loesung-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.loesung-grid > div {
+    border-top: 1px solid #3D3938;
+    padding-top: 24px;
+}
+
+.loesung-grid span {
+    display: block;
+    margin-bottom: 40px;
+    font-size: 18px;
+   color: #3D3938;
+}
+
+.loesung-grid h3 {
+    margin: 0 0 16px;
+    font-size: 28px;
+    line-height: 1.15;
+}
+
+.loesung-grid p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.logo {
+    margin-right: 35px;
+}
+
+.logo img {
+    display: block;
+    width: 170px;
+    height: auto;
+}
+.back-to-top {
+    display: inline-block;
+    width: auto;
+    margin-top: 50px;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    text-decoration: none;
+    border-radius: 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.back-to-top:hover {
+    opacity: 0.6;
+}
+/* Farbfolge der sieben Sections */
+
+#start {
+    background: #B0C1A9;
+}
+
+#ausgangslage {
+    background: #F9F6EB;
+    color: #3D3938;
+}
+
+#warum-es-nicht-reicht {
+    background: #3A305B;
+    color: #F9F6EB;
+}
+
+#loesung {
+    background: #FFFFFF;
+    color: #3D3938;
+}
+
+#fuetterung {
+    background: #B0C1A9;
+    color: #3D3938;
+}
+
+#forderungen {
+    background: #F9F6EB;
+    color: #3D3938;
+}
+
+#mitmachen {
+    background: #3A305B;
+    color: #F9F6EB;
+}
+.taubenbild {
+    width: 100%;
+    height: 75vh;
+    padding: 0;
+    overflow: hidden;
+    background: #3D3938;
+}
+
+.taubenbild img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center 28%;
+    display: block;
+}
+@media (max-width: 768px) {
+    .taubenbild {
+        height: 70vh;
+    }
+
+    .taubenbild img {
+        object-position: center center;
+    }
+}
+@media (max-width: 768px) {
+    header {
+        padding: 24px 6%;
+    }
+
+    nav {
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .logo img {
+        width: 180px;
+    }
+
+    main section {
+        min-height: auto;
+        padding: 70px 6%;
+    }
+
+    h1,
+    .loesung h2,
+    .forderungen h2,
+    .mitmachen h2,
+    .fuetterung h2 {
+        font-size: clamp(38px, 11vw, 58px);
+        line-height: 0.95;
+        letter-spacing: -0.04em;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .fakten-grid,
+    .loesung-grid,
+    .forderungen-grid,
+    .fuetterung {
+        display: block;
+    }
+
+    .fakten-grid > div,
+    .loesung-grid > div,
+    .forderung {
+        margin-bottom: 45px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .fakt-zahl {
+        font-size: 52px;
+        white-space: normal;
+    }
+
+    .taubenbild {
+        height: 70vh;
+    }
+}
+footer .footer-links a,
+footer .footer-links a:visited {
+    color: #FFFFFF !important;
+    text-decoration: none;
+}
+.mobile-sticky-petition {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-sticky-petition {
+    display: inline-flex;
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 999;
+    padding: 14px 20px;
+    border-radius: 999px;
+    background: #F4EBDD;
+    color: #3D3938;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  }
+}
+.hero h1,
+.loesung h2,
+.forderungen h2 {
+  color: #403566;
+}
+.mobile-sticky-petition {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-sticky-petition {
+    display: inline-flex;
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 9999;
+    padding: 14px 20px;
+    border-radius: 999px;
+    background: #F4EBDD;
+    color: #3D3938;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  }
 }
