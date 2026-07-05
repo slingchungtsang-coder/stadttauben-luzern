@@ -849,6 +849,10 @@ footer .footer-links a:visited {
   .forderung:nth-child(even) {
     padding-left: 0;
 }
+.forderung {
+    padding-top: 30px;
+    padding-bottom: 35px;
+}
 .forderung::before {
     width: 100% !important;
     margin-left: 0 !important;
