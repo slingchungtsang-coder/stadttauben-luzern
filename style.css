@@ -708,3 +708,56 @@ footer .footer-links a:visited {
     word-break: break-word;
   }
 }
+@media (max-width: 768px) {
+  header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    text-align: center;
+  }
+
+  header nav .logo {
+    margin: 0 auto;
+  }
+
+  header nav .logo img {
+    display: block;
+    margin: 0 auto;
+    width: 220px;
+    max-width: 70vw;
+  }
+
+  header nav > a:not(.logo) {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .forderung {
+    padding: 44px 0 56px 0;
+  }
+
+  .forderung::before {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .petition-widget-placeholder {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 420px;
+    padding: 32px 24px;
+    overflow: hidden;
+  }
+
+  .petition-widget-placeholder p {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .mitmachen {
+    overflow-x: hidden;
+  }
+}
