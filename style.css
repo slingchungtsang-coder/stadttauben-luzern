@@ -654,3 +654,46 @@ footer .footer-links a:visited {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   }
 }
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+
+  nav .logo img {
+    width: 180px;
+    max-width: 70vw;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 12vw, 58px);
+    line-height: 0.95;
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 80px 24px 120px;
+  }
+
+  .hero p {
+    max-width: 100%;
+  }
+
+  .mobile-sticky-petition {
+    right: 18px;
+    bottom: 18px;
+  }
+}
