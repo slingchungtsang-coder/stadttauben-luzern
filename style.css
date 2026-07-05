@@ -849,9 +849,9 @@ footer .footer-links a:visited {
   .forderung:nth-child(even) {
     padding-left: 0;
 }
-.forderung:nth-child(even)::before {
-    margin-left: -60px;
-    width: calc(100% + 60px);
+.forderung::before {
+    width: 100% !important;
+    margin-left: 0 !important;
 }
 }
 .hero .petition-button, .mitmachen .petition-button { font-weight: 700 !important; }
