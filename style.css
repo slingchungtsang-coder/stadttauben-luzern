@@ -629,31 +629,19 @@ footer .footer-links a:visited {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   }
 }
+
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 100px;
+  }
+}
+
 .hero h1,
 .loesung h2,
 .forderungen h2 {
   color: #403566;
 }
-.mobile-sticky-petition {
-  display: none;
-}
 
-@media (max-width: 768px) {
-  .mobile-sticky-petition {
-    display: inline-flex;
-    position: fixed;
-    right: 18px;
-    bottom: 18px;
-    z-index: 9999;
-    padding: 14px 20px;
-    border-radius: 999px;
-    background: #F4EBDD;
-    color: #3D3938;
-    font-weight: 700;
-    text-decoration: none;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  }
-}
 @media (max-width: 768px) {
   html,
   body {
