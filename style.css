@@ -258,7 +258,7 @@ main a {
 .mitmachen .petition-button {
     align-self: flex-start;
     margin-top: 10px;
-    padding: 18px 32px;
+    padding: 18px 44px;
     background: #F4EBDD;
     color: #3D3938;
 }
@@ -513,9 +513,28 @@ nav a:hover {
     color: #3D3938;
 }
 
-#forderungen {
-    background: #F9F6EB;
-    color: #3D3938;
+#forderung {
+  background: #3D3938;
+  color: #F9F6EB;
+}
+#forderung h2,
+#forderung h3,
+#forderung p,
+#forderung span,
+#forderung .back-to-top {
+  color: #F9F6EB;
+}
+
+#forderung .forderung::before {
+  background: #F9F6EB;
+}
+
+#forderung .petition-button {
+  display: inline-block;
+  background: #BFD2B5;
+  color: #3D3938;
+  padding: 18px 32px;
+  border-radius: 999px;
 }
 
 #mitmachen {
@@ -979,21 +998,17 @@ h3 {
     }
 }
 .support-section {
-  background: #403a3a;
-  color: #f5f0e8;
+  background: #b7c9b1;
+  color: #403a3a;
   padding: 120px 8%;
 }
 
-.support-inner {
-  max-width: 900px;
-}
-
 .support-section .section-kicker {
-  color: #f5f0e8;
+  color: #403a3a;
 }
 
 .support-section h2 {
-  color: #f5f0e8;
+  color: #403a3a;
   font-size: clamp(36px, 4vw, 64px);
   line-height: 1.05;
   margin: 20px 0 32px;
@@ -1009,7 +1024,7 @@ h3 {
 .support-button {
   display: inline-block;
   margin-top: 38px;
-  padding: 16px 28px;
+  padding: 27px 44px;
   background: #b7c9b1;
   color: #403a3a;
   text-decoration: none;
@@ -1204,4 +1219,133 @@ h3 {
     font-size: 18px;
     padding: 0 45px 28px 0;
   }
+}
+/* NACH OBEN – UNTEN LINKS IN DER SECTION */
+
+section {
+  position: relative;
+}
+
+.back-to-top {
+  position: absolute;
+  left: 8%;
+  bottom: 50px;
+  margin: 0;
+}
+/* PETITIONSBUTTON PINK */
+
+.petition-button {
+  background: #EC4F91;
+  color: #ffffff;
+}
+
+#forderung .petition-button {
+  background: #EC4F91;
+  color: #ffffff;
+}
+/* KURZFASSUNG – BEIGE */
+
+#kurzfassung {
+  background: #F9F6EB;
+  color: #403B3B;
+}
+
+#kurzfassung h2,
+#kurzfassung p {
+  color: #403B3B;
+}/* DOMESTIKATION – WEISS */
+
+#domestikation {
+  background: #ffffff;
+  color: #403B3B;
+}
+
+#domestikation h2,
+#domestikation p {
+  color: #403B3B;
+}
+/* VIDEO – VIOLETT */
+
+#video {
+  background: #403566;
+  color: #F9F6EB;
+}
+
+#video h2,
+#video p {
+  color: #F9F6EB;
+}
+
+/* AUSGANGSLAGE – LINDENGRÜN */
+
+#ausgangslage {
+  background: #C4D8BA;
+  color: #403B3B;
+}
+
+#ausgangslage h2,
+#ausgangslage p {
+  color: #403B3B;
+}
+/* KENNZAHLEN – ANTHRAZIT */
+
+#kennzahlen {
+  background: #403B3B;
+  color: #F9F6EB;
+}
+
+#kennzahlen h2,
+#kennzahlen h3,
+#kennzahlen p,
+#kennzahlen span {
+  color: #F9F6EB;
+}
+/* LÖSUNG – BEIGE */
+
+#loesung {
+  background: #F9F6EB;
+  color: #403B3B;
+}
+
+#loesung h2,
+#loesung h3,
+#loesung p,
+#loesung span {
+  color: #403B3B;
+}
+/* VORTEILE – VIOLETT */
+
+#vorteile {
+  background: #403566;
+  color: #F9F6EB;
+}
+
+#vorteile h2,
+#vorteile h3,
+#vorteile p,
+#vorteile span {
+  color: #F9F6EB;
+}
+/* FAQ – WEISS */
+
+#faq {
+  background: #ffffff;
+  color: #403B3B;
+}
+
+#faq h2,
+#faq h3,
+#faq p,
+#faq summary {
+  color: #403B3B;
+}
+/* PETITIONSBUTTONS – EINHEITLICHE GRÖSSE */
+
+.petition-button {
+  height: 72px !important;
+  padding: 0 44px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
