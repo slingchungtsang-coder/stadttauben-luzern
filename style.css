@@ -1432,3 +1432,8 @@ main section {
     display: inline-flex !important;
   }
 }
+@media (max-width: 768px) {
+  .support-button {
+    display: inline-flex !important;
+  }
+}
