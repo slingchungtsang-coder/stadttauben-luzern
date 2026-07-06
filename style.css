@@ -940,18 +940,21 @@ h3 {
   max-width: 1200px;
 }
 @media (max-width: 768px) {
-  .about-team {
-    grid-template-columns: 1fr;
-    gap: 32px;
-    max-width: 100%;
-  }
+    .about-team {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 34px !important;
+    }
 
-  .team-member img {
-    width: 100%;
-    max-width: 320px;
-  }
+    .team-member img {
+        width: 100% !important;
+        max-width: 320px !important;
+        height: auto !important;
+    }
 
-  .team-member h3 {
-    font-size: 28px;
-  }
+    .team-member h3 {
+        font-size: 28px !important;
+        margin-top: 12px !important;
+    }
 }
