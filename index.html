@@ -240,5 +240,18 @@
   Petition unterschreiben
 </a>
 
+<script>
+  const stickyButton = document.querySelector('.mobile-sticky-petition');
+  const petitionForm = document.querySelector('#petition-formular');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      stickyButton.style.display = entry.isIntersecting ? 'none' : '';
+    });
+  });
+
+  observer.observe(petitionForm);
+</script>
+
 </body>
 </html>
