@@ -1419,3 +1419,12 @@ main section {
   justify-content: center;
   box-sizing: border-box;
 }
+/* MOBILE – BUTTONS AUSBLENDEN */
+
+@media (max-width: 768px) {
+  .petition-button,
+  .support-button,
+  .mobile-sticky-petition {
+    display: none !important;
+  }
+}
