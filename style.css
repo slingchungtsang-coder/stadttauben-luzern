@@ -1427,3 +1427,8 @@ main section {
     display: none !important;
   }
 }
+@media (max-width: 768px) {
+  .mobile-sticky-petition {
+    display: inline-flex !important;
+  }
+}
