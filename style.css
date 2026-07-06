@@ -1342,9 +1342,79 @@ section {
 /* PETITIONSBUTTONS – EINHEITLICHE GRÖSSE */
 
 .petition-button {
-  height: 72px !important;
+  height: 60px !important;
   padding: 0 44px !important;
   display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+/* NACH OBEN – UNTEN LINKS IN JEDER SECTION */
+
+section {
+  position: relative;
+}
+
+.back-to-top {
+  position: absolute;
+  left: 8%;
+  bottom: 50px;
+  margin: 0;
+}
+/* EINHEITLICHE LINKE AUSRICHTUNG ALLER SECTIONS */
+
+:root {
+  --section-padding: 8%;
+}
+
+main section {
+  padding-left: var(--section-padding);
+  padding-right: var(--section-padding);
+  box-sizing: border-box;
+}
+
+/* Wer wir sind */
+
+.about-section {
+  padding-left: var(--section-padding);
+  padding-right: var(--section-padding);
+}
+
+.about-section .section-kicker,
+.about-section h2,
+.about-section .about-intro,
+.about-team,
+.about-section .back-to-top {
+  margin-left: 0;
+}
+
+/* Vorteile */
+
+.vorteile-section > p,
+.vorteile-section > h2,
+.vorteile-grid {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* FAQ */
+
+.faq-section > p,
+.faq-section > h2,
+.faq-list {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Nach oben */
+
+.back-to-top {
+  left: var(--section-padding);
+}
+.support-button {
+  height: 60px;
+  padding: 0 44px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
