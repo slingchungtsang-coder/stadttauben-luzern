@@ -622,8 +622,8 @@ footer .footer-links a:visited {
     z-index: 999;
     padding: 12px 18px;
     border-radius: 999px;
-    background: #F4EBDD;
-    color: #3D3938;
+    background: #E85D9E;
+    color: #FFFFFF;
     font-weight: 700;
     text-decoration: none;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
@@ -847,3 +847,14 @@ footer .footer-links a:visited {
 }
 }
 .hero .petition-button, .mitmachen .petition-button { font-weight: 700 !important; }
+
+.loesung-nutzen {
+    font-size: 24px;
+    line-height: 1.25;
+    font-weight: 700;
+    color: #403566;
+    margin-top: 20px;
+}
+.loesung-intro {
+    margin-bottom: 20px;
+}
