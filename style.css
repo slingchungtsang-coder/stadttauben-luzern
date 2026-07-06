@@ -868,3 +868,17 @@ footer .footer-links a:visited {
     display: none;
   }
 }
+h1,
+h2,
+h3 {
+    hyphens: none;
+    -webkit-hyphens: none;
+    word-break: normal;
+    overflow-wrap: normal;
+}
+@media (max-width: 480px) {
+    .loesung h2 {
+        font-size: 36px;
+        line-height: 1;
+    }
+}
