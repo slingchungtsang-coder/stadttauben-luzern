@@ -914,6 +914,11 @@ h3 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 24px;
+  margin-left: 8%;
+}
+
+.about-section .back-to-top {
+  margin-left: 8%;
 }
 
 .team-member img {
@@ -936,6 +941,12 @@ h3 {
   max-width: none;
   margin: 0;
 }
+
+  .about-section .section-kicker,
+.about-section h2,
+.about-section .about-intro {
+  margin-left: 8%;
+}
 .about-team {
   max-width: 1200px;
 }
@@ -957,4 +968,42 @@ h3 {
         font-size: 28px !important;
         margin-top: 12px !important;
     }
+}
+.support-section {
+  background: #403a3a;
+  color: #f5f0e8;
+  padding: 120px 8%;
+}
+
+.support-inner {
+  max-width: 900px;
+}
+
+.support-section .section-kicker {
+  color: #f5f0e8;
+}
+
+.support-section h2 {
+  color: #f5f0e8;
+  font-size: clamp(36px, 4vw, 64px);
+  line-height: 1.05;
+  margin: 20px 0 32px;
+  max-width: 850px;
+}
+
+.support-section p {
+  font-size: 21px;
+  line-height: 1.6;
+  max-width: 760px;
+}
+
+.support-button {
+  display: inline-block;
+  margin-top: 38px;
+  padding: 16px 28px;
+  background: #f05a9d;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 700;
 }
