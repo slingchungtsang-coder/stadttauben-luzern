@@ -858,3 +858,13 @@ footer .footer-links a:visited {
 .loesung-intro {
     margin-bottom: 20px;
 }
+.hero .petition-button,
+.mitmachen .petition-button {
+    background: #EC5795 !important;
+    color: #FFFFFF !important;
+}
+@media (max-width: 768px) {
+  .hero .petition-button {
+    display: none;
+  }
+}
