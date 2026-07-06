@@ -157,7 +157,7 @@ main a {
 }
 
 .forderung {
-  padding: 40px 60px 35px 0;
+  padding: 30px 60px 25px 0;
   position: relative;
 }
 
@@ -167,7 +167,7 @@ main a {
   width: 82%;
   height: 1px;
   background: #3D3938;
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 
 .forderung:nth-child(even) {
@@ -176,7 +176,7 @@ main a {
 
 .forderung span {
     display: block;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
     font-size: 16px;
 }
 
