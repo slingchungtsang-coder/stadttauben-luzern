@@ -882,3 +882,60 @@ h3 {
         line-height: 1;
     }
 }
+
+/* WER WIR SIND */
+
+.about-section {
+  background: #f4f0ea;
+  padding: 100px 40px;
+}
+
+.about-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-section .section-kicker {
+  margin-bottom: 16px;
+}
+
+.about-section h2 {
+  margin-bottom: 24px;
+}
+
+.about-intro {
+  max-width: 760px;
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 60px;
+}
+
+.about-team {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+}
+
+.team-member img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+}
+
+.team-member h3 {
+  margin-top: 16px;
+  font-size: 22px;
+}
+
+.about-section {
+  min-height: auto;
+  height: auto;
+}
+
+.about-inner {
+  max-width: none;
+  margin: 0;
+}
+.about-team {
+  max-width: 1200px;
+}
