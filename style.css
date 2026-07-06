@@ -1423,8 +1423,7 @@ main section {
 
 @media (max-width: 768px) {
   .petition-button,
-  .support-button,
-  .mobile-sticky-petition {
+  .support-button {
     display: none !important;
   }
 }
