@@ -12,12 +12,17 @@ body {
 }
 
 header {
-    padding: 28px 8%;
+    padding: 28px 8% 20px;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    border-bottom: 1px solid #3D3938;
 }
 
 nav {
     display: flex;
     gap: 32px;
+    align-items: center;
 }
 
 nav a {
@@ -885,6 +890,12 @@ h3 {
 
 /* WER WIR SIND */
 
+.about-section h2 {
+    font-size: 40px;
+    line-height: 1.1;
+    color: #403566;
+}
+
 .about-section {
   background: #f4f0ea;
   padding: 100px 40px;
@@ -1001,8 +1012,8 @@ h3 {
   display: inline-block;
   margin-top: 38px;
   padding: 16px 28px;
-  background: #f05a9d;
-  color: #ffffff;
+  background: #b7c9b1;
+  color: #403a3a;
   text-decoration: none;
   border-radius: 999px;
   font-weight: 700;
