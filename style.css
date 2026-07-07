@@ -302,15 +302,6 @@ footer p {
     opacity: 0.75;
 }
 
-#ausgangslage {
-    background: #F9F6EB;
-}
-
-#warum-es-nicht-reicht {
-    background: #3A305B;
-    color: #F9F6EB;
-}
-
 .hero {
     background: #B0C1A9;
 }
@@ -493,19 +484,9 @@ nav a:hover {
     background: #B0C1A9;
 }
 
-#ausgangslage {
-    background: #F9F6EB;
-    color: #3D3938;
-}
-
 #warum-es-nicht-reicht {
     background: #3A305B;
     color: #F9F6EB;
-}
-
-#loesung {
-    background: #FFFFFF;
-    color: #3D3938;
 }
 
 #fuetterung {
