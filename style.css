@@ -1421,6 +1421,48 @@ main section {
   justify-content: center;
   box-sizing: border-box;
 }
+
+.game-section {
+    background: #3A305B;
+    color: #ffffff;
+    padding: 100px 8%;
+}
+
+.game-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.game-section .section-label {
+    margin-bottom: 18px;
+}
+
+.game-section h2 {
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 0.95;
+    margin: 0 0 28px;
+}
+
+.game-section > p,
+.game-content > p {
+    max-width: 650px;
+}
+
+.game-frame-wrap {
+    margin: 55px 0 40px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 28px;
+}
+
+.super-pigeon-game {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
 /* MOBILE – BUTTONS */
 
 @media (max-width: 768px) {
@@ -1617,27 +1659,6 @@ z-index: 0;
 #forderung > a {
   position: relative;
   z-index: 1;
-}
-.hero-pigeon {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: clamp(260px, 32vw, 440px);
-    height: auto;
-    z-index: 0;
-    pointer-events: none;
-
-    -webkit-mask-image:
-        linear-gradient(to right, transparent 0%, black 55%, black 100%),
-        linear-gradient(to bottom, transparent 0%, black 30%, black 100%);
-
-    -webkit-mask-composite: source-in;
-
-    mask-image:
-        linear-gradient(to right, transparent 0%, black 55%, black 100%),
-        linear-gradient(to bottom, transparent 0%, black 35%, black 100%);
-
-    mask-composite: intersect;
 }
 @media (max-width: 768px) {
   #forderung {
