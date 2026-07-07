@@ -1419,21 +1419,15 @@ main section {
   justify-content: center;
   box-sizing: border-box;
 }
-/* MOBILE – BUTTONS AUSBLENDEN */
+/* MOBILE – BUTTONS */
 
 @media (max-width: 768px) {
-  .petition-button,
-  .support-button {
+  .petition-button {
     display: none !important;
   }
-}
-@media (max-width: 768px) {
+
+  .support-button,
   .mobile-sticky-petition {
-    display: inline-flex !important;
-  }
-}
-@media (max-width: 768px) {
-  .support-button {
     display: inline-flex !important;
   }
 }
