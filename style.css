@@ -1515,7 +1515,6 @@ main section {
     overflow-wrap: break-word;
     margin: 18px 0 55px;
   }
-}
 
   .voices-section h2 {
     font-size: clamp(2.8rem, 13vw, 4rem);
