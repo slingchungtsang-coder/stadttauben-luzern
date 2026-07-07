@@ -89,11 +89,6 @@ main a {
     max-width: 360px;
 }
 
-.loesung {
-    background: #FFFFFF;
-    color: #3D3938;
-}
-
 
 .loesung > p:first-child {
     font-size: 20px;
