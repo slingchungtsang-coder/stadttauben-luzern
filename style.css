@@ -1636,6 +1636,12 @@ main section {
 
   mask-composite: intersect;
 }
+#mitmachen > p,
+#mitmachen > h2,
+#mitmachen > a {
+    position: relative;
+    z-index: 2;
+}
 .section-pigeon-forderung {
 position: absolute;
 right: 0;
@@ -1716,7 +1722,7 @@ z-index: 0;
     }
 }
     }
-    
+
 .game-section .petition-button {
     background: #B9D986;
     color: #3A305B;
