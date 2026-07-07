@@ -1220,18 +1220,7 @@ color: #F9F6EB;
     padding: 0 45px 28px 0;
   }
 }
-/* NACH OBEN – UNTEN LINKS IN DER SECTION */
 
-section {
-  position: relative;
-}
-
-.back-to-top {
-  position: absolute;
-  left: 8%;
-  bottom: 50px;
-  margin: 0;
-}
 /* PETITIONSBUTTON PINK */
 
 .petition-button {
