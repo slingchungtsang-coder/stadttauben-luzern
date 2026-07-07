@@ -998,11 +998,15 @@ h3 {
 }
 
 .support-button {
-  display: inline-block;
+  height: 60px;
+  padding: 0 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
   margin-top: 38px;
-  padding: 27px 44px;
-  background: #403566;
-  color: #F9F6EB;
+  background: #6B4EFF;
+  color: #FFFFFF;
   text-decoration: none;
   border-radius: 999px;
   font-weight: 700;
