@@ -1698,14 +1698,25 @@ z-index: 0;
         display: none;
     }
 
-    .game-frame-wrap::before {
-        content: "Super Pigeon funktioniert auf kleinen Bildschirmen besser in einem eigenen Fenster.";
-        display: block;
-        color: #ffffff;
-        font-size: 1rem;
-        line-height: 1.5;
+@media (max-width: 768px) {
+    .game-frame-wrap {
+        display: none;
+    }
+
+    .super-pigeon-game {
+        display: none;
+    }
+
+    .game-section .petition-button {
+        display: inline-flex !important;
+        margin-top: 36px;
+        max-width: 100%;
+        text-align: center;
+        justify-content: center;
     }
 }
+    }
+    
 .game-section .petition-button {
     background: #B9D986;
     color: #3A305B;
