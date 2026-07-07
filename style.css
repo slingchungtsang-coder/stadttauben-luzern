@@ -210,19 +210,16 @@ main a {
     margin-bottom: 35px;
 }
 
-.mitmachen h2 {
-    max-width: 1100px;
-    margin: 0 0 45px;
-    font-size: clamp(52px, 7vw, 110px);
-    line-height: 0.92;
-    letter-spacing: -0.05em;
+.mitmachen-text {
+  max-width: 650px;
+  margin: 0 0 40px;
+  font-size: 22px;
+  line-height: 1.5;
 }
 
-.mitmachen-text {
-    max-width: 650px;
-    margin: 0 0 40px;
-    font-size: 22px;
-    line-height: 1.5;
+.mitmachen h2 {
+  margin-top: 0px;
+  margin-bottom: 32px;
 }
 
 .petition-widget-placeholder {
@@ -405,7 +402,7 @@ nav a:hover {
 
 .loesung h2 {
     max-width: 1000px;
-    margin: 0 0 40px;
+    margin: 0 0 32px;
     font-size: clamp(48px, 6vw, 92px);
     line-height: 0.95;
     letter-spacing: -0.04em;
@@ -849,10 +846,29 @@ footer .footer-links a:visited {
 .loesung-nutzen {
     font-size: 24px;
     line-height: 1.25;
-    font-weight: 700;
+    font-weight: 600;
     color: #403566;
     margin-top: 20px;
 }
+
+.loesung-ziel {
+  max-width: 760px;
+  margin: 28px 0 0;
+  font-size: 24px;
+  line-height: 1.35;
+}
+
+.ziel-label {
+  font-weight: 700;
+}
+
+.loesung-nutzen,
+.toetung-hinweis h3 {
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
 .loesung-intro {
     margin-bottom: 20px;
 }
@@ -900,10 +916,11 @@ h3 {
 }
 
 .about-section .section-kicker {
-  margin-bottom: 16px;
+  margin-bottom: 0px;
 }
 
 .about-section h2 {
+  margin-top: 24px;
   margin-bottom: 24px;
 }
 
@@ -1054,9 +1071,13 @@ h3 {
 }
 
 .toetung-hinweis h3 {
-    margin-top: 0;
-    margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 600;
 }
+
 /* Vorteile */
 
 .vorteile-section {
@@ -1131,6 +1152,7 @@ h3 {
 }
 
 .faq-section h2 {
+    margin-top: 0;
     margin-bottom: 60px;
     font-size: clamp(48px, 6vw, 92px);
     line-height: 0.95;
