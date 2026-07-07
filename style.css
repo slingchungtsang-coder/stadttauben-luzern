@@ -613,7 +613,18 @@ footer .footer-links a:visited {
     text-decoration: none;
 }
 .mobile-sticky-petition {
-  display: none;
+    display: inline-flex;
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 999;
+    padding: 12px 18px;
+    border-radius: 999px;
+    background: #E85D9E;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 768px) {
@@ -1698,4 +1709,9 @@ z-index: 0;
 .game-section .petition-button {
     background: #B9D986;
     color: #3A305B;
+}
+@media (max-width: 768px) {
+    .game-section .petition-button {
+        display: inline-flex !important;
+    }
 }
