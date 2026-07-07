@@ -1092,7 +1092,7 @@ h3 {
 }
 
 .vorteile-section > h2 {
-  margin-bottom: 60px;
+  margin-bottom: 32px;
 }
 
 .vorteile-grid {
@@ -1100,7 +1100,7 @@ h3 {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 60px 45px;
+  gap: 28px 45px;
 }
 
 .vorteile-grid > div {
