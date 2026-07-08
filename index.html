@@ -11,6 +11,17 @@
 </head>
 <body>
 
+  <nav class="section-scroll-nav" aria-label="Seitennavigation">
+  <a href="#start" aria-label="Start"></a>
+  <a href="#ausgangslage" aria-label="Ausgangslage"></a>
+  <a href="#loesung" aria-label="Lösung"></a>
+  <a href="#vorteile" aria-label="Vorteile"></a>
+  <a href="#faq" aria-label="Häufige Fragen"></a>
+  <a href="#unterstuetzen" aria-label="Unterstützen"></a>
+  <a href="#stimmen" aria-label="Stimmen aus Luzern"></a>
+  <a href="#ueber-uns" aria-label="Über uns"></a>
+</nav>
+
 <header>
   <nav>
 
@@ -60,7 +71,6 @@
 
     <a href="#petition-formular" class="petition-button">Petition unterschreiben</a>
 
-    <a href="#start" class="back-to-top">↑ Nach oben</a>
 </section>
 
 <section id="kurzfassung">
@@ -86,7 +96,7 @@
         Jahren eine wissenschaftlich fundierte und praxiserprobte Lösung, welche Tierwohl,
         Sauberkeit und Wirtschaftlichkeit miteinander verbindet.
     </p>
-    <a href="#start" class="back-to-top">↑ Nach oben</a>
+
 </section>
 
 <section id="video" class="video-section">
@@ -97,7 +107,7 @@
     <div class="video-placeholder">
         <p>Erklärvideo folgt</p>
     </div>
-    <a href="#start" class="back-to-top">↑ Nach oben</a>
+    
 </section>
 
 <section id="domestikation">
@@ -120,7 +130,7 @@
         Nahrung halten sie sich häufig am Boden auf und verfangen sich mit den Füssen 
         in Haaren, Schnüren und anderen fadenartigen Abfällen – oft mit schweren Verletzungen als Folge.
     </p>
-    <a href="#start" class="back-to-top">↑ Nach oben</a>
+    
 </section>
 
 <section id="ausgangslage">
@@ -156,7 +166,7 @@
         aufeinander abgestimmtes Gesamtkonzept bleiben Verschmutzung, unkontrollierte
         Brut und Tierleid bestehen.
     </p>
-    <a href="#start" class="back-to-top">↑ Nach oben</a>
+    
 </section>
 
 <section id="kennzahlen" class="kennzahlen-section">
@@ -175,7 +185,7 @@
             <span class="kennzahl-text">Brutpaare finden Platz in den zwei städtischen Taubenschlägen</span>
         </div>
     </div>
-    <a href="#start" class="back-to-top">↑ Nach oben</a>
+    
 </section>
 
 <section id="loesung" class="loesung">
@@ -204,7 +214,7 @@
         <div>
             <span>03</span>
             <h3>Bestandesregulierung</h3>
-            <p>Nachhaltige Regulierung der Population durch konsequenten Eiertausch.</p>
+            <p>Nachhaltige Regulierung der Population durch systematischen Eiertausch.</p>
         </div>
 
         <div>
@@ -245,7 +255,7 @@
         Ursachen des Stadttaubenproblems.
     </p>
 </div>
-<a href="#start" class="back-to-top">↑ Nach oben</a>
+
 </section>
 
 <section id="vorteile" class="vorteile-section">
@@ -278,7 +288,7 @@
             <p>Eine Lösung, die Bevölkerung, Gewerbe, Stadtbild und Tierschutz zusammenbringt.</p>
         </div>
     </div>
-    <a href="#start" class="back-to-top">↑ Nach oben</a>
+ 
 </section>
 
 <section id="faq" class="faq-section">
@@ -461,7 +471,7 @@ Tauben ihr artspezifisches Verhalten weiterhin ausleben können.
             <summary>Wie wird die Anzahl der Tauben verringert?</summary>
             <p>
                 In den betreuten Taubenschlägen werden die gelegten Eier regelmässig kontrolliert 
-                und im Rahmen eines konsequenten Eiertauschs durch Attrappen ersetzt. Einzelne Bruterfolge 
+                und im Rahmen eines systematischen Eiertauschs durch Attrappen ersetzt. Einzelne Bruterfolge 
                 können gezielt zugelassen werden, um die Bindung der Tauben an den Taubenschlag zu unterstützen. 
                 Die Population wird auf diese Weise langfristig und tierschutzgerecht reguliert.
             </p>
@@ -479,7 +489,7 @@ Tauben ihr artspezifisches Verhalten weiterhin ausleben können.
         </details>
 
     </div>
-    <a href="#start" class="back-to-top">↑ Nach oben</a>
+    
 </section>
 
 <section id="unterstuetzen" class="support-section">
@@ -506,7 +516,7 @@ Tauben ihr artspezifisches Verhalten weiterhin ausleben können.
 
   </div>
 
-  <a href="#start" class="back-to-top">↑ Nach oben</a>
+  
 </section>
 
 <section id="mitmachen" class="mitmachen">
@@ -519,7 +529,7 @@ Tauben ihr artspezifisches Verhalten weiterhin ausleben können.
     Stadttaubenmanagement in Luzern.</p>
 
     <a href="#petition-formular" class="petition-button">Petition unterschreiben</a>
-  <a href="#start" class="back-to-top">↑ Nach oben</a>
+  
 </section>
 
 <section id="stimmen" class="voices-section">
@@ -644,7 +654,7 @@ Tauben ihr artspezifisches Verhalten weiterhin ausleben können.
   <h3>Stefania</h3>
 </article>
     </div>
-    <a href="#start" class="back-to-top">↑ Nach oben</a>
+   
   </div>
 </section>
 
@@ -682,6 +692,35 @@ Tauben ihr artspezifisches Verhalten weiterhin ausleben können.
   });
 
   observer.observe(petitionForm);
+</script>
+
+<script>
+  const scrollNav = document.querySelector('.section-scroll-nav');
+
+  function updateScrollNavColor() {
+    const navRect = scrollNav.getBoundingClientRect();
+    const x = navRect.left + navRect.width / 2;
+    const y = navRect.top + navRect.height / 2;
+
+    scrollNav.style.pointerEvents = 'none';
+    const elementBehindNav = document.elementFromPoint(x, y);
+    scrollNav.style.pointerEvents = '';
+
+    if (!elementBehindNav) return;
+
+    const backgroundColor = getComputedStyle(elementBehindNav).backgroundColor;
+
+    const isDarkBackground =
+  backgroundColor === 'rgb(58, 48, 91)' ||
+  backgroundColor === 'rgb(64, 53, 102)' ||
+  backgroundColor === 'rgb(61, 57, 56)';
+
+   scrollNav.classList.toggle('is-on-purple', isDarkBackground);
+  }
+
+  window.addEventListener('scroll', updateScrollNavColor);
+  window.addEventListener('resize', updateScrollNavColor);
+  updateScrollNavColor();
 </script>
 
 </body>
