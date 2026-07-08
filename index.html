@@ -23,19 +23,25 @@
 </nav>
 
 <header>
-  <nav>
-
+  <nav class="main-nav">
     <a href="#start" class="logo">
       <img src="Luzern_Sektionslogo.svg" alt="Stadttauben Schweiz – Sektion Luzern">
     </a>
 
-    <a href="#forderung">Unsere Forderung</a>
-    <a href="#kurzfassung">Kurz gesagt</a>
-    <a href="#loesung">Lösung</a>
-    <a href="#faq">Häufige Fragen</a>
-    <a href="#unterstuetzen">Unterstützen</a>
-    <a href="#ueber-uns">Über uns</a>
+    <div class="main-nav-links">
+      <a href="#forderung">Unsere Forderung</a>
+      <a href="#kurzfassung">Kurz gesagt</a>
+      <a href="#loesung">Lösung</a>
+      <a href="#faq">Häufige Fragen</a>
+      <a href="#unterstuetzen">Unterstützen</a>
+      <a href="#ueber-uns">Über uns</a>
+    </div>
 
+    <div class="compact-nav-links">
+      <a href="#start">Petition</a>
+      <a href="wissen.html">Wissen</a>
+      <a href="wissen.html#praxis">Praxisbeispiele</a>
+    </div>
   </nav>
 </header>
 
@@ -721,6 +727,18 @@ Tauben ihr artspezifisches Verhalten weiterhin ausleben können.
   window.addEventListener('scroll', updateScrollNavColor);
   window.addEventListener('resize', updateScrollNavColor);
   updateScrollNavColor();
+</script>
+
+<script>
+  const header = document.querySelector("header");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 160) {
+      header.classList.add("is-compact");
+    } else if (window.scrollY < 40) {
+      header.classList.remove("is-compact");
+    }
+  });
 </script>
 
 </body>
