@@ -1835,9 +1835,9 @@ z-index: 0;
 }
 
 .wissen-thema {
-  min-height: 130px;
-  padding: 24px 28px;
-  border-radius: 32px;
+  min-height: 110px;
+  padding: 20px 24px;
+  border-radius: 28px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
