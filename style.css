@@ -1526,7 +1526,7 @@ main section {
 .quote-mark {
   display: block;
   color: #43366b;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 800;
   line-height: 0.5;
 }
@@ -1543,9 +1543,9 @@ main section {
 
 .voice-card blockquote {
   margin: 0;
-  font-size: clamp(1.25rem, 1.65vw, 1.8rem);
-  line-height: 1.2;
-  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.45;
+  font-weight: 500;
   color: #3d3938;
 }
 
