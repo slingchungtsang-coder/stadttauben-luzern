@@ -2314,3 +2314,19 @@ z-index: 0;
     font-size: 1.45rem;
   }
 }
+.wissen-stadt {
+  padding: 28px;
+  overflow: hidden;
+}
+
+.wissen-stadt h3,
+.wissen-stadt p {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: auto;
+}
+
+.wissen-stadt h3 {
+  font-size: 1.45rem;
+}
