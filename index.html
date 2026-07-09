@@ -718,10 +718,16 @@ Tauben ihr artspezifisches Verhalten weiterhin ausleben können.
 
     const backgroundColor = getComputedStyle(elementBehindNav).backgroundColor;
 
-    const isDarkBackground =
-  backgroundColor === 'rgb(58, 48, 91)' ||
-  backgroundColor === 'rgb(64, 53, 102)' ||
-  backgroundColor === 'rgb(61, 57, 56)';
+const darkSection = elementBehindNav.closest(
+  '#forderung, #kennzahlen'
+);
+
+const isDarkBackground =
+  darkSection !== null ||
+  backgroundColor.includes('58, 48, 91') ||
+  backgroundColor.includes('64, 53, 102') ||
+  backgroundColor.includes('61, 57, 56') ||
+  backgroundColor.includes('63, 59, 58');
 
    scrollNav.classList.toggle('is-on-purple', isDarkBackground);
   }

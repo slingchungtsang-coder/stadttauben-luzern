@@ -1744,36 +1744,43 @@ z-index: 0;
 /* SEITLICHE SECTION-NAVIGATION */
 
 .section-scroll-nav {
-  position: fixed;
-  left: 24px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 900;
+    position: fixed;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 900;
 
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 
-  padding: 18px 8px;
-  background: #3A305B;
-  border-radius: 999px;
+    padding: 18px 8px;
+    background: #3A305B;
+    border-radius: 999px;
 }
 
 .section-scroll-nav a {
-  width: 8px;
-  height: 8px;
-  background: #FFFFFF;
-  border-radius: 50%;
-  display: block;
-  opacity: 0.6;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+    width: 8px;
+    height: 8px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: block;
+    opacity: 0.6;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .section-scroll-nav a:hover {
-  opacity: 1;
-  transform: scale(1.4);
+    opacity: 1;
+    transform: scale(1.4);
 }
 
+.section-scroll-nav.is-on-purple {
+    background: #BFD2B5;
+}
+
+.section-scroll-nav.is-on-purple a {
+    background: #3F3B3A;
+}
 .section-scroll-nav a:hover {
   opacity: 1;
   transform: scale(1.4);
@@ -1784,7 +1791,7 @@ z-index: 0;
 }
 
 .section-scroll-nav.is-on-purple a {
-  background: #3A305B;
+    background: #3F3B3A;
 }
 
 @media (max-width: 768px) {
@@ -2075,9 +2082,9 @@ z-index: 0;
 }
 
 .wissen-scroll-nav a:hover {
-  background: #6F5AA8;
-  border-color: #6F5AA8;
-  transform: scale(1.25);
+    background: #3D3938;
+    border-color: #3D3938;
+    transform: scale(1.25);
 }
 
 /* Mobile-Fix Hauptnavigation */
