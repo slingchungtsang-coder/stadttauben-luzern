@@ -28,20 +28,15 @@
       <img src="Luzern_Sektionslogo.svg" alt="Stadttauben Schweiz – Sektion Luzern">
     </a>
 
-    <div class="main-nav-links">
-      <a href="#forderung">Unsere Forderung</a>
-      <a href="#kurzfassung">Kurz gesagt</a>
-      <a href="#loesung">Lösung</a>
-      <a href="#faq">Häufige Fragen</a>
-      <a href="#unterstuetzen">Unterstützen</a>
-      <a href="#ueber-uns">Über uns</a>
-    </div>
-
-    <div class="compact-nav-links">
-      <a href="#start">Petition</a>
-      <a href="wissen.html">Wissen</a>
-      <a href="wissen.html#praxis">Praxisbeispiele</a>
-    </div>
+<div class="main-nav-links">
+  <a href="index.html#forderung">Unsere Forderung</a>
+  <a href="index.html#loesung">Lösung</a>
+  <a href="index.html#faq">Häufige Fragen</a>
+  <a href="wissen.html">Wissen</a>
+  <a href="medien.html">Medien</a>
+  <a href="index.html#unterstuetzen">Unterstützen</a>
+  <a href="index.html#ueber-uns">Über uns</a>
+</div>
   </nav>
 </header>
 
@@ -608,16 +603,19 @@ Tauben ihr artspezifisches Verhalten weiterhin ausleben können.
 
         <div class="game-frame-wrap">
             <iframe
-                src="https://superpigeon.ch/"
+                src="https://superpigeon.ch/?city=luzern"
                 title="Super Pigeon – Jump & Run durch Luzern"
                 class="super-pigeon-game"
                 loading="lazy">
             </iframe>
         </div>
 
-        <a href="https://superpigeon.ch/" target="_blank" rel="noopener" class="petition-button">
-            Spiel öffnen
-        </a>
+       <a href="https://superpigeon.ch/?city=luzern"
+   target="_blank"
+   rel="noopener"
+   class="petition-button">
+  Spiel öffnen
+</a>
     </div>
 </section>
 
@@ -727,18 +725,6 @@ Tauben ihr artspezifisches Verhalten weiterhin ausleben können.
   window.addEventListener('scroll', updateScrollNavColor);
   window.addEventListener('resize', updateScrollNavColor);
   updateScrollNavColor();
-</script>
-
-<script>
-  const header = document.querySelector("header");
-
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 160) {
-      header.classList.add("is-compact");
-    } else if (window.scrollY < 40) {
-      header.classList.remove("is-compact");
-    }
-  });
 </script>
 
 </body>

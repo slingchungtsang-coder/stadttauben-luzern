@@ -13,12 +13,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body id="top">
 
-    <nav class="wissen-scroll-nav" aria-label="Kapitelnavigation">
+<nav class="wissen-scroll-nav" aria-label="Kapitelnavigation">
+  <a href="#top" aria-label="Zum Seitenanfang"></a>
   <a href="#herkunft" aria-label="Herkunft und Domestikation"></a>
   <a href="#hunger" aria-label="Hunger und Fortpflanzung"></a>
-  <a href="#management" aria-label="Taubenschläge und Bestandesregulierung"></a>
+  <a href="#taubenschlaege" aria-label="Taubenschläge und Bestandesregulierung"></a>
   <a href="#stadtraum" aria-label="Stadttauben und Stadtraum"></a>
   <a href="#gesundheit" aria-label="Gesundheit und Zoonosen"></a>
   <a href="#verhalten" aria-label="Verhalten und Kognition"></a>
@@ -757,18 +758,6 @@
     </section>
 
   </main>
-
-  <script>
-  const subpageHeader = document.querySelector(".subpage-header");
-
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 160) {
-      subpageHeader.classList.add("is-compact");
-    } else if (window.scrollY < 40) {
-      subpageHeader.classList.remove("is-compact");
-    }
-  });
-</script>
 
 </body>
 
