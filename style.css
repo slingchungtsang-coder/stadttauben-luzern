@@ -15,7 +15,7 @@ header {
     align-items: center;
     gap: 48px;
     border-bottom: 1px solid #3D3938;
-    background: #6F5AA8;
+    background: #3A305B;
     top: 0;
     z-index: 100;
     transition: padding 0.25s ease, background 0.25s ease;
@@ -656,7 +656,7 @@ footer .footer-links a:visited {
 .hero h1,
 .loesung h2,
 .forderungen h2 {
-  color: #403566;
+  color: #3A305B;
 }
 
 @media (max-width: 768px) {
@@ -869,7 +869,7 @@ footer .footer-links a:visited {
     font-size: 24px;
     line-height: 1.25;
     font-weight: 600;
-    color: #403566;
+    color: #3A305B;
     margin-top: 20px;
 }
 
@@ -1179,7 +1179,7 @@ h3 {
     font-size: clamp(48px, 6vw, 92px);
     line-height: 0.95;
     letter-spacing: -0.04em;
-    color: #403566;
+    color: #3A305B;
 }
 
 .faq-item {
@@ -1212,7 +1212,7 @@ h3 {
   transform: translateY(-50%);
   font-size: 34px;
   font-weight: 400;
-  color: #403566;
+  color: #3A305B;
 }
 
 .faq-item[open] summary::after {
@@ -1283,7 +1283,7 @@ h3 {
 /* VIDEO – VIOLETT */
 
 #video {
-  background: #403566;
+  background: #3A305B;
   color: #F9F6EB;
 }
 
@@ -2263,5 +2263,54 @@ z-index: 0;
   nav.wissen-scroll-nav {
     display: none !important;
     visibility: hidden !important;
+  }
+}
+/* Mobile-Fix Wissensseite */
+
+@media (max-width: 768px) {
+  .wissen-kapitel,
+  .wissen-hero,
+  .wissen-themen {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .wissen-kapitel-inner,
+  .wissen-hero-inner,
+  .wissen-themen-inner {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .wissen-quelle {
+    padding: 28px 0;
+    width: 100%;
+  }
+
+  .wissen-quelle-meta {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+
+  .wissen-quelle h3 {
+    max-width: 100%;
+    font-size: 1.45rem;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+  }
+
+  .wissen-quelle p {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .wissen-stadt {
+    padding: 28px;
+  }
+
+  .wissen-stadt h3 {
+    font-size: 1.45rem;
   }
 }
