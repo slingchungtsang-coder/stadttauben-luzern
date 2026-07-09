@@ -2239,3 +2239,29 @@ z-index: 0;
     hyphens: none !important;
   }
 }
+/* WISSEN – PUNKTNAVIGATION AUF MOBILE AUSBLENDEN */
+
+@media (max-width: 768px) {
+  .wissen-scroll-nav {
+    display: none !important;
+  }
+}
+/* MEDIEN – ABSTÄNDE */
+
+.medien-hero {
+  min-height: auto !important;
+  padding: 80px 8% 40px !important;
+}
+
+.medien-section {
+  min-height: auto !important;
+  padding: 60px 8% 80px !important;
+}
+/* WISSEN – SCROLLPUNKTE AUF MOBILE AUSBLENDEN */
+
+@media (max-width: 900px) {
+  nav.wissen-scroll-nav {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
