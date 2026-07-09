@@ -2178,3 +2178,64 @@ z-index: 0;
     hyphens: none;
   }
 }
+/* SUBPAGES – MOBILE NAVIGATION WIE HAUPTSEITE */
+
+@media (max-width: 768px) {
+  .subpage-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 22px;
+    padding: 28px 6% 36px;
+  }
+
+  .subpage-logo {
+    margin: 0;
+  }
+
+  .subpage-logo img {
+    width: 220px;
+    max-width: 72vw;
+    margin: 0 auto;
+  }
+
+  .subpage-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+
+  .subpage-nav a {
+    font-size: 18px;
+  }
+}
+/* WISSEN – THEMENKARTEN MOBILE FINAL */
+
+@media (max-width: 768px) {
+  .wissen-themen-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 22px !important;
+  }
+
+  .wissen-thema,
+  .wissen-thema:nth-child(5),
+  .wissen-thema:nth-child(6),
+  .wissen-thema:nth-child(7) {
+    display: flex !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    grid-column: auto !important;
+    min-height: 145px !important;
+    padding: 26px 28px !important;
+    box-sizing: border-box !important;
+  }
+
+  .wissen-thema h3 {
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    hyphens: none !important;
+  }
+}
