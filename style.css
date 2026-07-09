@@ -2144,3 +2144,37 @@ z-index: 0;
   min-height: auto !important;
   padding-top: 40px !important;
 }
+/* WISSEN – THEMENKARTEN MOBILE */
+
+@media (max-width: 768px) {
+  .wissen-themen {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .wissen-themen-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .wissen-thema,
+  .wissen-thema:nth-child(5),
+  .wissen-thema:nth-child(6),
+  .wissen-thema:nth-child(7) {
+    grid-column: auto;
+    width: 100%;
+    max-width: 100%;
+    min-height: 145px;
+    padding: 26px 28px;
+    box-sizing: border-box;
+  }
+
+  .wissen-thema h3 {
+    font-size: 1.25rem;
+    line-height: 1.2;
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
+  }
+}
