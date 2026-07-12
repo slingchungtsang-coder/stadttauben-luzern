@@ -1,5 +1,14 @@
-** {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
+}
+
+:root {
+    --font-size-body: 20px;
+    --line-height-body: 1.6;
+    --font-size-small: 16px;
+    --font-size-lead: 22px;
 }
 
 body {
@@ -35,7 +44,7 @@ nav a {
 
 main section {
     min-height: 80vh;
-    padding: 100px 8%;
+    padding: 70px 8%;
 }
 
 h1 {
@@ -48,8 +57,8 @@ h1 {
 
 p {
     max-width: 760px;
-    font-size: 22px;
-    line-height: 1.5;
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
 }
 
 main a {
@@ -120,7 +129,7 @@ main a {
 
 .loesung-grid span {
     display: block;
-    margin-bottom: 25px;
+    margin-bottom: 16px;
     font-size: 16px;
 }
 
@@ -439,9 +448,9 @@ nav a:hover {
 
 .loesung-grid span {
     display: block;
-    margin-bottom: 40px;
+    margin-bottom: 16px;
     font-size: 18px;
-   color: #3D3938;
+    color: #3D3938;
 }
 
 .loesung-grid h3 {
@@ -926,6 +935,7 @@ h3 {
     line-height: 0.95;
     letter-spacing: -0.04em;
     color: #403566;
+    max-width: 650px;
 }
 .about-section {
   background: #f4f0ea;
@@ -1028,7 +1038,7 @@ h3 {
   line-height: 0.95;
   letter-spacing: -0.04em;
   margin: 20px 0 32px;
-  max-width: 850px;
+  max-width: 650px;
 }
 
 .support-section p {
@@ -1180,6 +1190,7 @@ h3 {
     line-height: 0.95;
     letter-spacing: -0.04em;
     color: #3A305B;
+    max-width: 650px;
 }
 
 .faq-item {
@@ -1453,6 +1464,7 @@ main section {
     font-size: clamp(3rem, 7vw, 6rem);
     line-height: 0.95;
     margin: 0 0 28px;
+    max-width: 650px;
 }
 
 .game-section > p,
@@ -1503,7 +1515,7 @@ main section {
   color: #43366b;
   font-size: clamp(3rem, 5vw, 5.5rem);
   line-height: 1;
-  max-width: 900px;
+  max-width: 650px;
   margin: 20px 0 80px;
 }
 
@@ -2336,4 +2348,268 @@ z-index: 0;
 
 .wissen-stadt h3 {
   font-size: 1.45rem;
+}
+/* ========================================
+   TYPOGRAFIE – EINHEITLICHE FLIESSTEXTE
+======================================== */
+
+.hero p,
+#kurzfassung p,
+#domestikation p,
+#video p,
+#ausgangslage p,
+#kennzahlen p,
+#loesung p,
+#vorteile p,
+#forderung p,
+#mitmachen p,
+.about-intro,
+.support-section p,
+.game-section p,
+.faq-item p {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+}
+/* ========================================
+   DESKTOP – SECTION-HÖHEN HARMONISIEREN
+======================================== */
+
+@media (min-width: 769px) {
+  #start,
+  #forderung,
+  #kurzfassung,
+  #domestikation,
+  #video,
+  #ausgangslage,
+  #kennzahlen,
+  #loesung,
+  #vorteile,
+  #faq,
+  #mitmachen,
+  .support-section,
+  .game-section,
+  .voices-section,
+  .about-section {
+    min-height: 80vh;
+    height: auto;
+  }
+}
+/* ========================================
+   DESKTOP – EINHEITLICHE SECTION-ABSTÄNDE
+======================================== */
+
+@media (min-width: 769px) {
+  main section,
+  .vorteile-section,
+  .faq-section,
+  .support-section,
+  .game-section,
+  .voices-section,
+  .about-section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+@media (min-width: 769px) {
+    #mitmachen > p,
+    #mitmachen > h2,
+    #mitmachen > a {
+        transform: translateY(-45px);
+    }
+}
+/* ========================================
+   EINHEITLICHER BUTTON-STIL
+======================================== */
+
+.petition-button,
+.mobile-sticky-petition,
+.support-button,
+.super-pigeon-credit a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+
+  height: 48px !important;
+  padding: 0 18px !important;
+
+  border-radius: 999px !important;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 16px !important;
+  line-height: 1 !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+.super-pigeon-credit a {
+    margin-left: 10px;
+    background: #ffffff;
+    color: #3D3938;
+}
+
+.game-section .petition-button {
+    background: #B9D986 !important;
+    color: #3A305B !important;
+}
+/* ========================================
+   EINHEITLICHES CONTENT-RASTER
+======================================== */
+
+:root {
+    --text-column-width: 760px;
+    --wide-content-width: 1200px;
+}
+
+/* ----------------------------------------
+   TEXTSPALTE
+   Überschrift und zugehöriger Text
+   erhalten dieselbe Breite
+---------------------------------------- */
+
+#kurzfassung > p,
+#kurzfassung > h2,
+
+#domestikation > p,
+#domestikation > h2,
+
+#video > p,
+#video > h2,
+
+#ausgangslage > p,
+#ausgangslage > h2,
+
+#kennzahlen > p,
+#kennzahlen > h2,
+
+#loesung > p,
+#loesung > h2,
+#loesung .loesung-intro,
+#loesung .loesung-nutzen,
+#loesung .loesung-ziel,
+
+#vorteile > p,
+#vorteile > h2,
+
+#forderung > p,
+#forderung > h2,
+
+#mitmachen > p,
+#mitmachen > h2,
+#mitmachen .mitmachen-text,
+
+.support-section > p,
+.support-section > h2,
+
+.game-content > p,
+.game-content > h2,
+
+.voices-section .section-kicker,
+.voices-section h2,
+
+.about-section .section-kicker,
+.about-section h2,
+.about-section .about-intro,
+
+.faq-section > p,
+.faq-section > h2 {
+    width: 100%;
+    max-width: var(--text-column-width);
+}
+
+/* Überschriften möglichst ausgewogen umbrechen */
+
+#kurzfassung h2,
+#domestikation h2,
+#video h2,
+#ausgangslage h2,
+#kennzahlen h2,
+#loesung h2,
+#vorteile h2,
+#forderung h2,
+#mitmachen h2,
+.support-section h2,
+.game-section h2,
+.voices-section h2,
+.about-section h2,
+.faq-section h2 {
+    text-wrap: balance;
+}
+
+/* ----------------------------------------
+   BREITE INHALTE
+   Einheitliche Maximalbreite für Grids,
+   Karten und mehrspaltige Bereiche
+---------------------------------------- */
+
+.kennzahlen-grid,
+.loesung-grid,
+.forderungen-grid,
+.vorteile-grid,
+.faq-list,
+.game-content,
+.voices-inner,
+.about-team {
+    width: 100%;
+    max-width: var(--wide-content-width);
+    margin-left: 0;
+    margin-right: 0;
+}
+/* ========================================
+   SEITLICHE NAVIGATION – TRANSPARENT
+======================================== */
+
+.section-scroll-nav,
+.section-scroll-nav.is-on-purple {
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+}
+
+/* Helle Sections */
+
+.section-scroll-nav a {
+    width: 12px;
+    height: 12px;
+    background: transparent;
+    border: 2px solid #3A305B;
+    border-radius: 50%;
+    opacity: 0.7;
+    transition: all 0.2s ease;
+}
+
+/* Dunkle/Violette Sections */
+
+.section-scroll-nav.is-on-purple a {
+    background: transparent;
+    border-color: #BFD2B5;
+}
+
+/* Hover */
+
+.section-scroll-nav a:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+/* Scrollpunkte beim Berühren oder Anklicken ausfüllen */
+
+.section-scroll-nav a:hover,
+.section-scroll-nav a:focus,
+.section-scroll-nav a:focus-visible,
+.section-scroll-nav a:active {
+    background: #3A305B;
+    border-color: #3A305B;
+    opacity: 1;
+    transform: scale(1.25);
+    outline: none;
+}
+
+/* Auf dunklen Sections lindengrün ausfüllen */
+
+.section-scroll-nav.is-on-purple a:hover,
+.section-scroll-nav.is-on-purple a:focus,
+.section-scroll-nav.is-on-purple a:focus-visible,
+.section-scroll-nav.is-on-purple a:active {
+    background: #BFD2B5;
+    border-color: #BFD2B5;
 }
