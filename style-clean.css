@@ -1493,16 +1493,13 @@ footer p {
 
 @media (max-width: 768px) {
 
-  h1,
-  main section h2 {
+h1,
+main section h2 {
     width: 100%;
     max-width: 100%;
-    font-size: clamp(38px, 11vw, 52px);
-    line-height: 1;
-    letter-spacing: -0.04em;
-    overflow-wrap: anywhere;
-    word-break: normal;
-    text-wrap: wrap;
+    font-size: clamp(32px, 9vw, 44px);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
 }
 
     .hero {
