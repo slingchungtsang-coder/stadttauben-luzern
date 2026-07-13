@@ -379,7 +379,7 @@ footer p {
 .vergleich-card {
     background: #fff;
     border-radius: 18px;
-    padding: 2rem;
+    padding: 1.6rem;
     box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 }
 
@@ -395,7 +395,7 @@ footer p {
     justify-content: space-between;
     align-items: center;
     gap: 1.5rem;
-    padding: 0.9rem 0;
+    padding: 0.75rem 0;
     border-bottom: 1px solid rgba(58, 48, 91, 0.12);
     font-size: var(--font-size-body);
 }
@@ -422,6 +422,7 @@ footer p {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    font-style: italic;
 }
 
 /* FAQ */
@@ -733,11 +734,8 @@ footer p {
 }
 
 .voices-section h2 {
-    max-width: 650px;
-    margin: 20px 0 80px;
     color: #43366B;
-    font-size: clamp(3rem, 5vw, 5.5rem);
-    line-height: 1;
+    margin-bottom: 80px;
 }
 
 /* Wer wir sind */
@@ -762,9 +760,6 @@ footer p {
     max-width: 650px;
     margin: 24px 0;
     color: #403566;
-    font-size: clamp(48px, 6vw, 92px);
-    line-height: 0.95;
-    letter-spacing: -0.04em;
 }
 
 .about-intro {
@@ -784,12 +779,7 @@ footer p {
 }
 
 .support-section h2 {
-    max-width: 650px;
-    margin: 20px 0 32px;
     color: #403A3A;
-    font-size: clamp(48px, 6vw, 92px);
-    line-height: 0.95;
-    letter-spacing: -0.04em;
 }
 
 .support-section p {
@@ -814,10 +804,7 @@ footer p {
 }
 
 .game-section h2 {
-    max-width: 650px;
-    margin: 0 0 28px;
-    font-size: clamp(3rem, 7vw, 6rem);
-    line-height: 0.95;
+    margin-bottom: 28px;
 }
 
 .game-content > p {
@@ -844,11 +831,14 @@ footer p {
 #vorteile h2,
 .mitmachen h2,
 .support-section h2,
-.faq-section h2 {
+.faq-section h2,
+.voices-section h2,
+.game-section h2,
+.about-section h2 {
     width: 100%;
     max-width: min(1100px, 78vw);
     margin: 0 0 32px;
-    font-size: clamp(48px, 6vw, 92px);
+    font-size: clamp(48px, 5vw, 78px);
     line-height: 0.95;
     letter-spacing: -0.04em;
     text-wrap: balance;
