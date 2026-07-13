@@ -1,0 +1,1808 @@
+/* ==========================================================
+   Stadttauben Luzern
+   Haupt-Stylesheet
+
+   Struktur:
+   1. Reset
+   2. Variablen
+   3. Basis
+   4. Header
+   5. Navigation
+   6. Buttons
+   7. Komponenten
+   8. Startseite
+   9. Wissensseite
+  10. Medienseite
+  11. Mobile
+
+   Refactoring begonnen: Juli 2026
+========================================================== */
+
+
+/* ========================================
+   RESET
+======================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ========================================
+   VARIABLEN
+======================================== */
+
+:root {
+    --font-size-body: 20px;
+    --line-height-body: 1.6;
+    --font-size-small: 16px;
+    --font-size-lead: 22px;
+    --section-padding: 8%;
+    --text-column-width: 760px;
+    --wide-content-width: 1200px;
+}
+
+/* ========================================
+   BASIS
+======================================== */
+
+html,
+body {
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    color: #3D3938;
+    background: #FFFFFF;
+}
+
+main section {
+    position: relative;
+    min-height: 80vh;
+    padding: 70px var(--section-padding);
+    box-sizing: border-box;
+}
+
+h1 {
+    max-width: 1000px;
+    margin: 0 0 30px;
+    font-size: clamp(48px, 6vw, 92px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+}
+
+h1,
+h2,
+h3 {
+    hyphens: none;
+    -webkit-hyphens: none;
+    word-break: normal;
+    overflow-wrap: normal;
+}
+
+p {
+    max-width: var(--text-column-width);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+}
+
+main a {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 16px 28px;
+    background: #3D3938;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+    padding: 28px 8% 20px;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    border-bottom: 1px solid #3D3938;
+    background: #3A305B;
+    top: 0;
+    z-index: 100;
+    transition:
+        padding 0.25s ease,
+        background 0.25s ease;
+}
+
+header img {
+    filter: brightness(0) invert(1);
+}
+
+.logo {
+    margin-right: 35px;
+}
+
+.logo img {
+    display: block;
+    width: 170px;
+    height: auto;
+}
+
+/* ========================================
+   NAVIGATION
+======================================== */
+nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.main-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 52px;
+}
+
+.main-nav-links a {
+    white-space: nowrap;
+}
+/* ========================================
+   BUTTONS
+======================================== */
+
+.petition-button,
+.support-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 12px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.petition-button {
+    background: #EC4F91;
+    color: #FFFFFF;
+}
+
+.support-button {
+    margin-top: 38px;
+    background: #6B4EFF;
+    color: #FFFFFF;
+}
+
+.mobile-sticky-petition {
+    display: inline-flex;
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 999;
+    padding: 12px 18px;
+    border-radius: 999px;
+    background: #E85D9E;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    padding: 70px var(--section-padding);
+    background: #3D3938;
+    color: #FFFFFF;
+}
+
+footer p {
+    margin: 0 0 14px;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+.footer-logo {
+    display: block;
+    width: 120px;
+    height: auto;
+    margin-bottom: 35px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-links a,
+.footer-links a:visited {
+    color: #FFFFFF;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer-links a {
+    margin-top: 35px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 35px;
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+/* ========================================
+   KOMPONENTEN
+======================================== */
+
+/* Back to top */
+
+.back-to-top {
+    position: absolute;
+    left: var(--section-padding);
+    bottom: 50px;
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    text-decoration: none;
+    border-radius: 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.back-to-top:hover {
+    opacity: 0.6;
+}
+
+/* Scroll-Navigation */
+
+.section-scroll-nav {
+    position: fixed;
+    left: 24px;
+    top: 50%;
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    transform: translateY(-50%);
+}
+
+.section-scroll-nav a {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: 1.5px solid #3A305B;
+    border-radius: 50%;
+    opacity: 1;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.section-scroll-nav.is-on-purple a {
+    background: transparent;
+    border-color: #BFD2B5;
+}
+
+.section-scroll-nav a:hover,
+.section-scroll-nav a:focus,
+.section-scroll-nav a:focus-visible,
+.section-scroll-nav a:active {
+    background: #3A305B;
+    border-color: #3A305B;
+    opacity: 1;
+    outline: none;
+    transform: scale(1.25);
+}
+
+.section-scroll-nav.is-on-purple a:hover,
+.section-scroll-nav.is-on-purple a:focus,
+.section-scroll-nav.is-on-purple a:focus-visible,
+.section-scroll-nav.is-on-purple a:active {
+    background: #BFD2B5;
+    border-color: #BFD2B5;
+}
+
+/* Wissenskarten */
+
+.wissen-themen-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+    margin-top: 48px;
+}
+
+.wissen-thema {
+    grid-column: span 3;
+    min-height: 110px;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 28px;
+    text-decoration: none;
+}
+
+.wissen-thema:nth-child(5) {
+    grid-column: 2 / span 3;
+}
+
+.wissen-thema:nth-child(6),
+.wissen-thema:nth-child(7) {
+    grid-column: span 3;
+}
+
+.wissen-thema span {
+    font-size: 0.9rem;
+}
+
+.wissen-thema h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Vergleich Luzern / Augsburg */
+
+.vergleich-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.vergleich-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.vergleich-card h3 {
+    margin: 0 0 1.5rem;
+    font-size: 2rem;
+    color: #3A305B;
+    text-align: center;
+}
+
+.vergleich-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid rgba(58, 48, 91, 0.12);
+    font-size: 1.1rem;
+}
+
+.vergleich-row:last-child {
+    border-bottom: none;
+}
+
+.vergleich-row span {
+    color: #555;
+}
+
+.vergleich-row strong {
+    color: #3A305B;
+    font-weight: 700;
+    text-align: right;
+}
+
+.vergleich-hinweis {
+    margin-top: 2.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* FAQ */
+
+.faq-list {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0;
+}
+
+.faq-item {
+    border-top: 1px solid #403B3B;
+}
+
+.faq-item:last-child {
+    border-bottom: 1px solid #403B3B;
+}
+
+.faq-item summary {
+    position: relative;
+    padding: 28px 60px 28px 0;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.3;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    color: #3A305B;
+    font-size: 34px;
+    font-weight: 400;
+    transform: translateY(-50%);
+}
+
+.faq-item[open] summary::after {
+    content: "−";
+}
+
+.faq-item p {
+    max-width: 820px;
+    margin: 0;
+    padding: 0 60px 30px 0;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* Stimmenkarten */
+
+.voices-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.voice-card {
+    position: relative;
+    min-height: 300px;
+    padding: 45px 38px 38px;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border-radius: 24px;
+}
+
+.quote-mark {
+    display: block;
+    color: #43366B;
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 0.5;
+}
+
+.quote-mark-open {
+    margin-bottom: 0;
+}
+
+.quote-mark-close {
+    align-self: flex-end;
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+.voice-card blockquote {
+    margin: 0;
+    color: #3D3938;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.45;
+}
+
+.voice-person {
+    margin-top: auto;
+    padding-top: 12px;
+}
+
+.voice-name {
+    margin: 0 0 6px;
+    color: #43366B;
+    font-weight: 800;
+}
+
+.voice-role {
+    margin: 0;
+    color: #3D3938;
+    font-size: 0.95rem;
+}
+
+/* Teamkarten */
+
+.about-team {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    width: 100%;
+    max-width: var(--wide-content-width);
+    margin-left: 0;
+}
+
+.team-member img {
+    display: block;
+    width: 100%;
+    border-radius: 18px;
+}
+
+.team-member h3 {
+    margin-top: 16px;
+    font-size: 22px;
+}
+
+/* Game */
+
+.game-frame-wrap {
+    width: 100%;
+    margin: 55px 0 40px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 28px;
+}
+
+.super-pigeon-game {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.game-section .petition-button {
+    background: #B9D986;
+    color: #3A305B;
+}
+
+/* Formulare */
+
+
+/* ========================================
+   STARTSEITE
+======================================== */
+/* Hero */
+
+.hero {
+    background: #B0C1A9;
+}
+
+.hero h1 {
+    color: #3A305B;
+}
+
+.hero .petition-button {
+    background: #EC5795;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+/* Kurzfassung */
+
+#kurzfassung {
+    background: #F9F6EB;
+    color: #403B3B;
+}
+
+#kurzfassung h2,
+#kurzfassung p {
+    color: #403B3B;
+}
+
+/* Ausgangslage */
+
+#ausgangslage {
+    background: #C4D8BA;
+    color: #403B3B;
+}
+
+#ausgangslage h2,
+#ausgangslage p {
+    color: #3A305B;
+}
+
+/* Domestikation */
+
+#domestikation {
+    background: #FFFFFF;
+    color: #403B3B;
+}
+
+#domestikation h2,
+#domestikation p {
+    color: #403B3B;
+}
+
+/* Video */
+
+#video {
+    background: #3A305B;
+    color: #F9F6EB;
+}
+
+#video h2,
+#video p {
+    color: #F9F6EB;
+}
+
+/* Kennzahlen */
+
+#kennzahlen {
+    background: #403B3B;
+    color: #F9F6EB;
+}
+
+#kennzahlen h2,
+#kennzahlen h3,
+#kennzahlen p,
+#kennzahlen span {
+    color: #F9F6EB;
+}
+
+/* Lösung */
+
+#loesung {
+    background: #F9F6EB;
+    color: #403B3B;
+}
+
+#loesung h2,
+#loesung h3,
+#loesung p,
+#loesung span {
+    color: #403B3B;
+}
+
+/* Vorteile */
+
+#vorteile {
+    background: #3A305B;
+    color: #F9F6EB;
+}
+
+#vorteile h2,
+#vorteile h3,
+#vorteile p,
+#vorteile span {
+    color: #F9F6EB;
+}
+
+/* FAQ */
+
+#faq {
+    background: #FFFFFF;
+    color: #403B3B;
+}
+
+#faq h2,
+#faq h3,
+#faq p,
+#faq summary {
+    color: #403B3B;
+}
+
+/* Stimmen */
+
+.voices-section {
+    background: #F8E8EE;
+}
+
+.voices-inner {
+    width: 100%;
+    max-width: var(--wide-content-width);
+    margin: 0;
+}
+
+.voices-section h2 {
+    max-width: 650px;
+    margin: 20px 0 80px;
+    color: #43366B;
+    font-size: clamp(3rem, 5vw, 5.5rem);
+    line-height: 1;
+}
+
+/* Wer wir sind */
+
+.about-section {
+    min-height: auto;
+    height: auto;
+    background: #F4F0EA;
+}
+
+.about-inner {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+.about-section .section-kicker {
+    margin-bottom: 0;
+}
+
+.about-section h2 {
+    max-width: 650px;
+    margin: 24px 0;
+    color: #403566;
+    font-size: clamp(48px, 6vw, 92px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+}
+
+.about-intro {
+    max-width: var(--text-column-width);
+    margin-bottom: 60px;
+}
+
+/* Unterstützen */
+
+.support-section {
+    background: #B7C9B1;
+    color: #403A3A;
+}
+
+.support-section .section-kicker {
+    color: #403A3A;
+}
+
+.support-section h2 {
+    max-width: 650px;
+    margin: 20px 0 32px;
+    color: #403A3A;
+    font-size: clamp(48px, 6vw, 92px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+}
+
+.support-section p {
+    max-width: var(--text-column-width);
+}
+
+/* Game */
+
+.game-section {
+    background: #3A305B;
+    color: #FFFFFF;
+}
+
+.game-content {
+    width: 100%;
+    max-width: var(--wide-content-width);
+    margin: 0;
+}
+
+.game-section .section-label {
+    margin-bottom: 18px;
+}
+
+.game-section h2 {
+    max-width: 650px;
+    margin: 0 0 28px;
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 0.95;
+}
+
+.game-content > p {
+    max-width: 650px;
+}
+
+/* Gemeinsame Inhaltsbreiten */
+
+.content-column,
+.support-inner {
+    width: 100%;
+    max-width: var(--wide-content-width);
+}
+
+/* Überschriften der Startseite */
+
+#forderung h2,
+#kurzfassung h2,
+#video h2,
+#domestikation h2,
+#ausgangslage h2,
+#kennzahlen h2,
+#loesung h2,
+#vorteile h2,
+#mitmachen h2,
+.support-section h2,
+.faq-section h2 {
+    width: 100%;
+    max-width: var(--text-column-width);
+    margin: 0 0 32px;
+    font-size: clamp(48px, 6vw, 92px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+}
+
+/* Forderung */
+
+#forderung {
+    overflow: hidden;
+    background: #3D3938;
+    color: #F9F6EB;
+}
+
+#forderung h2,
+#forderung p {
+    position: relative;
+    z-index: 1;
+    color: #F9F6EB;
+}
+
+#forderung .petition-button {
+    position: relative;
+    z-index: 2;
+}
+
+/* Video */
+
+.video-placeholder {
+    width: 100%;
+    max-width: 900px;
+    min-height: 420px;
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+}
+
+.video-placeholder p {
+    margin: 0;
+}
+
+/* Lösung */
+
+.loesung-intro {
+    max-width: var(--text-column-width);
+    margin: 0 0 70px;
+    font-size: var(--font-size-lead);
+    line-height: 1.5;
+}
+
+.loesung-grid {
+    width: 100%;
+    max-width: var(--wide-content-width);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+}
+
+.loesung-grid > div {
+    padding-top: 24px;
+    border-top: 1px solid #3D3938;
+}
+
+.loesung-grid span {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+.loesung-grid h3 {
+    margin: 0 0 16px;
+    font-size: 28px;
+    line-height: 1.15;
+}
+
+.loesung-grid p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.loesung-nutzen,
+.loesung-ziel {
+    max-width: var(--text-column-width);
+    font-size: 24px;
+}
+
+.loesung-nutzen {
+    margin: 28px 0 0;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.loesung-ziel {
+    margin: 28px 0 0;
+    line-height: 1.35;
+}
+
+.ziel-label {
+    font-weight: 700;
+}
+
+.toetung-hinweis {
+    max-width: 52rem;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid currentColor;
+}
+
+.toetung-hinweis h3 {
+    margin: 0 0 1rem;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+/* Vorteile */
+
+.vorteile-grid {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 45px;
+}
+
+.vorteile-grid > div {
+    padding-top: 28px;
+    border-top: 1px solid currentColor;
+}
+
+.vorteile-grid h3 {
+    margin: 0 0 22px;
+    font-size: 1.8rem;
+}
+
+.vorteile-grid p {
+    margin: 0 0 16px;
+}
+
+/* Mitmachen */
+
+.mitmachen {
+    min-height: 80vh;
+    overflow: hidden;
+    background: #3A305B;
+    color: #F9F6EB;
+}
+
+.mitmachen h2,
+.mitmachen p {
+    position: relative;
+    z-index: 2;
+    color: #F9F6EB;
+}
+
+.mitmachen-text {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+    margin: 0 0 40px;
+    font-size: var(--font-size-lead);
+    line-height: 1.5;
+}
+
+.mitmachen .petition-button {
+    position: relative;
+    z-index: 2;
+}
+
+/* Dekorative Taubenbilder */
+
+.section-pigeon {
+    position: absolute;
+    display: block;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.section-pigeon-forderung,
+.section-pigeon-mitmachen {
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 38%;
+    max-width: 520px;
+    height: auto;
+    mask-image:
+        linear-gradient(to right, transparent 0%, black 35%, black 100%),
+        linear-gradient(to bottom, transparent 0%, black 25%, black 100%);
+    mask-composite: intersect;
+    -webkit-mask-image:
+        linear-gradient(to right, transparent 0%, black 35%, black 100%),
+        linear-gradient(to bottom, transparent 0%, black 25%, black 100%);
+    -webkit-mask-composite: source-in;
+}
+
+/* Super Pigeon */
+
+.super-pigeon-credit {
+    max-width: 650px;
+    font-size: var(--font-size-small);
+}
+
+.super-pigeon-credit a {
+    margin-left: 10px;
+    background: #FFFFFF;
+    color: #3D3938;
+}
+
+/* ========================================
+   WISSENSSEITE
+======================================== */
+
+/* Hero und Themenübersicht */
+
+.wissen-hero {
+    min-height: auto;
+    padding: 100px var(--section-padding) 30px;
+}
+
+.wissen-hero-inner,
+.wissen-themen-inner,
+.wissen-kapitel-inner {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.wissen-intro {
+    max-width: 820px;
+}
+
+.wissen-themen {
+    min-height: auto;
+    padding: 30px var(--section-padding) 20px;
+}
+
+/* Wissenskapitel */
+
+.wissen-kapitel {
+    min-height: auto;
+    padding: 40px var(--section-padding) 80px;
+}
+
+.wissen-kapitel h2 {
+    max-width: var(--text-column-width);
+}
+
+.wissen-kapitel-lead {
+    max-width: 820px;
+    margin-top: 32px;
+    font-size: 1.35rem;
+    line-height: 1.55;
+}
+
+.wissen-text {
+    max-width: 820px;
+    margin-top: 56px;
+}
+
+.wissen-text p {
+    margin-bottom: 24px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.wissen-kapitel-alt {
+    background: #F3F0EB;
+}
+
+/* Quellen */
+
+.wissen-quellen {
+    margin-top: 80px;
+}
+
+.wissen-quelle {
+    margin-top: 32px;
+    padding: 40px;
+    border-top: 1px solid #3F3B3B;
+    border-bottom: 1px solid #3F3B3B;
+}
+
+.wissen-quelle + .wissen-quelle {
+    border-top: none;
+}
+
+.wissen-quelle-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 48px;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+}
+
+.wissen-quelle h3 {
+    max-width: var(--text-column-width);
+    margin-bottom: 24px;
+    font-size: 2rem;
+    line-height: 1.15;
+}
+
+.wissen-quelle p {
+    max-width: var(--text-column-width);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.wissen-quelle-link {
+    display: inline-block;
+    margin-top: 32px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.wissen-quelle-link:focus,
+.wissen-quelle-link:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Städtebeispiele */
+
+.wissen-staedte {
+    margin-top: 80px;
+}
+
+.wissen-stadt {
+    margin-top: 32px;
+    padding: 28px;
+    overflow: hidden;
+    background: #3F3B3B;
+    color: #F3F0EB;
+    border-radius: 32px;
+}
+
+.wissen-stadt-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 56px;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+}
+
+.wissen-stadt h3,
+.wissen-stadt p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: auto;
+}
+
+.wissen-stadt h3 {
+    margin-bottom: 24px;
+    font-size: 1.45rem;
+    line-height: 1.15;
+}
+
+.wissen-stadt p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.wissen-stadt .wissen-quelle-link {
+    color: #F3F0EB;
+}
+
+/* Eingebettete Videos */
+
+.wissen-video {
+    max-width: 900px;
+    margin-top: 40px;
+    margin-bottom: 32px;
+    aspect-ratio: 16 / 9;
+}
+
+.wissen-video iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Unterseiten-Navigation */
+
+.subpage-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    padding: 28px var(--section-padding) 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 48px;
+    background: rgba(243, 240, 235, 0.92);
+    backdrop-filter: blur(12px);
+}
+
+.subpage-logo {
+    flex-shrink: 0;
+    margin-right: 20px;
+    color: #3F3B3B;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.subpage-logo img {
+    display: block;
+    width: 170px;
+    height: auto;
+    filter: brightness(0) saturate(100%);
+    opacity: 0.75;
+}
+
+.subpage-nav {
+    margin-left: 0;
+    display: flex;
+    gap: 32px;
+    overflow: visible;
+}
+
+.subpage-nav a {
+    color: #3F3B3B;
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+/* Rechte Kapitelnavigation */
+
+.wissen-scroll-nav {
+    position: fixed;
+    right: 28px;
+    top: 50%;
+    z-index: 90;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transform: translateY(-50%);
+}
+
+.wissen-scroll-nav a {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid #3D3938;
+    border-radius: 50%;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.wissen-scroll-nav a:hover {
+    background: #3D3938;
+    border-color: #3D3938;
+    transform: scale(1.25);
+}
+
+/* ========================================
+   MEDIENSEITE
+======================================== */
+
+/* Seitenabstände */
+
+.medien-hero {
+    min-height: auto;
+    padding: 80px var(--section-padding) 40px;
+}
+
+.medien-section {
+    min-height: auto;
+    padding: 60px var(--section-padding) 80px;
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+/* Grundlayout und Hauptnavigation */
+
+@media (max-width: 768px) {
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        padding-bottom: 100px;
+    }
+
+    main section {
+        min-height: auto;
+        padding: 70px 6%;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    header {
+        width: 100%;
+        padding: 24px 0;
+        overflow: hidden;
+    }
+
+    header nav,
+    .main-nav {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 22px;
+        text-align: center;
+    }
+
+    .logo {
+        margin: 0 auto 10px;
+    }
+
+    .logo img {
+        width: 220px;
+        max-width: 72vw;
+        margin: 0 auto;
+    }
+
+    .main-nav-links {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .main-nav-links a {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .compact-nav-links {
+        display: none;
+    }
+
+    header.is-compact {
+        padding: 10px 5%;
+    }
+
+    header.is-compact .main-nav {
+        flex-direction: row;
+    }
+
+    header.is-compact .logo img {
+        width: 54px;
+    }
+
+    header.is-compact .compact-nav-links {
+        display: flex;
+        margin-left: auto;
+        gap: 16px;
+    }
+
+    header.is-compact .compact-nav-links a {
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+}
+
+
+/* Mobile Buttons */
+
+@media (max-width: 768px) {
+    .petition-button {
+        display: none;
+    }
+
+    .support-button,
+    .mobile-sticky-petition {
+        display: inline-flex;
+    }
+
+    .mobile-sticky-petition {
+        right: 18px;
+        bottom: 18px;
+    }
+
+    .game-section .petition-button {
+        display: inline-flex;
+        max-width: 100%;
+        margin-top: 36px;
+        justify-content: center;
+        text-align: center;
+    }
+}
+/* Mobile Typografie und Hero */
+
+@media (max-width: 768px) {
+    h1,
+    .loesung h2,
+    .forderungen h2,
+    .mitmachen h2,
+    .fuetterung h2 {
+        font-size: clamp(38px, 11vw, 58px);
+        line-height: 0.95;
+        letter-spacing: -0.04em;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 80px 24px 120px;
+    }
+
+    .hero h1 {
+        max-width: 100%;
+        font-size: clamp(38px, 11vw, 52px);
+        line-height: 0.95;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .hero p {
+        max-width: 100%;
+    }
+
+    .loesung h2,
+    .forderungen h2 {
+        max-width: 100%;
+        font-size: clamp(38px, 11vw, 52px);
+        line-height: 0.95;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+}
+
+/* Mobile Grids */
+
+@media (max-width: 768px) {
+    .fakten-grid,
+    .loesung-grid,
+    .forderungen-grid,
+    .fuetterung {
+        display: block;
+    }
+
+    .fakten-grid > div,
+    .loesung-grid > div,
+    .forderung {
+        margin-bottom: 45px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .fakt-zahl {
+        font-size: 52px;
+        white-space: normal;
+    }
+}
+
+@media (max-width: 480px) {
+    .loesung h2 {
+        font-size: 36px;
+        line-height: 1;
+    }
+}
+
+/* Mobile Vergleich und Startseiten-Komponenten */
+
+@media (max-width: 768px) {
+
+    /* Vergleich Luzern / Augsburg */
+
+    .vergleich-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-top: 40px;
+    }
+
+    .vergleich-card {
+        padding: 26px 22px;
+    }
+
+    .vergleich-card h3 {
+        margin-bottom: 18px;
+        font-size: 1.7rem;
+    }
+
+    .vergleich-row {
+        align-items: flex-start;
+        gap: 16px;
+        padding: 14px 0;
+        font-size: 18px;
+    }
+
+    .vergleich-row span,
+    .vergleich-row strong {
+        width: 50%;
+    }
+
+    .vergleich-row strong {
+        overflow-wrap: break-word;
+    }
+
+    .vergleich-hinweis {
+        margin-top: 32px;
+        font-size: 18px;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    /* Erklärvideo */
+
+    .video-placeholder {
+        min-height: 260px;
+        margin-top: 36px;
+        padding: 24px;
+        text-align: center;
+    }
+
+    /* Lösung */
+
+    .loesung-grid {
+        display: block;
+    }
+
+    .loesung-grid > div {
+        margin-bottom: 40px;
+    }
+
+    .loesung-nutzen,
+    .loesung-ziel {
+        max-width: 100%;
+        font-size: 21px;
+    }
+
+    .toetung-hinweis {
+        margin-top: 48px;
+    }
+
+    /* Mitmachen und dekorative Taubenbilder */
+
+    #forderung,
+    .mitmachen {
+        padding-bottom: 55vw;
+    }
+
+    .section-pigeon-forderung,
+    .section-pigeon-mitmachen {
+        width: 58%;
+        max-width: 320px;
+    }
+
+    /* Super Pigeon */
+
+    .game-frame-wrap {
+        display: none;
+    }
+
+    .super-pigeon-game {
+        display: none;
+    }
+
+    .game-section .petition-button {
+        display: inline-flex;
+    }
+
+    .super-pigeon-credit {
+        margin-top: 32px;
+        font-size: 16px;
+    }
+
+    .super-pigeon-credit a {
+        margin-left: 0;
+        margin-top: 12px;
+    }
+}
+
+/* Mobile Vorteile */
+
+@media (max-width: 700px) {
+    .vorteile-section {
+        padding: 75px 7%;
+    }
+
+    .vorteile-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .vorteile-section > h2 {
+        margin-bottom: 45px;
+    }
+}
+
+
+/* Mobile FAQ */
+
+@media (max-width: 700px) {
+    .faq-section {
+        padding: 75px 7%;
+    }
+
+    .faq-section h2 {
+        margin-bottom: 40px;
+        font-size: 40px;
+        line-height: 1.05;
+    }
+
+    .faq-item summary {
+        padding: 24px 45px 24px 0;
+        font-size: 20px;
+    }
+
+    .faq-item p {
+        padding: 0 45px 28px 0;
+        font-size: 18px;
+    }
+}
+
+
+/* Mobile Stimmenkarten */
+
+@media (max-width: 768px) {
+    .voices-section h2 {
+        max-width: 100%;
+        margin: 18px 0 55px;
+        font-size: clamp(2.8rem, 13vw, 4rem);
+        line-height: 1.05;
+        overflow-wrap: break-word;
+    }
+
+    .voices-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .voice-card {
+        min-height: 300px;
+        padding: 45px 38px 38px;
+    }
+}
+
+/* Mobile Teamkarten */
+
+@media (max-width: 768px) {
+    .about-team {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 34px;
+    }
+
+    .team-member img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+
+    .team-member h3 {
+        margin-top: 12px;
+        font-size: 28px;
+    }
+}
+
+/* Mobile Wissensseite */
+
+@media (max-width: 768px) {
+
+    .wissen-hero {
+        padding: 80px 6% 30px;
+    }
+
+    .wissen-intro,
+    .wissen-text,
+    .wissen-kapitel-lead {
+        max-width: 100%;
+    }
+
+    .wissen-themen-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .wissen-thema,
+    .wissen-thema:nth-child(5),
+    .wissen-thema:nth-child(6),
+    .wissen-thema:nth-child(7) {
+        grid-column: auto;
+        min-height: 145px;
+        padding: 26px 28px;
+    }
+
+    .wissen-kapitel {
+        padding: 60px 6%;
+    }
+
+    .wissen-quelle {
+        padding: 28px;
+    }
+
+    .wissen-quelle-meta,
+    .wissen-stadt-meta {
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 28px;
+    }
+
+    .wissen-stadt {
+        padding: 24px;
+    }
+
+    .wissen-video {
+        margin-top: 28px;
+    }
+
+    .wissen-scroll-nav {
+        display: none;
+    }
+}
+
+/* Mobile Unterseiten-Navigation */
+
+@media (max-width: 768px) {
+
+    .subpage-header {
+        padding: 22px 6%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .subpage-logo {
+        margin: 0;
+    }
+
+    .subpage-logo img {
+        width: 180px;
+    }
+
+    .subpage-nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .subpage-nav a {
+        font-size: 14px;
+    }
+}
+/* Mobile Medienseite */
+
+@media (max-width: 768px) {
+    .medien-hero {
+        min-height: auto;
+        padding: 60px 6% 30px;
+    }
+
+    .medien-section {
+        min-height: auto;
+        padding: 45px 6% 65px;
+    }
+}

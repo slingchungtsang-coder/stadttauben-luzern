@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stadttauben Luzern</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-clean.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -33,6 +33,7 @@
   <a href="index.html#loesung">Lösung</a>
   <a href="index.html#faq">Häufige Fragen</a>
   <a href="wissen.html">Wissen</a>
+  <a href="agenda.html">Agenda</a>
   <a href="medien.html">Medien</a>
   <a href="index.html#unterstuetzen">Unterstützen</a>
   <a href="index.html#ueber-uns">Über uns</a>
@@ -172,22 +173,78 @@
 </section>
 
 <section id="kennzahlen" class="kennzahlen-section">
-    <p>Stadttauben in Luzern</p>
+    <p>Vergleich</p>
 
-    <h2>Die bestehenden Taubenschläge erreichen nur einen kleinen Teil der Population.</h2>
+    <h2>Ähnliche Population – unterschiedliches Management.</h2>
 
-    <div class="kennzahlen-grid">
-        <div class="kennzahl">
-            <span class="kennzahl-zahl">ca. 2'500</span>
-            <span class="kennzahl-text">Stadttauben leben schätzungsweise in Luzern</span>
+<div class="vergleich-grid">
+
+    <div class="vergleich-card">
+        <h3>Luzern 🇨🇭</h3>
+
+        <div class="vergleich-row">
+            <span>Stadttauben</span>
+            <strong>ca. 2'500</strong>
         </div>
 
-        <div class="kennzahl">
-            <span class="kennzahl-zahl">180</span>
-            <span class="kennzahl-text">Brutpaare finden Platz in den zwei städtischen Taubenschlägen</span>
+        <div class="vergleich-row">
+            <span>Betreute Taubenschläge</span>
+            <strong>2</strong>
         </div>
+
+        <div class="vergleich-row">
+            <span>Brutplätze</span>
+            <strong>180 Brutpaare (≈ 14 %)</strong>
+        </div>
+
+        <div class="vergleich-row">
+            <span>Kontrollierte Fütterung</span>
+            <strong>Nein</strong>
+        </div>
+
+        <div class="vergleich-row">
+            <span>Gesundheitskontrollen</span>
+            <strong>Nein</strong>
+        </div>
+
     </div>
-    
+
+    <div class="vergleich-card">
+        <h3>Augsburg 🇩🇪</h3>
+
+        <div class="vergleich-row">
+            <span>Stadttauben</span>
+            <strong>ca. 2'000</strong>
+        </div>
+
+        <div class="vergleich-row">
+            <span>Betreute Taubenschläge</span>
+            <strong>10</strong>
+        </div>
+
+        <div class="vergleich-row">
+            <span>Eiertausch</span>
+            <strong>7'000–8'000 Eier/Jahr</strong>
+        </div>
+
+        <div class="vergleich-row">
+            <span>Kontrollierte Fütterung</span>
+            <strong>Ja</strong>
+        </div>
+
+        <div class="vergleich-row">
+            <span>Gesundheitskontrollen</span>
+            <strong>Ja</strong>
+        </div>
+
+    </div>
+
+</div>
+
+    <p class="vergleich-hinweis">
+Das Augsburger Modell zeigt seit Jahrzehnten, dass konsequent betreute Taubenschläge eine Stadttaubenpopulation langfristig nachhaltig und tiergerecht regulieren können.
+</p>
+
 </section>
 
 <section id="loesung" class="loesung">
@@ -239,8 +296,9 @@
 </div>
 
 <p class="loesung-nutzen">
-        Dadurch wird ein grosser Teil der Tauben dauerhaft an die betreuten Schläge gebunden. 
-        Der Grossteil des Kots fällt dort an und kann fachgerecht entsorgt werden.
+    Dadurch wird ein grosser Teil der Tauben dauerhaft an die betreuten Schläge gebunden.
+    Der Grossteil des Kots fällt dort an und kann fachgerecht entsorgt werden.
+</p>
 
 <p class="loesung-ziel">
   <span class="ziel-label">Ziel:</span> Ein sauberes, konfliktarmes und tiergerechtes Zusammenleben von Bevölkerung und Stadttauben.
@@ -521,7 +579,7 @@ Tauben ihr artspezifisches Verhalten weiterhin ausleben können.
   
 </section>
 
-<section id="mitmachen" class="mitmachen">
+<section id="petition-formular" class="mitmachen">
   <img src="20250609_Stadttauben_Schweiz_3.jpg" alt="" class="section-pigeon section-pigeon-mitmachen">
 
   <p>Jetzt mitmachen</p>
@@ -704,6 +762,7 @@ Tauben ihr artspezifisches Verhalten weiterhin ausleben können.
   const stickyButton = document.querySelector('.mobile-sticky-petition');
   const petitionForm = document.querySelector('#petition-formular');
 
+if (stickyButton && petitionForm) {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       stickyButton.style.display = entry.isIntersecting ? 'none' : '';
@@ -711,6 +770,8 @@ Tauben ihr artspezifisches Verhalten weiterhin ausleben können.
   });
 
   observer.observe(petitionForm);
+}
+
 </script>
 
 <script>
