@@ -337,7 +337,7 @@ footer p {
 
 .wissen-thema {
     grid-column: span 3;
-    min-height: 110px;
+    min-height: 150px;
     padding: 20px 24px;
     display: flex;
     flex-direction: column;
@@ -397,7 +397,7 @@ footer p {
     gap: 1.5rem;
     padding: 0.9rem 0;
     border-bottom: 1px solid rgba(58, 48, 91, 0.12);
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
 }
 
 .vergleich-row:last-child {
@@ -417,7 +417,7 @@ footer p {
 .vergleich-hinweis {
     margin-top: 2.5rem;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: var(--font-size-body);
     line-height: 1.7;
     max-width: 900px;
     margin-left: auto;
@@ -516,7 +516,7 @@ footer p {
 .voice-card blockquote {
     margin: 0;
     color: #3D3938;
-    font-size: 1rem;
+    font-size: var(--font-size-body);
     font-weight: 500;
     line-height: 1.45;
 }
@@ -664,6 +664,18 @@ footer p {
 #kennzahlen p,
 #kennzahlen span {
     color: #F9F6EB;
+}
+
+#kennzahlen .vergleich-card h3 {
+    color: #3A305B;
+}
+
+#kennzahlen .vergleich-row span {
+    color: #5A5553;
+}
+
+#kennzahlen .vergleich-row strong {
+    color: #3A305B;
 }
 
 /* Lösung */
@@ -830,11 +842,11 @@ footer p {
 #kennzahlen h2,
 #loesung h2,
 #vorteile h2,
-#mitmachen h2,
+.mitmachen h2,
 .support-section h2,
 .faq-section h2 {
     width: 100%;
-    max-width: var(--text-column-width);
+    max-width: min(1100px, 78vw);
     margin: 0 0 32px;
     font-size: clamp(48px, 6vw, 92px);
     line-height: 0.95;
@@ -916,7 +928,7 @@ footer p {
 
 .loesung-grid p {
     margin: 0;
-    font-size: 18px;
+    font-size: var(--font-size-body);
     line-height: 1.5;
 }
 
@@ -1044,9 +1056,14 @@ footer p {
 }
 
 .super-pigeon-credit a {
+    display: inline-block;
     margin-left: 10px;
+    padding: 8px 22px;
     background: #FFFFFF;
     color: #3D3938;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
 }
 
 /* ========================================
@@ -1102,7 +1119,7 @@ footer p {
 
 .wissen-text p {
     margin-bottom: 24px;
-    font-size: 1.05rem;
+    font-size: var(--font-size-body);
     line-height: 1.7;
 }
 
@@ -1145,7 +1162,7 @@ footer p {
 
 .wissen-quelle p {
     max-width: var(--text-column-width);
-    font-size: 1.05rem;
+    font-size: var(--font-size-body);
     line-height: 1.7;
 }
 
@@ -1154,6 +1171,14 @@ footer p {
     margin-top: 32px;
     font-weight: 600;
     text-decoration: none;
+    color: #F3F0EB;
+    transition: color 0.2s ease;
+
+}
+
+.wissen-quelle-link:hover {
+    background: #FFFFFF;
+    transform: translateY(-2px);
 }
 
 .wissen-quelle-link:focus,
@@ -1201,12 +1226,24 @@ footer p {
 }
 
 .wissen-stadt p {
-    font-size: 1.05rem;
+    font-size: var(--font-size-body);
     line-height: 1.7;
 }
 
 .wissen-stadt .wissen-quelle-link {
-    color: #F3F0EB;
+    background: #F3F0EB;
+    color: #3A305B;
+    padding: 12px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(243, 240, 235, 0.35);
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.wissen-stadt .wissen-quelle-link:hover {
+    background: #FFFFFF;
+    transform: translateY(-2px);
 }
 
 /* Eingebettete Videos */
