@@ -404,18 +404,6 @@ footer p {
     box-shadow: 0 10px 30px rgba(0,0,0,.06);
 }
 
-.vergleich-row-einrichtungen span,
-.vergleich-row-einrichtungen strong {
-    white-space: nowrap;
-}
-
-.vergleich-card h3 {
-    margin: 0 0 1.5rem;
-    font-size: 2rem;
-    color: #3A305B;
-    text-align: center;
-}
-
 .vergleich-card h3 {
     margin: 0 0 1.5rem;
     font-size: 2rem;
@@ -1393,12 +1381,6 @@ footer p {
         overflow-x: hidden;
     }
 
-    html,
-    body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
     body {
         padding-bottom: 100px;
     }
@@ -1510,15 +1492,18 @@ footer p {
 /* Mobile Typografie und Hero */
 
 @media (max-width: 768px) {
-    h1,
-    .loesung h2,
-    .forderungen h2,
-    .mitmachen h2,
-    .fuetterung h2 {
-        font-size: clamp(38px, 11vw, 58px);
-        line-height: 0.95;
-        letter-spacing: -0.04em;
-    }
+
+  h1,
+  main section h2 {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(38px, 11vw, 52px);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    text-wrap: wrap;
+}
 
     .hero {
         min-height: auto;
@@ -1591,6 +1576,8 @@ footer p {
     }
 
     .vergleich-card {
+        width: 100%;
+        min-width: 0;
         padding: 26px 22px;
     }
 
@@ -1609,10 +1596,13 @@ footer p {
     .vergleich-row span,
     .vergleich-row strong {
         width: 50%;
+        min-width: 0;
+        white-space: normal;
+        overflow-wrap: anywhere;
     }
 
     .vergleich-row strong {
-        overflow-wrap: break-word;
+        text-align: right;
     }
 
     .vergleich-hinweis {
@@ -1621,6 +1611,7 @@ footer p {
         line-height: 1.6;
         text-align: left;
     }
+
 
     /* Erklärvideo */
 
