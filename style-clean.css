@@ -1557,7 +1557,7 @@ footer p {
 }
 
 @media (max-width: 480px) {
-    .loesung h2 {
+    #loesung h2 {
         font-size: 36px;
         line-height: 1;
     }
@@ -1632,6 +1632,11 @@ footer p {
         margin-bottom: 40px;
     }
 
+    .loesung-grid h3 {
+    font-size: 26px;
+    line-height: 1.15;
+}
+
     .loesung-nutzen,
     .loesung-ziel {
         max-width: 100%;
@@ -1705,11 +1710,9 @@ footer p {
         padding: 75px 7%;
     }
 
-    .faq-section h2 {
-        margin-bottom: 40px;
-        font-size: 40px;
-        line-height: 1.05;
-    }
+   .faq-section h2 {
+    margin-bottom: 40px;
+}
 
     .faq-item summary {
         padding: 24px 45px 24px 0;
@@ -1729,9 +1732,6 @@ footer p {
     .voices-section h2 {
         max-width: 100%;
         margin: 18px 0 55px;
-        font-size: clamp(2.8rem, 13vw, 4rem);
-        line-height: 1.05;
-        overflow-wrap: break-word;
     }
 
     .voices-grid {
