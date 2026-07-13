@@ -1493,39 +1493,39 @@ footer p {
 
 @media (max-width: 768px) {
 
-h1,
-main section h2 {
-    width: 100%;
-    max-width: 100%;
-    font-size: clamp(28px, 8vw, 38px);
-    line-height: 1.08;
-    letter-spacing: -0.02em;
-}
-
     .hero {
         min-height: auto;
         padding: 80px 24px 120px;
     }
 
-    .hero h1 {
+    .hero h1,
+    #forderung h2,
+    #kurzfassung h2,
+    #video h2,
+    #domestikation h2,
+    #ausgangslage h2,
+    #kennzahlen h2,
+    #loesung h2,
+    #vorteile h2,
+    .mitmachen h2,
+    .support-section h2,
+    .faq-section h2,
+    .voices-section h2,
+    .game-section h2,
+    .about-section h2 {
+        width: 100%;
         max-width: 100%;
-        font-size: clamp(38px, 11vw, 52px);
-        line-height: 0.95;
-        overflow-wrap: anywhere;
-        word-break: break-word;
+        font-size: clamp(30px, 8vw, 38px);
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+        overflow-wrap: normal;
+        word-break: normal;
+        hyphens: none;
+        text-wrap: wrap;
     }
 
     .hero p {
         max-width: 100%;
-    }
-
-    .loesung h2,
-    .forderungen h2 {
-        max-width: 100%;
-        font-size: clamp(38px, 11vw, 52px);
-        line-height: 0.95;
-        overflow-wrap: anywhere;
-        word-break: break-word;
     }
 }
 
