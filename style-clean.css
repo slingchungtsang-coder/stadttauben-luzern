@@ -202,6 +202,29 @@ nav a:hover {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
+.petition-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.petition-button-secondary {
+    display: inline-flex;
+    margin-top: 16px;
+    background: transparent;
+    color: #F9F6EB;
+    border: 2px solid rgba(249, 246, 235, 0.8);
+    box-shadow: none;
+}
+
+.petition-button-secondary:hover {
+    background: rgba(249, 246, 235, 0.08);
+    border-color: #F9F6EB;
+    display: flex;
+    width: fit-content;
+}
+
 /* ========================================
    FOOTER
 ======================================== */
