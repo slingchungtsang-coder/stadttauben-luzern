@@ -561,7 +561,7 @@ footer p {
 .voice-card blockquote {
     margin: 0;
     color: #3D3938;
-    font-size: var(--font-size-body);
+    font-size: 19px;
     font-weight: 500;
     line-height: 1.45;
 }
@@ -1490,7 +1490,10 @@ footer p {
 /* Mobile Buttons */
 
 @media (max-width: 768px) {
-    .petition-button {
+
+    .hero .petition-button,
+    #forderung .petition-button,
+    .mitmachen .petition-button {
         display: none;
     }
 
@@ -1512,6 +1515,7 @@ footer p {
         text-align: center;
     }
 }
+
 /* Mobile Typografie und Hero */
 
 @media (max-width: 768px) {
