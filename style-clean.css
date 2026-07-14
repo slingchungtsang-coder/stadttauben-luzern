@@ -1485,24 +1485,24 @@ footer p {
         font-size: 0.8rem;
         white-space: nowrap;
     }
-}
 
+}
 
 /* Mobile Buttons */
 
 @media (max-width: 768px) {
 
-     .hero .petition-button,
-     #forderung .petition-button,
-     .mitmachen .petition-button:not(.petition-form-button) {
+    .hero .petition-button,
+    #forderung .petition-button,
+    .mitmachen .petition-button:not(.petition-form-button) {
         display: none;
     }
 
-     .mitmachen .petition-form-button,
-     .support-button,
-     .mobile-sticky-petition {
+    .mitmachen .petition-form-button,
+    .support-button,
+    .mobile-sticky-petition {
         display: inline-flex;
-}
+    }
 
     .mobile-sticky-petition {
         right: 18px;
@@ -1515,6 +1515,10 @@ footer p {
         margin-top: 36px;
         justify-content: center;
         text-align: center;
+    }
+
+    .petition-form-button {
+        margin-top: -16px;
     }
 }
 
