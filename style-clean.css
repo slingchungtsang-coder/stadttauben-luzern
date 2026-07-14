@@ -901,7 +901,7 @@ footer p {
     color: #F9F6EB;
 }
 
-#forderung .petition-button {
+#forderung .petition-buttons {
     position: relative;
     z-index: 2;
 }
@@ -1503,6 +1503,10 @@ footer p {
     .mitmachen .petition-button:not(.petition-form-button) {
         display: none;
     }
+
+    #forderung .petition-buttons {
+    margin-top: 36px;
+}
 
     .mitmachen .petition-form-button,
     .support-button,
