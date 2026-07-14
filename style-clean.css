@@ -1493,10 +1493,11 @@ footer p {
 
     .hero .petition-button,
     #forderung .petition-button,
-    .mitmachen .petition-button {
+    .mitmachen .petition-button:not(.petition-button-secondary) {
         display: none;
     }
 
+    .mitmachen .petition-button-secondary,
     .support-button,
     .mobile-sticky-petition {
         display: inline-flex;
@@ -1558,6 +1559,19 @@ footer p {
         max-width: 100%;
     }
 }
+
+   /* Einheitliche Fliesstextgrösse */
+
+    main section p,
+    .loesung-intro,
+    .loesung-nutzen,
+    .loesung-ziel,
+    .mitmachen-text,
+    .voice-card blockquote,
+    .faq-item p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
 
 /* Mobile Grids */
 
