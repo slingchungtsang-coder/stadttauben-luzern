@@ -209,20 +209,21 @@ nav a:hover {
     gap: 24px;
 }
 
-.petition-button-secondary {
+.petition-form-button {
     display: inline-flex;
+    width: fit-content;
     margin-top: 16px;
+    padding: 8px 16px;
+
     background: transparent;
     color: #F9F6EB;
     border: 2px solid rgba(249, 246, 235, 0.8);
     box-shadow: none;
 }
 
-.petition-button-secondary:hover {
+.petition-form-button:hover {
     background: rgba(249, 246, 235, 0.08);
     border-color: #F9F6EB;
-    display: flex;
-    width: fit-content;
 }
 
 /* ========================================
@@ -1491,17 +1492,17 @@ footer p {
 
 @media (max-width: 768px) {
 
-    .hero .petition-button,
-    #forderung .petition-button,
-    .mitmachen .petition-button:not(.petition-button-secondary) {
+     .hero .petition-button,
+     #forderung .petition-button,
+     .mitmachen .petition-button:not(.petition-form-button) {
         display: none;
     }
 
-    .mitmachen .petition-button-secondary,
-    .support-button,
-    .mobile-sticky-petition {
+     .mitmachen .petition-form-button,
+     .support-button,
+     .mobile-sticky-petition {
         display: inline-flex;
-    }
+}
 
     .mobile-sticky-petition {
         right: 18px;
