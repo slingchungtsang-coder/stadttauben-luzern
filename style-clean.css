@@ -832,6 +832,67 @@ footer p {
     max-width: var(--text-column-width);
 }
 
+/* Ideelle Unterstützer */
+
+.supporters {
+    width: 100%;
+    max-width: var(--wide-content-width);
+    margin-top: 55px;
+}
+
+.supporters-title {
+    max-width: none;
+    margin: 0 0 28px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.supporters-grid {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+main .supporter-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    text-decoration: none;
+    overflow: visible;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+main .supporter-logo:hover {
+    transform: translateY(-2px);
+    opacity: 0.92;
+}
+
+main .supporter-logo:focus-visible {
+    outline: 3px solid #6B4EFF;
+    outline-offset: 6px;
+}
+
+.supporter-logo img {
+    display: block;
+    width: 320px;
+    max-width: 100%;
+    height: auto;
+}
+
 /* Game */
 
 .game-section {
@@ -1785,6 +1846,22 @@ footer p {
     }
 }
 
+/* Ideelle Unterstützer */
+
+@media (max-width: 768px) {
+    .supporters {
+        margin-top: 45px;
+    }
+
+    .supporters-title {
+        margin-bottom: 24px;
+        font-size: 17px;
+    }
+
+    .supporter-logo img {
+        width: 240px;
+    }
+}
 
 /* Mobile Stimmenkarten */
 
