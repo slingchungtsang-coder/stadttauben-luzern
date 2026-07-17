@@ -841,11 +841,11 @@ footer p {
 }
 
 .supporters-title {
-    max-width: none;
-    margin: 0 0 28px;
+    margin: 60px 0 28px;
     font-size: 18px;
-    font-weight: 500;
-    line-height: 1.5;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
 }
 
 .supporters-grid {
@@ -859,8 +859,10 @@ footer p {
 main .supporter-logo {
     display: inline-flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 
+    width: 320px;
+    height: 190px;
     margin: 0;
     padding: 0;
 
@@ -888,9 +890,19 @@ main .supporter-logo:focus-visible {
 
 .supporter-logo img {
     display: block;
-    width: 320px;
-    max-width: 100%;
+    width: auto;
     height: auto;
+    max-width: 100%;
+    max-height: 170px;
+    object-fit: contain;
+}
+
+/* Hochformatiges Logo Lebenshof Änzi */
+
+.supporter-logo--aenzi img {
+    width: 155px;
+    max-width: 155px;
+    max-height: 180px;
 }
 
 /* Game */
@@ -1879,6 +1891,30 @@ main .supporter-logo:focus-visible {
     .voice-card {
         min-height: 300px;
         padding: 45px 38px 38px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .supporters-grid {
+        gap: 24px;
+    }
+
+    main .supporter-logo {
+        width: 240px;
+        height: 155px;
+        justify-content: flex-start;
+    }
+
+    .supporter-logo img {
+        max-width: 240px;
+        max-height: 135px;
+    }
+
+    .supporter-logo--aenzi img {
+        width: 115px;
+        max-width: 115px;
+        max-height: 145px;
     }
 }
 
