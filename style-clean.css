@@ -546,12 +546,13 @@ footer p {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 28px;
+    align-items: start;
 }
 
 .voice-card {
     position: relative;
-    min-height: 300px;
-    padding: 45px 38px 38px;
+    min-height: 0;
+    padding: 38px 32px 32px;
     display: flex;
     flex-direction: column;
     background: #FFFFFF;
@@ -561,7 +562,7 @@ footer p {
 .quote-mark {
     display: block;
     color: #43366B;
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 800;
     line-height: 0.5;
 }
@@ -572,21 +573,21 @@ footer p {
 
 .quote-mark-close {
     align-self: flex-end;
-    margin-top: 20px;
-    margin-bottom: 12px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .voice-card blockquote {
     margin: 0;
     color: #3D3938;
-    font-size: 19px;
+    font-size: 16px;
     font-weight: 500;
-    line-height: 1.45;
+    line-height: 1.5;
 }
 
 .voice-person {
-    margin-top: auto;
-    padding-top: 12px;
+    margin-top: 0px;
+    padding-top: 0;
 }
 
 .voice-name {
@@ -599,6 +600,26 @@ footer p {
     margin: 0;
     color: #3D3938;
     font-size: 0.95rem;
+}
+.voice-name a,
+.voice-name a:visited {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: #43366B;
+    border-radius: 0;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.voice-name a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.voice-name a:focus-visible {
+    outline: 2px solid #43366B;
+    outline-offset: 4px;
 }
 
 /* Teamkarten */
