@@ -943,6 +943,13 @@ main .supporter-logo:focus-visible {
     object-fit: contain;
 }
 
+.supporter-logo--aurelio img {
+    width: 170px;
+    max-width: 170px;
+    max-height: 180px;
+    object-fit: contain;
+}
+
 /* Hochformatiges Logo Lebenshof Änzi */
 
 .supporter-logo--aenzi img {
@@ -1463,6 +1470,14 @@ main .supporter-logo:focus-visible {
         width: 170px;
         max-width: 170px;
         max-height: 125px;
+    }
+}
+
+@media (max-width: 768px) {
+    .supporter-logo--aurelio img {
+        width: 130px;
+        max-width: 130px;
+        max-height: 135px;
     }
 }
 
