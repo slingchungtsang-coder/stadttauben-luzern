@@ -2024,34 +2024,78 @@ main .legal-back-link:hover {
     }
 }
 
-/* Ideelle Unterstützer */
+/* Mobile ideelle Unterstützer */
 
 @media (max-width: 768px) {
+
     .supporters {
+        width: 100%;
         margin-top: 45px;
     }
 
     .supporters-title {
-        margin-bottom: 24px;
+        margin-bottom: 30px;
         font-size: 17px;
     }
 
-    .supporter-logo img {
-        width: 240px;
+    .supporters-grid {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
     }
-}
 
-@media (max-width: 768px) {
+    main .supporter-logo {
+        display: flex;
+        width: 100%;
+        max-width: 280px;
+        height: 160px;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .supporter-logo img {
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 240px;
+        max-height: 145px;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+    .supporter-logo--aenzi img {
+        width: 115px;
+        max-width: 115px;
+        max-height: 145px;
+    }
+
     .supporter-logo--aaa img {
         width: 130px;
         max-width: 130px;
         max-height: 130px;
+    }
+
+    .supporter-logo--tierundwir img {
+        width: 170px;
+        max-width: 170px;
+        max-height: 125px;
+    }
+
+    .supporter-logo--aurelio img {
+        width: 130px;
+        max-width: 130px;
+        max-height: 135px;
     }
 }
 
 /* Mobile Stimmenkarten */
 
 @media (max-width: 768px) {
+
     .voices-section h2 {
         max-width: 100%;
         margin: 18px 0 55px;
@@ -2063,32 +2107,8 @@ main .legal-back-link:hover {
     }
 
     .voice-card {
-        min-height: 300px;
-        padding: 45px 38px 38px;
-    }
-}
-
-@media (max-width: 768px) {
-
-    .supporters-grid {
-        gap: 24px;
-    }
-
-    main .supporter-logo {
-        width: 240px;
-        height: 155px;
-        justify-content: flex-start;
-    }
-
-    .supporter-logo img {
-        max-width: 240px;
-        max-height: 135px;
-    }
-
-    .supporter-logo--aenzi img {
-        width: 115px;
-        max-width: 115px;
-        max-height: 145px;
+        min-height: 0;
+        padding: 38px 30px 32px;
     }
 }
 
