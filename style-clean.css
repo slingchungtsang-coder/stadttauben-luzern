@@ -2038,21 +2038,25 @@ main .legal-back-link:hover {
         font-size: 17px;
     }
 
+@media (max-width: 768px) {
+
     .supporters-grid {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 32px;
+        gap: 12px;
     }
 
     main .supporter-logo {
         display: flex;
         width: 100%;
         max-width: 280px;
-        height: 160px;
+        height: auto;
+        min-height: 0;
         margin: 0 auto;
+        padding: 0;
         align-items: center;
         justify-content: center;
     }
@@ -2066,6 +2070,7 @@ main .legal-back-link:hover {
         margin: 0 auto;
         object-fit: contain;
     }
+}
 
     .supporter-logo--aenzi img {
         width: 115px;
