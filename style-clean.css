@@ -975,6 +975,14 @@ main .supporter-logo:focus-visible {
     max-height: 155px;
 }
 
+/* Sentience */
+
+.supporter-logo--sentience img {
+    width: 210px;
+    max-width: 210px;
+    max-height: 95px;
+}
+
 /* Game */
 
 .game-section {
@@ -2100,7 +2108,11 @@ main .legal-back-link:hover {
     width: 165px;
     max-width: 100%;
     }
-}
+
+    .supporter-logo--sentience img {
+    width: 200px;
+    max-width: 68vw;
+    }
 
 /* Mobile Stimmenkarten */
 
