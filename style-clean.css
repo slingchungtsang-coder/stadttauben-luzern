@@ -936,6 +936,13 @@ main .supporter-logo:focus-visible {
     object-fit: contain;
 }
 
+.supporter-logo--tierundwir img {
+    width: 210px;
+    max-width: 210px;
+    max-height: 150px;
+    object-fit: contain;
+}
+
 /* Hochformatiges Logo Lebenshof Änzi */
 
 .supporter-logo--aenzi img {
@@ -1450,6 +1457,13 @@ main .supporter-logo:focus-visible {
     text-decoration: none;
     font-weight: 600;
     white-space: nowrap;
+}
+@media (max-width: 768px) {
+    .supporter-logo--tierundwir img {
+        width: 170px;
+        max-width: 170px;
+        max-height: 125px;
+    }
 }
 
 
