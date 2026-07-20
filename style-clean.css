@@ -2028,72 +2028,54 @@ main .legal-back-link:hover {
 
 @media (max-width: 768px) {
 
-    .supporters {
-        width: 100%;
-        margin-top: 45px;
-    }
-
-    .supporters-title {
-        margin-bottom: 30px;
-        font-size: 17px;
-    }
-
-@media (max-width: 768px) {
-
     .supporters-grid {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 12px;
+        gap: 26px;
     }
 
     main .supporter-logo {
-        display: flex;
-        width: 100%;
-        max-width: 280px;
+        display: block;
+        width: auto;
+        max-width: 100%;
         height: auto;
-        min-height: 0;
         margin: 0 auto;
         padding: 0;
-        align-items: center;
-        justify-content: center;
     }
 
     .supporter-logo img {
         display: block;
         width: auto;
         height: auto;
-        max-width: 240px;
-        max-height: 145px;
         margin: 0 auto;
         object-fit: contain;
     }
-}
 
-    .supporter-logo--aenzi img {
-        width: 115px;
-        max-width: 115px;
-        max-height: 145px;
-    }
-
-    .supporter-logo--aaa img {
-        width: 130px;
-        max-width: 130px;
-        max-height: 130px;
-    }
-
-    .supporter-logo--tierundwir img {
-        width: 170px;
-        max-width: 170px;
-        max-height: 125px;
+    .supporter-logo--elemental img {
+        width: 240px;
+        max-width: 80vw;
     }
 
     .supporter-logo--aurelio img {
         width: 130px;
-        max-width: 130px;
-        max-height: 135px;
+        max-width: 45vw;
+    }
+
+    .supporter-logo--tierundwir img {
+        width: 170px;
+        max-width: 65vw;
+    }
+
+    .supporter-logo--aenzi img {
+        width: 115px;
+        max-width: 42vw;
+    }
+
+    .supporter-logo--aaa img {
+        width: 130px;
+        max-width: 45vw;
     }
 }
 
