@@ -2074,9 +2074,10 @@ main .legal-back-link:hover {
     }
 
     .supporter-logo--aaa img {
-        width: 130px;
-        max-width: 45vw;
+        width: 150px;
+        max-width: 52vw;
          margin-top: 24px;
+
     }
 }
 
