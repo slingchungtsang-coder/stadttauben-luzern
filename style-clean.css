@@ -983,6 +983,14 @@ main .supporter-logo:focus-visible {
     max-height: 95px;
 }
 
+/* Verbund Tier-Ambulanz-Dienste */
+
+.supporter-logo--vtad img {
+    width: 145px;
+    max-width: 145px;
+    max-height: 145px;
+}
+
 /* Game */
 
 .game-section {
@@ -2112,6 +2120,11 @@ main .legal-back-link:hover {
     .supporter-logo--sentience img {
     width: 200px;
     max-width: 68vw;
+    }
+
+    .supporter-logo--vtad img {
+    width: 145px;
+    max-width: 48vw;
     }
 
 /* Mobile Stimmenkarten */
