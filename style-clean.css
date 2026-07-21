@@ -935,6 +935,14 @@ main .supporter-logo:focus-visible {
     max-height: 125px;
 }
 
+/* Neubad Luzern */
+
+.supporter-logo--neubad img {
+    width: 210px;
+    max-width: 210px;
+    max-height: 120px;
+}
+
 /* Swissveg */
 
 .supporter-logo--swissveg img {
@@ -1600,26 +1608,6 @@ main .supporter-logo:focus-visible {
     font-weight: 600;
     white-space: nowrap;
 }
-@media (max-width: 768px) {
-    .supporter-logo--tierundwir img {
-        width: 170px;
-        max-width: 170px;
-        max-height: 125px;
-    }
-}
-
-@media (max-width: 768px) {
-    .supporter-logo--aurelio img {
-        width: 130px;
-        max-width: 130px;
-        max-height: 135px;
-    }
-}
-.supporter-logo--tierpartei img {
-    width: 220px;
-    max-width: 78vw;
-}
-
 
 /* Rechte Kapitelnavigation */
 
@@ -2233,7 +2221,34 @@ main .legal-back-link:hover {
     max-width: 48vw;
     }
 
-} /* Ende Mobile ideelle Unterstützer */
+    .supporter-logo--neubad img {
+    width: 200px;
+    max-width: 70vw;
+}
+
+@media (max-width: 768px) {
+    .supporter-logo--tierundwir img {
+        width: 170px;
+        max-width: 170px;
+        max-height: 125px;
+    }
+}
+
+@media (max-width: 768px) {
+    .supporter-logo--aurelio img {
+        width: 130px;
+        max-width: 130px;
+        max-height: 135px;
+    }
+}
+.supporter-logo--tierpartei img {
+    width: 220px;
+    max-width: 78vw;
+}
+
+} 
+
+/* Ende Mobile ideelle Unterstützer */
 
 
 /* Mobile Stimmenkarten */
