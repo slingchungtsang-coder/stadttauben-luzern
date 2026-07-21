@@ -935,6 +935,14 @@ main .supporter-logo:focus-visible {
     max-height: 125px;
 }
 
+/* The Official Animal Rights March Switzerland */
+
+.supporter-logo--animalrightsmarch img {
+    width: 165px;
+    max-width: 165px;
+    max-height: 165px;
+}
+
 /* Lebenshof TierMensch */
 
 .supporter-logo--tiermensch img {
@@ -2192,6 +2200,12 @@ main .legal-back-link:hover {
         width: 240px;
         max-width: 80vw;
     }
+
+    .supporter-logo--animalrightsmarch img {
+    width: 150px;
+    max-width: 48vw;
+}
+
 
     .supporter-logo--tiermensch img {
     width: 220px;
