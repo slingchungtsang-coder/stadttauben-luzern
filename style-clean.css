@@ -1265,7 +1265,7 @@ main .supporter-logo:focus-visible {
 
 .wissen-hero {
     min-height: auto;
-    padding: 70px var(--section-padding) 30px;
+    padding: 70px var(--section-padding) 15px;
 }
 
 .wissen-hero-inner,
@@ -1282,7 +1282,7 @@ main .supporter-logo:focus-visible {
 
 .wissen-themen {
     min-height: auto;
-    padding: 30px var(--section-padding) 20px;
+    padding: 15px var(--section-padding) 70px;
 
 }
 
