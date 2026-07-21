@@ -989,6 +989,15 @@ main .supporter-logo:focus-visible {
     width: 145px;
     max-width: 145px;
     max-height: 145px;
+
+}
+
+/* Simbas Welt */
+
+.supporter-logo--simbaswelt img {
+    width: 150px;
+    max-width: 150px;
+    max-height: 150px;
 }
 
 /* Game */
@@ -2266,13 +2275,22 @@ main .legal-back-link:hover {
         padding: 26px 28px;
     }
 
-    .wissen-kapitel {
-        padding: 60px 6%;
-    }
+   .wissen-kapitel {
+    padding: 60px 6%;
+}
 
-    .wissen-quelle {
-        padding: 28px;
-    }
+.wissen-kapitel h2 {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(36px, 11vw, 52px);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    overflow-wrap: anywhere;
+}
+
+.wissen-quelle {
+    padding: 28px;
+}
 
     .wissen-quelle-meta,
     .wissen-stadt-meta {
