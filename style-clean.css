@@ -935,6 +935,14 @@ main .supporter-logo:focus-visible {
     max-height: 125px;
 }
 
+/* Lebenshof TierMensch */
+
+.supporter-logo--tiermensch img {
+    width: 240px;
+    max-width: 240px;
+    max-height: 120px;
+}
+
 /* Neubad Luzern */
 
 .supporter-logo--neubad img {
@@ -2185,14 +2193,21 @@ main .legal-back-link:hover {
         max-width: 80vw;
     }
 
+    .supporter-logo--tiermensch img {
+    width: 220px;
+    max-width: 78vw;
+}
+
     .supporter-logo--aurelio img {
         width: 130px;
-        max-width: 45vw;
+        max-width: 130px;
+        max-height: 135px;
     }
 
     .supporter-logo--tierundwir img {
         width: 170px;
-        max-width: 65vw;
+        max-width: 170px;
+        max-height: 125px;
     }
 
     .supporter-logo--aenzi img {
@@ -2203,50 +2218,45 @@ main .legal-back-link:hover {
     .supporter-logo--aaa img {
         width: 170px;
         max-width: 58vw;
-         margin-top: 20px;
-
+        margin-top: 20px;
     }
+
     .supporter-logo--swissveg img {
-    width: 165px;
-    max-width: 100%;
+        width: 165px;
+        max-width: 100%;
     }
 
     .supporter-logo--sentience img {
-    width: 200px;
-    max-width: 68vw;
+        width: 200px;
+        max-width: 68vw;
     }
 
     .supporter-logo--vtad img {
-    width: 145px;
-    max-width: 48vw;
+        width: 145px;
+        max-width: 48vw;
+    }
+
+    .supporter-logo--simbaswelt img {
+        width: 145px;
+        max-width: 48vw;
+    }
+
+    .supporter-logo--animalrights img {
+        width: 220px;
+        max-width: 75vw;
+    }
+
+    .supporter-logo--tierpartei img {
+        width: 220px;
+        max-width: 78vw;
     }
 
     .supporter-logo--neubad img {
-    width: 200px;
-    max-width: 70vw;
-}
-
-@media (max-width: 768px) {
-    .supporter-logo--tierundwir img {
-        width: 170px;
-        max-width: 170px;
-        max-height: 125px;
-    }
-}
-
-@media (max-width: 768px) {
-    .supporter-logo--aurelio img {
         width: 130px;
-        max-width: 130px;
-        max-height: 135px;
+        max-width: 42vw;
+        height: auto;
     }
 }
-.supporter-logo--tierpartei img {
-    width: 220px;
-    max-width: 78vw;
-}
-
-} 
 
 /* Ende Mobile ideelle Unterstützer */
 
