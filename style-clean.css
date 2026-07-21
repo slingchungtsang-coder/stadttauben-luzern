@@ -998,6 +998,15 @@ main .supporter-logo:focus-visible {
     width: 150px;
     max-width: 150px;
     max-height: 150px;
+
+}
+
+/* Animal Rights Switzerland */
+
+.supporter-logo--animalrights img {
+    width: 230px;
+    max-width: 230px;
+    max-height: 110px;
 }
 
 /* Game */
@@ -1362,7 +1371,17 @@ main .supporter-logo:focus-visible {
 }
 
 .wissen-kapitel h2 {
-    max-width: var(--text-column-width);
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(30px, 8.5vw, 38px);
+    line-height: 1.04;
+    letter-spacing: -0.025em;
+
+    white-space: normal;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: normal;
 }
 
 .wissen-kapitel-lead {
