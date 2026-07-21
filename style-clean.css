@@ -1283,7 +1283,67 @@ main .supporter-logo:focus-visible {
 .wissen-themen {
     min-height: auto;
     padding: 30px var(--section-padding) 20px;
+
 }
+
+/* Normale Textlinks und Quellen im ausführlichen Dossier */
+
+.wissen-dossier .knowledge-source {
+    max-width: 820px;
+    margin: 12px 0 32px;
+    padding: 0;
+
+    background: transparent;
+    color: #3D3938;
+
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+.wissen-dossier a,
+.wissen-dossier a:visited {
+    display: inline;
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+    color: #3A305B;
+
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: 400;
+
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.wissen-dossier a strong,
+.wissen-dossier a b {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+}
+
+.wissen-dossier a:hover {
+    background: transparent;
+    color: #3A305B;
+    opacity: 0.7;
+    transform: none;
+}
+
+.wissen-dossier a:focus-visible {
+    outline: 2px solid #3A305B;
+    outline-offset: 3px;
+}
+
 
 /* Wissenskapitel */
 
@@ -1316,6 +1376,12 @@ main .supporter-logo:focus-visible {
 
 .wissen-kapitel-alt {
     background: #F3F0EB;
+}
+
+.knowledge-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 /* Quellen */
@@ -2126,6 +2192,9 @@ main .legal-back-link:hover {
     width: 145px;
     max-width: 48vw;
     }
+
+} /* Ende Mobile ideelle Unterstützer */
+
 
 /* Mobile Stimmenkarten */
 
