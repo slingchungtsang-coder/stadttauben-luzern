@@ -1009,6 +1009,14 @@ main .supporter-logo:focus-visible {
     max-height: 110px;
 }
 
+/* Tierpartei Schweiz */
+
+.supporter-logo--tierpartei img {
+    width: 240px;
+    max-width: 240px;
+    max-height: 135px;
+}
+
 /* Game */
 
 .game-section {
@@ -1606,6 +1614,10 @@ main .supporter-logo:focus-visible {
         max-width: 130px;
         max-height: 135px;
     }
+}
+.supporter-logo--tierpartei img {
+    width: 220px;
+    max-width: 78vw;
 }
 
 
