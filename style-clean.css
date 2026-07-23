@@ -935,6 +935,22 @@ main .supporter-logo:focus-visible {
     max-height: 125px;
 }
 
+/* Stiftung für das Tier im Recht */
+
+.supporter-logo--tir img {
+    width: 220px;
+    max-width: 220px;
+    max-height: 130px;
+}
+
+/* Animal Free Research */
+
+.supporter-logo--animalfree img {
+    width: 260px;
+    max-width: 260px;
+    max-height: 110px;
+}
+
 /* The Official Animal Rights March Switzerland */
 
 .supporter-logo--animalrightsmarch img {
@@ -2200,6 +2216,8 @@ main .legal-back-link:hover {
         width: 240px;
         max-width: 80vw;
     }
+
+    
 
     .supporter-logo--animalrightsmarch img {
     width: 150px;
