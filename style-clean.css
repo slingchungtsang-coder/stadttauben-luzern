@@ -257,15 +257,24 @@ footer p {
     filter: brightness(0) invert(1);
 }
 
-.footer-links a,
-.footer-links a:visited {
-    color: #FFFFFF;
-    font-weight: 600;
-    text-decoration: none;
+.footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 35px;
 }
 
-.footer-links a {
-    margin-top: 35px;
+.footer-links a,
+.footer-links a:visited {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: #FFFFFF;
+    border-radius: 0;
+    font-weight: 600;
+    text-decoration: none;
 }
 
 .footer-links a:hover {
@@ -273,10 +282,16 @@ footer p {
 }
 
 .copyright {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
     margin-top: 35px;
     font-size: 14px;
     opacity: 0.75;
 }
+
 .copyright a,
 .copyright a:visited {
     color: inherit;
@@ -287,7 +302,6 @@ footer p {
 .copyright a:hover {
     text-decoration: underline;
 }
-
 /* ========================================
    KOMPONENTEN
 ======================================== */
@@ -1641,6 +1655,11 @@ main .supporter-logo:focus-visible {
     white-space: nowrap;
 }
 
+.subpage-nav a.is-active {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
 /* Rechte Kapitelnavigation */
 
 .wissen-scroll-nav {
@@ -1691,9 +1710,6 @@ main .supporter-logo:focus-visible {
    IMPRESSUM
 ======================================== */
 
-/* ========================================
-   IMPRESSUM
-======================================== */
 
 .legal-section {
     min-height: auto;
@@ -1717,11 +1733,6 @@ main .supporter-logo:focus-visible {
     max-width: 850px;
     margin-bottom: 70px;
     color: #3A305B;
-}
-
-.legal-content {
-    width: 100%;
-    max-width: 820px;
 }
 
 .legal-content h2 {
@@ -1977,8 +1988,9 @@ main .legal-back-link:hover {
     }
 }
 
-   /* Einheitliche Fliesstextgrösse */
+/* Einheitliche Fliesstextgrösse */
 
+@media (max-width: 768px) {
     main section p,
     .loesung-intro,
     .loesung-nutzen,
@@ -1989,6 +2001,7 @@ main .legal-back-link:hover {
         font-size: 18px;
         line-height: 1.6;
     }
+}
 
 /* Mobile Grids */
 
@@ -2073,12 +2086,10 @@ main .legal-back-link:hover {
 
     /* Erklärvideo */
 
-@media (max-width: 768px) {
     .video-wrap {
-        margin-top: 36px;
-        border-radius: 18px;
+    margin-top: 36px;
+    border-radius: 18px;
     }
-}
 
     /* Lösung */
 
@@ -2212,12 +2223,21 @@ main .legal-back-link:hover {
         object-fit: contain;
     }
 
-    .supporter-logo--elemental img {
-        width: 240px;
-        max-width: 80vw;
-    }
+.supporter-logo--elemental img {
+    width: 240px;
+    max-width: 80vw;
+}
 
-    
+/* Stiftung für das Tier im Recht */
+
+.supporter-logo--tir img {
+    display: block;
+    width: 220px;
+    max-width: 78vw;
+    height: auto;
+    max-height: 130px;
+    margin: 0 auto;
+}
 
     .supporter-logo--animalrightsmarch img {
     width: 150px;
