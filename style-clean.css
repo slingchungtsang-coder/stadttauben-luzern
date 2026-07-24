@@ -949,6 +949,14 @@ main .supporter-logo:focus-visible {
     max-height: 125px;
 }
 
+/* Life Farm Forever */
+
+.supporter-logo--lifefarm img {
+    width: 190px;
+    max-width: 190px;
+    max-height: 160px;
+}
+
 /* Stiftung für das Tier im Recht */
 
 .supporter-logo--tir img {
@@ -2228,6 +2236,14 @@ main .legal-back-link:hover {
     max-width: 80vw;
 }
 
+/* Life Farm Forever */
+
+.supporter-logo--lifefarm img {
+    width: 180px;
+    max-width: 62vw;
+    height: auto;
+}
+
 /* Stiftung für das Tier im Recht */
 
 .supporter-logo--tir img {
@@ -2243,7 +2259,6 @@ main .legal-back-link:hover {
     width: 150px;
     max-width: 48vw;
 }
-
 
     .supporter-logo--tiermensch img {
     width: 220px;
