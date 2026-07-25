@@ -954,6 +954,14 @@ main .supporter-logo:focus-visible {
     max-height: 125px;
 }
 
+/* Parterre Luzern */
+
+.supporter-logo--parterre img {
+    width: 210px;
+    max-width: 210px;
+    max-height: 125px;
+}
+
 /* Life Farm Forever */
 
 .supporter-logo--lifefarm img {
@@ -2290,6 +2298,12 @@ main .legal-back-link:hover {
 .supporter-logo--elemental img {
     width: 240px;
     max-width: 80vw;
+}
+
+.supporter-logo--parterre img {
+    width: 200px;
+    max-width: 72vw;
+    height: auto;
 }
 
 /* Life Farm Forever */
