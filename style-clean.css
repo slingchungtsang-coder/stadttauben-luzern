@@ -110,8 +110,6 @@ header {
     gap: 48px;
     border-bottom: 1px solid #3D3938;
     background: #3A305B;
-    top: 0;
-    z-index: 100;
     transition:
         padding 0.25s ease,
         background 0.25s ease;
@@ -320,7 +318,7 @@ footer p {
 
     font-family: "Montserrat", sans-serif;
     font-size: 20px;
-    font-weight: 400;      /* statt 700 */
+    font-weight: 400;     
     line-height: 1.3;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -605,7 +603,7 @@ footer p {
 }
 
 .voice-person {
-    margin-top: 0px;
+    margin-top: 0;
     padding-top: 0;
 }
 
@@ -1374,7 +1372,7 @@ main .supporter-logo:focus-visible {
 
 .wissen-hero {
     min-height: auto;
-    padding: 70px var(--section-padding) 15px;
+    padding: 70px var(--section-padding) 0;
 }
 
 .wissen-hero-inner,
@@ -1579,10 +1577,13 @@ main .supporter-logo:focus-visible {
     transform: translateY(-2px);
 }
 
-.wissen-quelle-link:focus,
-.wissen-quelle-link:focus-visible {
+.wissen-quelle-link:focus {
     outline: none;
-    box-shadow: none;
+}
+
+.wissen-quelle-link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
 }
 
 /* Städtebeispiele */
@@ -1741,6 +1742,67 @@ main .supporter-logo:focus-visible {
     transform: scale(1.25);
 }
 
+
+/* Seitliche Navigation für Agenda und Medien */
+
+.subpage-scroll-nav {
+    position: fixed;
+    right: 28px;
+    top: 50%;
+    z-index: 90;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    transform: translateY(-50%);
+}
+
+.subpage-scroll-nav a {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+    border: 1.5px solid #3D3938;
+    border-radius: 50%;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.subpage-scroll-nav a:hover,
+.subpage-scroll-nav a:focus-visible {
+    background: #3D3938;
+    border-color: #3D3938;
+    outline: none;
+    transform: scale(1.25);
+}
+
+
+/* Wissen-Titel auf grossen Bildschirmen einzeilig */
+
+@media (min-width: 1400px) {
+
+    .wissen-hero h1 {
+        max-width: none;
+        white-space: nowrap;
+    }
+}
+
+/* Wissen-Titel auf grossen Bildschirmen einzeilig */
+
+@media (min-width: 1400px) {
+
+    .wissen-hero h1 {
+        max-width: none;
+        white-space: nowrap;
+    }
+}
+
 /* ========================================
    MEDIENSEITE
 ======================================== */
@@ -1749,12 +1811,16 @@ main .supporter-logo:focus-visible {
 
 .medien-hero {
     min-height: auto;
-    padding: 80px var(--section-padding) 40px;
+    padding: 68px var(--section-padding) 0;
 }
 
 .medien-section {
     min-height: auto;
     padding: 60px var(--section-padding) 80px;
+}
+
+#petition-medien {
+    padding-top: 15px;
 }
 
 /* ========================================
@@ -1764,7 +1830,7 @@ main .supporter-logo:focus-visible {
 
 .legal-section {
     min-height: auto;
-    padding: 100px var(--section-padding);
+    padding: 68px var(--section-padding) 100px;
     background: #F4F0EA;
     color: #3D3938;
 }
@@ -1861,6 +1927,152 @@ main .legal-back-link:hover {
     .wissen-dossier .sources {
         max-width: 900px;
     }
+}
+
+/* Agenda */
+
+.agenda-hero,
+.agenda-section {
+    min-height: auto;
+}
+
+.agenda-hero {
+    padding: 42px 0 0;
+}
+
+.agenda-section {
+    padding: 75px 0;
+}
+
+.agenda-upcoming {
+    padding-top: 15px;
+}
+
+
+.agenda-inner {
+    width: min(84vw, var(--wide-content-width));
+    margin-left: 8vw;
+    margin-right: auto;
+}
+
+.agenda-intro {
+    max-width: 760px;
+    margin-top: 24px;
+}
+
+.agenda-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 36px;
+}
+
+.agenda-item {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr);
+    gap: 42px;
+
+    padding: 34px 0;
+    border-top: 1px solid rgba(61, 57, 56, 0.25);
+}
+
+.agenda-item:last-child {
+    border-bottom: 1px solid rgba(61, 57, 56, 0.25);
+}
+
+.agenda-date {
+    display: flex;
+    flex-direction: column;
+}
+
+.agenda-day {
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.agenda-month {
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.agenda-category {
+    display: block;
+    margin-bottom: 10px;
+
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.agenda-content h3 {
+    margin: 0 0 16px;
+}
+
+.agenda-content p {
+    max-width: 760px;
+}
+
+.agenda-meta {
+    margin-bottom: 22px;
+    font-weight: 500;
+}
+
+.agenda-past {
+    background: #f3efe9;
+}
+
+
+/* Agenda mobil */
+
+@media (max-width: 700px) {
+
+    .agenda-hero {
+        padding: 48px 0 55px;
+    }
+
+    .agenda-section {
+        padding: 55px 0;
+    }
+
+    .agenda-inner {
+    width: calc(100% - 32px);
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+    .agenda-item {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 28px 0;
+    }
+
+    .agenda-day {
+        font-size: 38px;
+    }
+}
+
+/* Einheitlicher Abstand zwischen Hero-Einleitung und Folgeabschnitt */
+
+.wissen-intro,
+.agenda-intro,
+.medien-intro {
+    margin-bottom: 60px;
+}
+
+.wissen-themen,
+.agenda-upcoming,
+#petition-medien {
+    padding-top: 0;
+}
+
+.wissen-themen .section-label,
+.agenda-upcoming .section-kicker,
+#petition-medien .section-label {
+    margin-top: 0;
 }
 
 /* ========================================
@@ -2161,9 +2373,6 @@ main .legal-back-link:hover {
 
     /* Lösung */
 
-    .loesung-grid {
-        display: block;
-    }
 
     .loesung-grid > div {
         margin-bottom: 40px;
@@ -2201,14 +2410,6 @@ main .legal-back-link:hover {
 
     .game-frame-wrap {
         display: none;
-    }
-
-    .super-pigeon-game {
-        display: none;
-    }
-
-    .game-section .petition-button {
-        display: inline-flex;
     }
 
     .super-pigeon-credit {
