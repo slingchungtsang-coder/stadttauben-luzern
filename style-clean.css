@@ -1846,6 +1846,23 @@ main .legal-back-link:hover {
     opacity: 0.9;
 }
 
+/* Breitere Textspalten auf grossen Desktop-Bildschirmen */
+
+@media (min-width: 1200px) {
+
+    :root {
+        --text-column-width: 900px;
+    }
+
+    .wissen-intro,
+    .wissen-text,
+    .wissen-kapitel-lead,
+    .wissen-dossier .knowledge-source,
+    .wissen-dossier .sources {
+        max-width: 900px;
+    }
+}
+
 /* ========================================
    MOBILE
 ======================================== */
