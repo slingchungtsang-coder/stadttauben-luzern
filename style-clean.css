@@ -1059,9 +1059,9 @@ main .supporter-logo:focus-visible {
 /* Sentience */
 
 .supporter-logo--sentience img {
-    width: 210px;
-    max-width: 210px;
-    max-height: 95px;
+    width: 260px;
+    max-width: 260px;
+    max-height: 110px;
 }
 
 /* Verbund Tier-Ambulanz-Dienste */
@@ -1849,12 +1849,12 @@ main .supporter-logo:focus-visible {
 .legal-section h1 {
     max-width: 850px;
     margin-bottom: 70px;
-    color: #3A305B;
+    color: #3D3938;
 }
 
 .legal-content h2 {
     margin: 42px 0 16px;
-    color: #3A305B;
+    color: #3D3938;
     font-size: 32px;
     line-height: 1.15;
 }
@@ -1865,7 +1865,7 @@ main .supporter-logo:focus-visible {
 
 .legal-content h3 {
     margin: 45px 0 16px;
-    color: #3D3938;
+    color: #3D3938
     font-size: 23px;
     line-height: 1.25;
 }
@@ -1881,7 +1881,7 @@ main .supporter-logo:focus-visible {
     margin: 0;
     padding: 0;
     background: transparent;
-    color: #3A305B;
+    color: #3D3938;
     border-radius: 0;
     font-weight: 600;
     text-decoration: underline;
@@ -1902,7 +1902,7 @@ main .legal-back-link {
     display: inline-block;
     margin-top: 35px;
     padding: 13px 20px;
-    background: #3A305B;
+    background: #3D3938;
     color: #FFFFFF;
     border-radius: 999px;
     text-decoration: none;
