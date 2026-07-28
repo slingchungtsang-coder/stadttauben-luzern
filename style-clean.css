@@ -952,6 +952,14 @@ main .supporter-logo:focus-visible {
     max-height: 125px;
 }
 
+/* JUSO Luzern */
+
+.supporter-logo--juso-luzern img {
+    width: 250px;
+    max-width: 250px;
+    max-height: 125px;
+}
+
 /* TierWelt */
 
 .supporter-logo--tierwelt img {
@@ -2499,6 +2507,14 @@ main .legal-back-link:hover {
 .supporter-logo--elemental img {
     width: 240px;
     max-width: 80vw;
+}
+
+@media (max-width: 600px) {
+    .supporter-logo--juso-luzern img {
+        width: 220px;
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 .supporter-logo--tierwelt img {
