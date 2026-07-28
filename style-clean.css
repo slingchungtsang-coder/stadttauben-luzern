@@ -1835,6 +1835,10 @@ main .supporter-logo:focus-visible {
     color: #3D3938;
 }
 
+.legal-page .subpage-header {
+    background: #FFFFFF;
+}
+
 .legal-inner {
     width: 100%;
     max-width: var(--wide-content-width);
@@ -1865,7 +1869,7 @@ main .supporter-logo:focus-visible {
 
 .legal-content h3 {
     margin: 45px 0 16px;
-    color: #3D3938
+    color: #3D3938;
     font-size: 23px;
     line-height: 1.25;
 }
@@ -1937,7 +1941,7 @@ main .legal-back-link:hover {
 }
 
 .agenda-hero {
-    padding: 42px 0 0;
+    padding: 68px 0 0;
 }
 
 .agenda-section {
@@ -2031,7 +2035,7 @@ main .legal-back-link:hover {
 @media (max-width: 700px) {
 
     .agenda-hero {
-        padding: 48px 0 55px;
+        padding: 60px 0 55px;
     }
 
     .agenda-section {
