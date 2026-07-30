@@ -2068,10 +2068,10 @@ main .legal-back-link:hover {
     }
 
     .agenda-inner {
-    width: calc(100% - 32px);
-    margin-left: 16px;
-    margin-right: 16px;
-}
+    width: auto;
+    margin-left: 6%;
+    margin-right: 6%;
+    }
 
     .agenda-item {
         grid-template-columns: 1fr;
@@ -2805,7 +2805,7 @@ main .legal-back-link:hover {
 @media (max-width: 768px) {
 
     .legal-section {
-        padding: 70px 6%;
+        padding: 60px 6%;
     }
 
     .legal-section h1 {
