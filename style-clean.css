@@ -952,6 +952,23 @@ main .supporter-logo:focus-visible {
     max-height: 125px;
 }
 
+/* Club der Rattenfreunde */
+
+.supporter-logo--rattenclub img {
+  width: 300px;
+  max-width: 100%;
+  max-height: 110px;
+  object-fit: contain;
+}
+
+/* AKUT – Arbeitskreis Kirche und Tiere */
+
+.supporter-logo--akut img {
+    width: 260px;
+    max-width: 260px;
+    max-height: 120px;
+}
+
 /* JUSO Luzern */
 
 .supporter-logo--juso-luzern img {
@@ -2509,6 +2526,14 @@ main .legal-back-link:hover {
     max-width: 80vw;
 }
 
+@media (max-width: 700px) {
+    .supporter-logo--akut img {
+        width: 220px;
+        max-width: 100%;
+        max-height: 100px;
+    }
+}
+
 @media (max-width: 600px) {
     .supporter-logo--juso-luzern img {
         width: 220px;
@@ -2527,6 +2552,13 @@ main .legal-back-link:hover {
     width: 200px;
     max-width: 72vw;
     height: auto;
+}
+
+@media (max-width: 700px) {
+  .supporter-logo--rattenclub img {
+    width: 240px;
+    max-height: 90px;
+  }
 }
 
 /* Life Farm Forever */
@@ -2668,7 +2700,7 @@ main .legal-back-link:hover {
 @media (max-width: 768px) {
 
     .wissen-hero {
-        padding: 80px 6% 30px;
+        padding: 60px 6% 30px;
     }
 
     .wissen-intro,
