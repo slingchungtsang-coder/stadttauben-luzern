@@ -425,15 +425,6 @@ footer p {
     text-decoration: none;
 }
 
-.wissen-thema:nth-child(5) {
-    grid-column: 2 / span 3;
-}
-
-.wissen-thema:nth-child(6),
-.wissen-thema:nth-child(7) {
-    grid-column: span 3;
-}
-
 .wissen-thema span {
     font-size: 0.9rem;
 }
