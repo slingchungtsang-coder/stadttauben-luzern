@@ -1715,6 +1715,10 @@ main .supporter-logo:focus-visible {
     outline-offset: 4px;
 }
 
+.wissen-text .wissen-quelle-link {
+    margin-top: 0;
+}
+
 /* Städtebeispiele */
 
 .wissen-staedte {
