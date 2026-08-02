@@ -11,103 +11,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    /* Aufklappbarer Luzern-Bereich auf der Wissensseite */
-    .wissen-luzern-intro {
-      margin-bottom: 42px;
-    }
-
-    .wissen-luzern-intro h2 {
-      max-width: 1050px;
-      margin: 0 0 24px;
-    }
-
-    .wissen-luzern-intro p:last-child {
-      max-width: 850px;
-      margin-bottom: 0;
-    }
-
-    .wissen-accordion-list {
-      width: 100%;
-      max-width: 1100px;
-    }
-
-    .wissen-accordion {
-      border-top: 1px solid rgba(61, 57, 56, 0.45);
-    }
-
-    .wissen-accordion:last-child {
-      border-bottom: 1px solid rgba(61, 57, 56, 0.45);
-    }
-
-    .wissen-accordion summary {
-      position: relative;
-      padding: 30px 72px 30px 0;
-      color: #403B3B;
-      font-size: clamp(28px, 3vw, 42px);
-      font-weight: 700;
-      line-height: 1.1;
-      letter-spacing: -0.025em;
-      cursor: pointer;
-      list-style: none;
-    }
-
-    .wissen-accordion summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .wissen-accordion summary::after {
-      content: "+";
-      position: absolute;
-      top: 50%;
-      right: 8px;
-      color: #403566;
-      font-size: 44px;
-      font-weight: 300;
-      line-height: 1;
-      transform: translateY(-50%);
-    }
-
-    .wissen-accordion[open] summary::after {
-      content: "−";
-    }
-
-    .wissen-accordion summary:focus-visible {
-      outline: 3px solid #403566;
-      outline-offset: 6px;
-    }
-
-    .wissen-accordion-content {
-      padding: 8px 0 52px;
-    }
-
-    .wissen-accordion-content > :first-child {
-      margin-top: 0;
-    }
-
-    @media (max-width: 768px) {
-      .wissen-luzern-intro {
-        margin-bottom: 28px;
-      }
-
-      .wissen-accordion summary {
-        padding: 24px 54px 24px 0;
-        font-size: clamp(25px, 7vw, 34px);
-        line-height: 1.12;
-      }
-
-      .wissen-accordion summary::after {
-        right: 2px;
-        font-size: 38px;
-      }
-
-      .wissen-accordion-content {
-        padding-bottom: 38px;
-      }
-    }
-  </style>
-
 </head>
 
 <body id="top">
@@ -166,12 +69,6 @@
 
         <h2>Stadttauben verstehen</h2>
 
-<p class="wissen-themen-hinweis">
-  Ergänzend dokumentieren wir das bisherige Stadttaubenmanagement der Stadt
-  Luzern und ordnen die veröffentlichten Aussagen und Grundlagen aus unserer
-  Sicht ein.
-</p>
-
         <div class="wissen-themen-grid">
 
           <a href="#herkunft" class="wissen-thema">
@@ -221,28 +118,17 @@
 
 
     <section id="luzerner-stadttaubenmanagement" class="wissen-kapitel wissen-kapitel-alt">
+
       <div class="wissen-kapitel-inner">
 
-        <div class="wissen-luzern-intro">
-          <p class="section-label">LUZERN</p>
+        <article class="wissen-dossier">
 
-          <h2>
-            Das Luzerner Stadttauben&shy;management – und wie wir es einordnen
-          </h2>
+          <article class="knowledge-article">
+            <h2>
+              Das Luzerner Stadttauben&shy;management – und wie wir es einordnen
+            </h2>
 
-          <p class="wissen-kapitel-lead">
-            Wie geht die Stadt Luzern heute mit ihren Stadttauben um?
-            Und weshalb reicht das bestehende Vorgehen aus unserer Sicht nicht aus?
-          </p>
-        </div>
-
-        <div class="wissen-accordion-list">
-
-          <details class="wissen-accordion">
-            <summary>Das Luzerner Stadttauben&shy;management</summary>
-
-            <div class="wissen-accordion-content">
-              <p class="knowledge-lead">Seit Jahren begründet die Stadt Luzern ihre Taubenpolitik vor allem mit einer
+            <p class="knowledge-lead">Seit Jahren begründet die Stadt Luzern ihre Taubenpolitik vor allem mit einer
               Begrenzung des Futterangebots.
               Wir haben öffentlich zugängliche Aussagen chronologisch zusammengestellt und mit den jeweils
               veröffentlichten Quellen verlinkt.
@@ -252,7 +138,9 @@
               beurteilen Aussagen und Belege,
               nicht persönliche Motive. Stand der Prüfung: 1. August 2026.</p>
 
-<h2>Veröffentlichte Aussagen seit 2001</h2>
+
+
+            <h2>Veröffentlichte Aussagen seit 2001</h2>
 
             <p><strong>2001–2005 – Frühes städtisches Gesamtkonzept:</strong>
               Der Stadtrat beschloss bereits 2001 das Projekt «Stadttauben Luzern».
@@ -285,7 +173,7 @@
             </p>
 
             <p class="knowledge-source">
-              <a href="Protokoll_8_Grosser_Stadtrat_vom_21._April_2005.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="quellen/luzern-protokoll-grosser-stadtrat-2005.pdf" target="_blank" rel="noopener noreferrer">
                 Quelle: Grosser Stadtrat Luzern, Protokoll vom 21. April 2005,
                 Dringliche Interpellation 49 «Taubenhaus am Kurplatz»
               </a>
@@ -469,14 +357,10 @@
                 href="https://www.tele1.ch/nachrichten/fuetterungsverbot-fuer-tauben-in-luzern-164313233"
                 target="_blank" rel="noopener noreferrer">Quelle: Tele1, «Fütterungsverbot für Tauben in Luzern», 24.
                 Mai 2026</a></p>
-            </div>
-          </details>
 
-          <details class="wissen-accordion">
-            <summary>Unsere Einordnung</summary>
+            <h2>Unsere Einordnung</h2>
 
-            <div class="wissen-accordion-content">
-<p>Die Aussagen «keine Abschüsse» und «gezielte Tötungen mit einer Zange» sind wörtlich betrachtet kein
+            <p>Die Aussagen «keine Abschüsse» und «gezielte Tötungen mit einer Zange» sind wörtlich betrachtet kein
               direkter Widerspruch: Nicht jede Tötung ist ein Abschuss.
               Die frühere Kommunikation konnte jedoch den Eindruck einer Strategie ohne Tötungen erwecken. Erst der
               Bericht von 2026 machte öffentlich deutlich,
@@ -749,7 +633,7 @@
             <p class="sources">
               Quellen:
 
-              <a href="koehler-wildlebende-stadttauben-2008.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="quellen/koehler-wildlebende-stadttauben-2008.pdf" target="_blank" rel="noopener noreferrer">
                 Richard Köhler, Biologische Station östliches Ruhrgebiet,
                 «Wildlebende Stadttauben», Oktober 2008
               </a>
@@ -828,7 +712,7 @@
 
             <p class="sources">
               Quelle:
-              <a href="tir-stellungnahme-stadttauben-2023.pdf" target="_blank" rel="noopener">
+              <a href="quellen/tir-stellungnahme-stadttauben-2023.pdf" target="_blank" rel="noopener">
                 Stiftung für das Tier im Recht (TIR), Stellungnahme an Linus Schöpfer
                 zum Umgang mit Stadttauben, 11. Januar 2023; wörtliche Wiedergabe mit Zustimmung der TIR.
               </a>
@@ -940,13 +824,16 @@
 
             <p class="knowledge-source">Quelle: eigene, archivierte Versand- und Rücklaufdokumentation der Erhebung vom
               April 2026.</p>
-            </div>
-          </details>
 
-        </div>
+
+          </article>
+
+        </article>
 
       </div>
+
     </section>
+
 
     <section id="herkunft" class="wissen-kapitel">
       <div class="wissen-kapitel-inner">
@@ -1065,7 +952,7 @@
             </a>
           </article>
 
-                    <article class="wissen-quelle">
+          <article class="wissen-quelle">
             <div class="wissen-quelle-meta">
               <span>RECHT · STATUS</span>
               <span>2023</span>
@@ -1081,12 +968,8 @@
               qualifizieren sind.
             </p>
 
-            <a
-              href="quellen/tir-analyse-status-stadttauben-2023.pdf"
-              class="wissen-quelle-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="quellen/tir-analyse-status-stadttauben-2023.pdf" class="wissen-quelle-link" target="_blank"
+              rel="noopener noreferrer">
               Zur Analyse
             </a>
           </article>
@@ -1108,30 +991,18 @@
               städtischen Taubenpopulationen.
             </p>
 
-            <a
-              href="quellen/sts-brieftaubensport-2016.pdf"
-              class="wissen-quelle-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="quellen/sts-brieftaubensport-2016.pdf" class="wissen-quelle-link" target="_blank"
+              rel="noopener noreferrer">
               Bericht 2016
             </a>
 
-            <a
-              href="quellen/sts-brieftaubensport-folgebericht-2017.pdf"
-              class="wissen-quelle-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="quellen/sts-brieftaubensport-folgebericht-2017.pdf" class="wissen-quelle-link" target="_blank"
+              rel="noopener noreferrer">
               Folgebericht 2017
             </a>
 
-            <a
-              href="quellen/sts-brieftaubensport-2018.pdf"
-              class="wissen-quelle-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="quellen/sts-brieftaubensport-2018.pdf" class="wissen-quelle-link" target="_blank"
+              rel="noopener noreferrer">
               Bericht 2018
             </a>
           </article>
@@ -1680,7 +1551,8 @@
             haben wir in unserer ausführlichen Praxisanleitung zusammengestellt.
           </p>
 
-          <a href="Stadttaubenmanagement.pdf" class="wissen-quelle-link" target="_blank" rel="noopener noreferrer">
+          <a href="quellen/stadttaubenmanagement.pdf" class="wissen-quelle-link" target="_blank"
+            rel="noopener noreferrer">
             Gesamtkonzept öffnen
           </a>
 
