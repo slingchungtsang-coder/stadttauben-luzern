@@ -158,6 +158,7 @@ nav a:hover {
 .main-nav-links a {
     white-space: nowrap;
 }
+
 /* ========================================
    BUTTONS
 ======================================== */
@@ -189,11 +190,12 @@ nav a:hover {
 .petition-form-button {
     background: transparent;
     color: #F9F6EB;
-    border: 2px solid rgba(249,246,235,.8);
+    border: 2px solid rgba(249, 246, 235, .8);
 }
 
 .support-button {
-    margin-top: 38px;
+    margin-top: 18px;
+    margin-bottom: 45px;
     background: #6B4EFF;
     color: #FFFFFF;
     border: 2px solid transparent;
@@ -307,6 +309,7 @@ footer p {
 .copyright a:hover {
     text-decoration: underline;
 }
+
 /* ========================================
    KOMPONENTEN
 ======================================== */
@@ -320,15 +323,16 @@ footer p {
 
     font-family: "Montserrat", sans-serif;
     font-size: 20px;
-    font-weight: 400;     
+    font-weight: 400;
     line-height: 1.3;
     letter-spacing: 0.14em;
     text-transform: uppercase;
 }
+
 /* Einheitlicher Abstand zwischen Kicker und Überschrift */
 
-.section-label + h1,
-.section-label + h2 {
+.section-label+h1,
+.section-label+h2 {
     margin-top: 0;
 }
 
@@ -452,7 +456,7 @@ footer p {
     background: #fff;
     border-radius: 18px;
     padding: 1.6rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,.06);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
 }
 
 .vergleich-card h3 {
@@ -495,6 +499,10 @@ footer p {
     margin-left: auto;
     margin-right: auto;
     color: rgba(255, 255, 255, 0.78);
+}
+
+.vergleich-pdf-button {
+    display: none;
 }
 
 /* FAQ */
@@ -551,31 +559,31 @@ footer p {
 }
 
 .faq-more {
-  margin-top: 1.25rem;
-  margin-bottom: 0;
+    margin-top: 1.25rem;
+    margin-bottom: 0;
 }
 
 .faq-link {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.65rem 1rem;
-  border: 1px solid currentColor;
-  border-radius: 999px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  line-height: 1.2;
-  text-decoration: none;
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease,
-    border-color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.65rem 1rem;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .faq-link:hover,
 .faq-link:focus-visible {
-  background-color: #3d3938;
-  color: #fff;
-  border-color: #3d3938;
+    background-color: #3d3938;
+    color: #fff;
+    border-color: #3d3938;
 }
 
 /* Aufklappbare Stimmen-Sektion */
@@ -667,22 +675,13 @@ footer p {
     border-radius: 24px;
 }
 
-.quote-mark {
-    display: block;
-    color: #43366B;
-    font-size: 3.5rem;
-    font-weight: 800;
-    line-height: 0.5;
-}
-
 .quote-mark-open {
-    margin-bottom: 0;
-}
-
-.quote-mark-close {
-    align-self: flex-end;
-    margin-top: 5px;
-    margin-bottom: 10px;
+    display: block;
+    margin: 0 0 12px;
+    color: #43366B;
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 0.7;
 }
 
 .voice-card blockquote {
@@ -693,8 +692,17 @@ footer p {
     line-height: 1.5;
 }
 
+.voice-card blockquote::after {
+    content: "\00A0»";
+    color: #43366B;
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 0;
+    vertical-align: -0.16em;
+}
+
 .voice-person {
-    margin-top: 0;
+    margin-top: 18px;
     padding-top: 0;
 }
 
@@ -709,6 +717,7 @@ footer p {
     color: #3D3938;
     font-size: 0.95rem;
 }
+
 .voice-name a,
 .voice-name a:visited {
     margin: 0;
@@ -966,11 +975,11 @@ footer p {
 .supporters {
     width: 100%;
     max-width: var(--wide-content-width);
-    margin-top: 55px;
+    margin-top: 0;
 }
 
 .supporters-title {
-    margin: 60px 0 28px;
+    margin: 0 0 28px;
     font-size: 18px;
     font-weight: 600;
     line-height: 1.4;
@@ -1034,17 +1043,17 @@ main .supporter-logo:focus-visible {
 }
 
 .supporter-logo--netap img {
-  width: 100%;
-  max-width: 230px;
+    width: 100%;
+    max-width: 230px;
 }
 
 /* Club der Rattenfreunde */
 
 .supporter-logo--rattenclub img {
-  width: 300px;
-  max-width: 100%;
-  max-height: 110px;
-  object-fit: contain;
+    width: 300px;
+    max-width: 100%;
+    max-height: 110px;
+    object-fit: contain;
 }
 
 /* AKUT – Arbeitskreis Kirche und Tiere */
@@ -1226,7 +1235,7 @@ main .supporter-logo:focus-visible {
     margin-bottom: 28px;
 }
 
-.game-content > p {
+.game-content>p {
     max-width: 650px;
 }
 
@@ -1319,7 +1328,7 @@ main .supporter-logo:focus-visible {
     gap: 40px;
 }
 
-.loesung-grid > div {
+.loesung-grid>div {
     padding-top: 24px;
     border-top: 1px solid #3D3938;
 }
@@ -1387,7 +1396,7 @@ main .supporter-logo:focus-visible {
     gap: 28px 45px;
 }
 
-.vorteile-grid > div {
+.vorteile-grid>div {
     padding-top: 28px;
     border-top: 1px solid currentColor;
 }
@@ -1525,7 +1534,9 @@ main .supporter-logo:focus-visible {
 /* Einheitliche Darstellung aller Dossier-Links */
 
 .wissen-dossier a,
-.wissen-dossier a:visited {
+.wissen-dossier a:visited,
+.wissen-accordion-content a,
+.wissen-accordion-content a:visited {
     display: inline;
     margin: 0;
     padding: 0;
@@ -1549,17 +1560,12 @@ main .supporter-logo:focus-visible {
 
 /* Einzelquelle: Beschriftung und Link bleiben auf derselben Zeile */
 
-.wissen-dossier .knowledge-source > a {
-    display: inline;
-    width: auto;
-    max-width: none;
-    margin: 0;
-}
+/* Jede Quelle steht in einer eigenen Zeile */
 
-/* Mehrere Quellen: Links untereinander */
-
-.wissen-dossier .sources > a,
-.wissen-dossier .knowledge-source:has(> a + a) > a {
+.wissen-dossier .knowledge-source>a,
+.wissen-dossier .sources>a,
+.wissen-accordion-content .knowledge-source>a,
+.wissen-accordion-content .sources>a {
     display: block;
     width: fit-content;
     max-width: 100%;
@@ -1573,14 +1579,16 @@ main .supporter-logo:focus-visible {
     font-weight: inherit;
 }
 
-.wissen-dossier a:hover {
+.wissen-dossier a:hover,
+.wissen-accordion-content a:hover {
     background: transparent;
     color: #3A305B;
     opacity: 0.7;
     transform: none;
 }
 
-.wissen-dossier a:focus-visible {
+.wissen-dossier a:focus-visible,
+.wissen-accordion-content a:focus-visible {
     outline: 2px solid #3A305B;
     outline-offset: 3px;
 }
@@ -1629,9 +1637,9 @@ main .supporter-logo:focus-visible {
 }
 
 .knowledge-list {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
 /* Quellen */
@@ -1647,7 +1655,7 @@ main .supporter-logo:focus-visible {
     border-bottom: 1px solid #3F3B3B;
 }
 
-.wissen-quelle + .wissen-quelle {
+.wissen-quelle+.wissen-quelle {
     border-top: none;
 }
 
@@ -2176,9 +2184,9 @@ main .legal-back-link:hover {
     }
 
     .agenda-inner {
-    width: auto;
-    margin-left: 6%;
-    margin-right: 6%;
+        width: auto;
+        margin-left: 6%;
+        margin-right: 6%;
     }
 
     .agenda-item {
@@ -2221,11 +2229,11 @@ main .legal-back-link:hover {
 @media (max-width: 768px) {
 
     .section-label {
-    font-size: 15px;
-    margin-bottom: 16px;
-    line-height: 1.3;
+        font-size: 15px;
+        margin-bottom: 16px;
+        line-height: 1.3;
 
-}
+    }
 
     .section-scroll-nav {
         display: none;
@@ -2331,8 +2339,8 @@ main .legal-back-link:hover {
     }
 
     #forderung .petition-buttons {
-    margin-top: 36px;
-}
+        margin-top: 36px;
+    }
 
     .mitmachen .petition-form-button,
     .support-button,
@@ -2358,7 +2366,7 @@ main .legal-back-link:hover {
     }
 }
 
-.petition-form-button + .petition-form-button {
+.petition-form-button+.petition-form-button {
     margin-top: 14px;
 }
 
@@ -2408,6 +2416,7 @@ main .legal-back-link:hover {
 /* Einheitliche Fliesstextgrösse */
 
 @media (max-width: 768px) {
+
     main section p,
     .loesung-intro,
     .loesung-nutzen,
@@ -2423,6 +2432,7 @@ main .legal-back-link:hover {
 /* Mobile Grids */
 
 @media (max-width: 768px) {
+
     .fakten-grid,
     .loesung-grid,
     .forderungen-grid,
@@ -2430,8 +2440,8 @@ main .legal-back-link:hover {
         display: block;
     }
 
-    .fakten-grid > div,
-    .loesung-grid > div,
+    .fakten-grid>div,
+    .loesung-grid>div,
     .forderung {
         margin-bottom: 45px;
         padding-left: 0;
@@ -2500,25 +2510,38 @@ main .legal-back-link:hover {
         text-align: left;
     }
 
+    #kennzahlen .vergleich-grid,
+    #kennzahlen .vergleich-hinweis {
+        display: none;
+    }
+
+    .vergleich-pdf-button {
+        display: inline-flex;
+        margin-top: 28px;
+        background: #F9F6EB;
+        color: #3A305B;
+        border: 2px solid transparent;
+    }
+
 
     /* Erklärvideo */
 
     .video-wrap {
-    margin-top: 36px;
-    border-radius: 18px;
+        margin-top: 36px;
+        border-radius: 18px;
     }
 
     /* Lösung */
 
 
-    .loesung-grid > div {
+    .loesung-grid>div {
         margin-bottom: 40px;
     }
 
     .loesung-grid h3 {
-    font-size: 26px;
-    line-height: 1.15;
-}
+        font-size: 26px;
+        line-height: 1.15;
+    }
 
     .loesung-nutzen,
     .loesung-ziel {
@@ -2572,7 +2595,7 @@ main .legal-back-link:hover {
         gap: 40px;
     }
 
-    .vorteile-section > h2 {
+    .vorteile-section>h2 {
         margin-bottom: 45px;
     }
 }
@@ -2585,9 +2608,9 @@ main .legal-back-link:hover {
         padding: 75px 7%;
     }
 
-   .faq-section h2 {
-    margin-bottom: 40px;
-}
+    .faq-section h2 {
+        margin-bottom: 40px;
+    }
 
     .faq-item summary {
         padding: 24px 45px 24px 0;
@@ -2629,74 +2652,74 @@ main .legal-back-link:hover {
         object-fit: contain;
     }
 
-.supporter-logo--elemental img {
-    width: 240px;
-    max-width: 80vw;
-}
-
-@media (max-width: 700px) {
-    .supporter-logo--akut img {
-        width: 220px;
-        max-width: 100%;
-        max-height: 100px;
+    .supporter-logo--elemental img {
+        width: 240px;
+        max-width: 80vw;
     }
-}
 
-@media (max-width: 600px) {
-    .supporter-logo--juso-luzern img {
-        width: 220px;
-        max-width: 100%;
+    @media (max-width: 700px) {
+        .supporter-logo--akut img {
+            width: 220px;
+            max-width: 100%;
+            max-height: 100px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .supporter-logo--juso-luzern img {
+            width: 220px;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    .supporter-logo--tierwelt img {
+        width: 230px;
+        max-width: 78vw;
         height: auto;
     }
-}
 
-.supporter-logo--tierwelt img {
-    width: 230px;
-    max-width: 78vw;
-    height: auto;
-}
+    .supporter-logo--parterre img {
+        width: 200px;
+        max-width: 72vw;
+        height: auto;
+    }
 
-.supporter-logo--parterre img {
-    width: 200px;
-    max-width: 72vw;
-    height: auto;
-}
+    @media (max-width: 700px) {
+        .supporter-logo--rattenclub img {
+            width: 240px;
+            max-height: 90px;
+        }
+    }
 
-@media (max-width: 700px) {
-  .supporter-logo--rattenclub img {
-    width: 240px;
-    max-height: 90px;
-  }
-}
+    /* Life Farm Forever */
 
-/* Life Farm Forever */
+    .supporter-logo--lifefarm img {
+        width: 180px;
+        max-width: 62vw;
+        height: auto;
+    }
 
-.supporter-logo--lifefarm img {
-    width: 180px;
-    max-width: 62vw;
-    height: auto;
-}
+    /* Stiftung für das Tier im Recht */
 
-/* Stiftung für das Tier im Recht */
-
-.supporter-logo--tir img {
-    display: block;
-    width: 220px;
-    max-width: 78vw;
-    height: auto;
-    max-height: 130px;
-    margin: 0 auto;
-}
+    .supporter-logo--tir img {
+        display: block;
+        width: 220px;
+        max-width: 78vw;
+        height: auto;
+        max-height: 130px;
+        margin: 0 auto;
+    }
 
     .supporter-logo--animalrightsmarch img {
-    width: 150px;
-    max-width: 48vw;
-}
+        width: 150px;
+        max-width: 48vw;
+    }
 
     .supporter-logo--tiermensch img {
-    width: 220px;
-    max-width: 78vw;
-}
+        width: 220px;
+        max-width: 78vw;
+    }
 
     .supporter-logo--aurelio img {
         width: 130px;
@@ -2859,22 +2882,22 @@ main .legal-back-link:hover {
         padding: 26px 28px;
     }
 
-   .wissen-kapitel {
-    padding: 60px 6%;
-}
+    .wissen-kapitel {
+        padding: 60px 6%;
+    }
 
-.wissen-kapitel h2 {
-    width: 100%;
-    max-width: 100%;
-    font-size: clamp(36px, 11vw, 52px);
-    line-height: 1;
-    letter-spacing: -0.03em;
-    overflow-wrap: anywhere;
-}
+    .wissen-kapitel h2 {
+        width: 100%;
+        max-width: 100%;
+        font-size: clamp(36px, 11vw, 52px);
+        line-height: 1;
+        letter-spacing: -0.03em;
+        overflow-wrap: anywhere;
+    }
 
-.wissen-quelle {
-    padding: 28px;
-}
+    .wissen-quelle {
+        padding: 28px;
+    }
 
     .wissen-quelle-meta,
     .wissen-stadt-meta {
@@ -2897,10 +2920,10 @@ main .legal-back-link:hover {
 }
 
 @media (max-width: 600px) {
-  .wissen-quelle-link {
-    padding: 0.9rem 1.5rem;
-    font-size: 1rem;
-  }
+    .wissen-quelle-link {
+        padding: 0.9rem 1.5rem;
+        font-size: 1rem;
+    }
 }
 
 /* Mobile Unterseiten-Navigation */
@@ -2932,6 +2955,7 @@ main .legal-back-link:hover {
         font-size: 14px;
     }
 }
+
 /* Mobile Medienseite */
 
 @media (max-width: 768px) {
@@ -2945,6 +2969,7 @@ main .legal-back-link:hover {
         padding: 45px 6% 65px;
     }
 }
+
 @media (max-width: 768px) {
 
     .legal-section {
