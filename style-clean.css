@@ -796,6 +796,8 @@ footer p {
 
 .hero {
     background: #B0C1A9;
+    min-height: 70vh;
+    background: #B0C1A9;
 }
 
 .hero h1 {
