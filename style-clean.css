@@ -2525,7 +2525,7 @@ main .legal-back-link:hover {
         margin-top: 28px;
         background: #F9F6EB;
         color: #3A305B;
-        border: 2px solid transparent;
+        border: none;
     }
 
 
