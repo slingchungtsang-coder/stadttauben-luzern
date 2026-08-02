@@ -1471,6 +1471,9 @@ main .supporter-logo:focus-visible {
         linear-gradient(to bottom, transparent 0%, black 25%, black 100%);
     -webkit-mask-composite: source-in;
 }
+.section-pigeon-forderung {
+    bottom: -60px;
+}
 
 /* Super Pigeon */
 
