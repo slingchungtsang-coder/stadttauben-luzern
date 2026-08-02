@@ -938,7 +938,7 @@ footer p {
 .about-section {
     min-height: auto;
     height: auto;
-    background: #F4F0EA;
+    background: #F9F6EB;
 }
 
 .about-inner {
@@ -1418,7 +1418,7 @@ main .supporter-logo:focus-visible {
 /* Mitmachen */
 
 .mitmachen {
-    min-height: 80vh;
+    min-height: 70vh;
     overflow: hidden;
     background: #3A305B;
     color: #F9F6EB;
