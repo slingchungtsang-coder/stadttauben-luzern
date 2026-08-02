@@ -184,7 +184,7 @@ nav a:hover {
 .petition-button {
     background: #E85D9E;
     color: #FFFFFF;
-    border: 2px solid transparent;
+    border: none;
 }
 
 .petition-form-button {
@@ -198,7 +198,7 @@ nav a:hover {
     margin-bottom: 45px;
     background: #6B4EFF;
     color: #FFFFFF;
-    border: 2px solid transparent;
+    border: none;
 }
 
 .mobile-sticky-petition {
