@@ -159,6 +159,14 @@ nav a:hover {
     white-space: nowrap;
 }
 
+.language-link {
+    padding: 0.45rem 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    line-height: 1;
+}
+
 /* ========================================
    BUTTONS
 ======================================== */
@@ -2089,7 +2097,9 @@ main .legal-back-link:hover {
     }
 }
 
-/* Agenda */
+/* ========================================
+   Agenda
+======================================== */
 
 .agenda-hero,
 .agenda-section {
@@ -2233,6 +2243,81 @@ main .legal-back-link:hover {
 .agenda-upcoming .section-kicker,
 #petition-medien .section-label {
     margin-top: 0;
+}
+
+/* ========================================
+   Englische Kurzseite: Abschnittsfarben
+======================================== */
+
+.english-page #why-it-falls-short {
+    background-color: #F3EFE7;
+}
+
+.english-page #augsburg-model {
+    background-color: #B0C1A9;
+}
+
+.english-page #petition {
+    background-color: #3A305B;
+}
+
+.english-page #about-us {
+    background-color: #EEE8DD;
+}
+
+/* Situation */
+
+.english-page #situation {
+    background-color: #3D3938;
+    color: #F9F6EB;
+}
+
+.english-page #situation h2,
+.english-page #situation p,
+.english-page #situation .section-label {
+    color: #F9F6EB;
+}
+
+/* Benefits */
+
+.english-page #benefits {
+    background-color: #3D3938;
+    color: #F9F6EB;
+}
+
+.english-page #benefits h2,
+.english-page #benefits h3,
+.english-page #benefits p,
+.english-page #benefits .section-label {
+    color: #F9F6EB;
+}
+
+.english-page #benefits .vorteile-grid > div {
+    border-top-color: #F9F6EB;
+}
+
+/* Further Reading */
+
+.english-page #further-reading {
+    background-color: #F9F6EB;
+    color: #3D3938;
+}
+
+.english-page #further-reading h2,
+.english-page #further-reading p,
+.english-page #further-reading .section-label {
+    color: #3D3938;
+}
+
+.english-page #further-reading .petition-form-button {
+    color: #3D3938;
+    border-color: #3D3938;
+    background-color: transparent;
+}
+
+.english-page #further-reading .petition-form-button:hover {
+    color: #F9F6EB;
+    background-color: #3D3938;
 }
 
 /* ========================================
