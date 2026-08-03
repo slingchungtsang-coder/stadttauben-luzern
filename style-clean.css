@@ -1052,6 +1052,12 @@ main .supporter-logo:focus-visible {
     max-width: 230px;
 }
 
+/* Stiftung ProTier */
+
+.supporter-logo--protier img {
+    max-width: 190px;
+}
+
 /* Club der Rattenfreunde */
 
 .supporter-logo--rattenclub img {
@@ -1471,6 +1477,7 @@ main .supporter-logo:focus-visible {
         linear-gradient(to bottom, transparent 0%, black 25%, black 100%);
     -webkit-mask-composite: source-in;
 }
+
 .section-pigeon-forderung {
     bottom: -60px;
 }
@@ -2706,6 +2713,12 @@ main .legal-back-link:hover {
         width: 180px;
         max-width: 62vw;
         height: auto;
+    }
+
+    /* Stiftung ProTier */
+
+    .supporter-logo--protier img {
+        max-width: 160px;
     }
 
     /* Stiftung für das Tier im Recht */
