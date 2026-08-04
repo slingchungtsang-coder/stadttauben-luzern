@@ -2337,6 +2337,10 @@ main .legal-back-link:hover {
 }
 
 @media (max-width: 768px) {
+    .english-page #situation {
+        padding-bottom: 300px;
+    }
+
     .english-page #situation .section-pigeon-forderung {
         width: 72%;
         right: -18%;
@@ -2387,7 +2391,31 @@ main .legal-back-link:hover {
     margin-top: 0;
     border-top: 0;
 }
+@media (max-width: 768px) {
+    .english-page #petition .section-pigeon-mitmachen {
+        width: 78%;
+        right: -18%;
+        bottom: -2%;
+    }
 
+    .english-page #petition .petition-buttons {
+        position: relative;
+        z-index: 3;
+        padding-right: 20%;
+    }
+}
+
+@media (max-width: 768px) {
+    .english-page #petition .petition-form-button {
+        position: relative;
+        z-index: 3;
+        transform: translateY(90px);
+    }
+
+    .english-page #petition {
+        padding-bottom: 170px;
+    }
+}
 /* ========================================
    MOBILE
 ======================================== */
