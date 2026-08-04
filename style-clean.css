@@ -2265,9 +2265,15 @@ main .legal-back-link:hover {
     background-color: #EEE8DD;
 }
 
+.english-page .hero {
+    min-height: 58vh;
+    padding-bottom: 50px;
+}
+
 /* Situation */
 
 .english-page #situation {
+    overflow: hidden;
     background-color: #3D3938;
     color: #F9F6EB;
 }
@@ -2275,7 +2281,13 @@ main .legal-back-link:hover {
 .english-page #situation h2,
 .english-page #situation p,
 .english-page #situation .section-label {
+    position: relative;
+    z-index: 2;
     color: #F9F6EB;
+}
+
+.english-page #situation .section-pigeon {
+    z-index: 1;
 }
 
 /* Benefits */
@@ -2318,6 +2330,48 @@ main .legal-back-link:hover {
 .english-page #further-reading .petition-form-button:hover {
     color: #F9F6EB;
     background-color: #3D3938;
+}
+
+@media (max-width: 768px) {
+    .english-page #situation .section-pigeon-forderung {
+        width: 72%;
+        right: -18%;
+        bottom: 0;
+        opacity: 0.72;
+    }
+}
+
+.english-page #why-it-falls-short,
+.english-page #further-reading {
+    min-height: auto;
+    height: auto;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+@media (max-width: 768px) {
+    .english-page #why-it-falls-short,
+    .english-page #further-reading {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
+.english-page #further-reading .organisation-link {
+    display: inline;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.english-page #further-reading .organisation-link:hover {
+    background: transparent;
+    color: inherit;
+    opacity: 0.75;
 }
 
 /* ========================================
