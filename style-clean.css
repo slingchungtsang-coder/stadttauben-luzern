@@ -2290,6 +2290,10 @@ main .legal-back-link:hover {
     z-index: 1;
 }
 
+.english-page #situation .section-pigeon-forderung {
+    bottom: -2px;
+}
+
 /* Benefits */
 
 .english-page #benefits {
@@ -2372,6 +2376,16 @@ main .legal-back-link:hover {
     background: transparent;
     color: inherit;
     opacity: 0.75;
+}
+
+.english-page #situation {
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+
+.english-page #history {
+    margin-top: 0;
+    border-top: 0;
 }
 
 /* ========================================
