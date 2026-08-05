@@ -838,23 +838,21 @@ footer p {
     height: auto;
 
     opacity: 0.55;
+    transform: translateY(-70px);
     pointer-events: none;
 }
 
-.hero {
-    position: relative;
-    overflow: hidden;
-}
-
 .hero-pigeon-background {
-  position: absolute;
-  right: 8%;
-  top: 45%;
-  width: 270px;
-  opacity: 0.55;
-  filter: none;
-  z-index: 0;
-  pointer-events: none;
+    position: absolute;
+    right: 8%;
+    top: 45%;
+    width: 270px;
+    opacity: 0.55;
+    filter: none;
+    z-index: 0;
+
+    transform: translateY(-70px);
+    pointer-events: none;
 }
 
 .hero .section-label,
@@ -2653,6 +2651,28 @@ main .legal-back-link:hover {
     .hero p {
         max-width: 100%;
     }
+}
+@media (max-width: 700px) {
+
+  .hero {
+    min-height: auto;
+    padding-bottom: 300px;
+  }
+
+  .hero-pigeon {
+    right: 6%;
+    bottom: 35px;
+    width: 210px;
+    transform: none;
+  }
+
+  .hero-pigeon-background {
+    right: 15%;
+    top: auto;
+    bottom: 225px;
+    width: 135px;
+    transform: none;
+  }
 }
 
 /* Einheitliche Fliesstextgrösse */
