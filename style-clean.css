@@ -803,7 +803,8 @@ footer p {
 /* Hero */
 
 .hero {
-    background: #B0C1A9;
+    position: relative;
+    overflow: hidden;
     min-height: 70vh;
     background: #B0C1A9;
 }
@@ -816,6 +817,52 @@ footer p {
     background: #E85D9E;
     color: #FFFFFF;
     font-weight: 600;
+}
+
+.hero .section-label,
+.hero h1,
+.hero p,
+.hero .petition-button {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-pigeon {
+    position: absolute;
+    right: 8%;
+    left: auto;
+    bottom: 2%;
+    z-index: 1;
+
+    width: min(34vw, 470px);
+    height: auto;
+
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-pigeon-background {
+  position: absolute;
+  right: 8%;
+  top: 45%;
+  width: 270px;
+  opacity: 0.55;
+  filter: none;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero .section-label,
+.hero h1,
+.hero>p,
+.hero .button {
+    position: relative;
+    z-index: 2;
 }
 
 /* Kurzfassung */
@@ -2265,11 +2312,6 @@ main .legal-back-link:hover {
     background-color: #EEE8DD;
 }
 
-.english-page .hero {
-    min-height: 58vh;
-    padding-bottom: 50px;
-}
-
 /* Situation */
 
 .english-page #situation {
@@ -2308,7 +2350,7 @@ main .legal-back-link:hover {
     color: #F9F6EB;
 }
 
-.english-page #benefits .vorteile-grid > div {
+.english-page #benefits .vorteile-grid>div {
     border-top-color: #F9F6EB;
 }
 
@@ -2358,12 +2400,14 @@ main .legal-back-link:hover {
 }
 
 @media (max-width: 768px) {
+
     .english-page #why-it-falls-short,
     .english-page #further-reading {
         padding-top: 70px;
         padding-bottom: 70px;
     }
 }
+
 .english-page #further-reading .organisation-link {
     display: inline;
     padding: 0;
@@ -2391,6 +2435,7 @@ main .legal-back-link:hover {
     margin-top: 0;
     border-top: 0;
 }
+
 @media (max-width: 768px) {
     .english-page #petition .section-pigeon-mitmachen {
         width: 78%;
@@ -2416,6 +2461,7 @@ main .legal-back-link:hover {
         padding-bottom: 170px;
     }
 }
+
 /* ========================================
    MOBILE
 ======================================== */
