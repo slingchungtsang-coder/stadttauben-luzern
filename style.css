@@ -1,62 +1,91 @@
+/* ==========================================================
+   Stadttauben Luzern
+   Haupt-Stylesheet
+
+   Struktur:
+   1. Reset
+   2. Variablen
+   3. Basis
+   4. Header
+   5. Navigation
+   6. Buttons
+   7. Komponenten
+   8. Startseite
+   9. Wissensseite
+  10. Medienseite
+  11. Englische Kurzseite
+  12. Mobile
+
+   Refactoring begonnen: Juli 2026
+========================================================== */
+
+
+/* ========================================
+   RESET
+======================================== */
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
+/* ========================================
+   VARIABLEN
+======================================== */
+
 :root {
     --font-size-body: 20px;
     --line-height-body: 1.6;
     --font-size-small: 16px;
     --font-size-lead: 22px;
+    --section-padding: 8%;
+    --text-column-width: 760px;
+    --wide-content-width: 1200px;
+}
+
+/* ========================================
+   BASIS
+======================================== */
+
+html,
+body {
+    width: 100%;
 }
 
 body {
     margin: 0;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     color: #3D3938;
-    background: #ffffff;
-}
-
-header {
-    padding: 28px 8% 20px;
-    display: flex;
-    align-items: center;
-    gap: 48px;
-    border-bottom: 1px solid #3D3938;
-    background: #3A305B;
-    top: 0;
-    z-index: 100;
-    transition: padding 0.25s ease, background 0.25s ease;
-}
-
-nav {
-    display: flex;
-    gap: 32px;
-    align-items: center;
-}
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 16px;
+    background: #FFFFFF;
 }
 
 main section {
+    position: relative;
     min-height: 80vh;
-    padding: 70px 8%;
+    padding: 70px var(--section-padding);
+    box-sizing: border-box;
 }
 
 h1 {
     max-width: 1000px;
     margin: 0 0 30px;
-    font-size: clamp(48px, 6vw, 92px);
+    font-size: clamp(44px, 5.4vw, 82px);
     line-height: 0.95;
     letter-spacing: -0.04em;
 }
 
+h1,
+h2,
+h3 {
+    hyphens: none;
+    -webkit-hyphens: none;
+    word-break: normal;
+    overflow-wrap: normal;
+}
+
 p {
-    max-width: 760px;
+    max-width: var(--text-column-width);
     font-size: var(--font-size-body);
     line-height: var(--line-height-body);
 }
@@ -66,403 +95,29 @@ main a {
     margin-top: 25px;
     padding: 16px 28px;
     background: #3D3938;
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
     border-radius: 50px;
 }
 
-.fakten {
-    margin-top: 160px;
-}
+/* ========================================
+   HEADER
+======================================== */
 
-.fakten h2 {
-    font-size: 22px;
-    margin-bottom: 50px;
-}
-
-.fakten-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 70px;
-    max-width: 900px;
-}
-
-.fakt-zahl {
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: 20px;
-    white-space: nowrap;
-    color: #F9F6EB;
-}
-
-.fakt-text {
-    font-size: 20px;
-    line-height: 1.5;
-    max-width: 360px;
-}
-
-
-.loesung > p:first-child {
-    font-size: 20px;
-    margin-bottom: 35px;
-}
-
-.loesung h2 {
-    max-width: 1000px;
-    margin: 0 0 50px;
-    font-size: clamp(42px, 5vw, 76px);
-    line-height: 1;
-    letter-spacing: -0.04em;
-}
-
-.loesung-intro {
-    max-width: 760px;
-    margin-bottom: 100px;
-}
-
-.loesung-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 60px;
-}
-
-.loesung-grid span {
-    display: block;
-    margin-bottom: 16px;
-    font-size: 16px;
-}
-
-.loesung-grid h3 {
-    margin: 0 0 20px;
-    font-size: 28px;
-}
-
-.loesung-grid p {
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-.forderungen {
-    background: #ffffff;
-    color: #3D3938;
-}
-
-.forderungen > p:first-child {
-    font-size: 20px;
-    margin-bottom: 35px;
-}
-
-.forderungen h2 {
-    margin: 0 0 90px;
-    font-size: clamp(48px, 6vw, 92px);
-    line-height: 0.95;
-    letter-spacing: -0.04em;
-}
-
-.forderungen-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0;
-    max-width: 1200px;
-}
-
-.forderung {
-  padding: 30px 60px 25px 0;
-  position: relative;
-}
-
-.forderung::before {
-  content: "";
-  display: block;
-  width: 82%;
-  height: 1px;
-  background: #3D3938;
-  margin-bottom: 35px;
-}
-
-.forderung:nth-child(even) {
-    padding-left: 60px;
-}
-
-.forderung span {
-    display: block;
-    margin-bottom: 30px;
-    font-size: 16px;
-}
-
-.forderung h3 {
-    max-width: 480px;
-    margin: 0 0 25px;
-    font-size: 32px;
-    line-height: 1.1;
-}
-
-.forderung p {
-    max-width: 480px;
-    margin: 0;
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-.mitmachen {
-  background: #B0C1A9;
-  color: #F4EBDD;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.mitmachen a {
-  color: #F4EBDD;
-}
-
-.mitmachen > p:first-child {
-    font-size: 20px;
-    margin-bottom: 35px;
-}
-
-.mitmachen-text {
-  max-width: 650px;
-  margin: 0 0 40px;
-  font-size: 22px;
-  line-height: 1.5;
-}
-
-.mitmachen h2 {
-  margin-top: 0px;
-  margin-bottom: 32px;
-}
-
-.petition-widget-placeholder {
-  width: min(100%, 760px);
-  min-height: 460px;
-  margin: 0 0 40px;
-  padding: 40px;
-  background: #ffffff;
-  color: #3A305B;
-  border-radius: 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.petition-widget-title {
-  margin: 0 0 12px;
-  font-size: 28px;
-  font-weight: 700;
-}
-
-.petition-widget-placeholder p {
-  margin: 0;
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-.mitmachen .petition-button {
-    align-self: flex-start;
-    margin-top: 10px;
-    padding: 18px 44px;
-    background: #F4EBDD;
-    color: #3D3938;
-}
-
-footer {
-    padding: 70px 8%;
-    background: #3D3938;
-    color: #FFFFFF;
-}
-
-footer p {
-    margin: 0 0 14px;
-    font-size: 18px;
-}
-
-.footer-links a {
-    margin-top: 35px;
-    font-weight: 600;
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-.footer-links a:visited {
-    color: #FFFFFF;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-.footer-logo {
-    width: 120px;
-    height: auto;
-    margin-bottom: 35px;
-    filter: brightness(0) invert(1);
-}
-
-.copyright {
-    margin-top: 35px;
-    font-size: 14px;
-    opacity: 0.75;
-}
-
-.hero {
-    background: #B0C1A9;
-}
-.fuetterung {
-    background: #f9f6eb;
-    color: #3d3938;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 100px;
-    align-items: start;
-}
-
-.fuetterung > p:first-child {
-    grid-column: 1 / -1;
-    font-size: 18px;
-    margin: 0 0 35px;
-}
-
-.fuetterung h2 {
-    grid-column: 1;
-    max-width: 650px;
-    margin: 0;
-    font-size: clamp(52px, 6vw, 90px);
-    line-height: 0.95;
-    letter-spacing: -0.05em;
-    color: #3a305b;
-}
-
-.fuetterung-text {
-    grid-column: 2;
-    max-width: 620px;
-    margin: 0;
-    padding-top: 5px;
-    font-size: 20px;
-    line-height: 1.5;
-}
-
-.fuetterung-text p {
-    margin: 0 0 28px;
-}
-
-.fuetterung-text p:first-child {
-    font-weight: 700;
-    font-size: 22px;
-}
-
-h1,
-.loesung h2,
-.forderungen h2,
-.mitmachen h2,
-.fuetterung h2 {
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    font-size: clamp(48px, 6vw, 92px);
-    line-height: 0.95;
-    letter-spacing: -0.04em;
-    font-weight: 700;
-}
 header {
+    padding: 28px 8% 20px;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    border-bottom: 1px solid #3D3938;
     background: #3A305B;
+    transition:
+        padding 0.25s ease,
+        background 0.25s ease;
 }
 
 header img {
     filter: brightness(0) invert(1);
-}
-
-nav a {
-    color: #ffffff;
-    font-weight: 600;
-}
-
-
-nav a:hover {
-    text-decoration: underline;
-}
-.fakten-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    margin-top: 60px;
-}
-
-.fakten-grid > div {
-    border-top: 2px solid #3A305B;
-    padding-top: 28px;
-}
-
-.fakt-zahl {
-    margin: 0 0 18px;
-    font-size: clamp(48px, 6vw, 88px);
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: -0.04em;
-    color: #FFFFFF;
-}
-
-.fakt-text {
-    margin: 0;
-    max-width: 500px;
-    font-size: 20px;
-    line-height: 1.5;
-}
-.loesung {
-    background: #3A305B;
-    color: #FFFFFF;
-}
-
-.loesung > p:first-child {
-    font-size: 20px;
-    margin-bottom: 35px;
-}
-
-.loesung h2 {
-    max-width: 1000px;
-    margin: 0 0 32px;
-    font-size: clamp(48px, 6vw, 92px);
-    line-height: 0.95;
-    letter-spacing: -0.04em;
-}
-
-.loesung-intro {
-    max-width: 760px;
-    margin: 0 0 70px;
-    font-size: 22px;
-    line-height: 1.5;
-}
-
-.loesung-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-}
-
-.loesung-grid > div {
-    border-top: 1px solid #3D3938;
-    padding-top: 24px;
-}
-
-.loesung-grid span {
-    display: block;
-    margin-bottom: 16px;
-    font-size: 18px;
-    color: #3D3938;
-}
-
-.loesung-grid h3 {
-    margin: 0 0 16px;
-    font-size: 28px;
-    line-height: 1.15;
-}
-
-.loesung-grid p {
-    margin: 0;
-    font-size: 18px;
-    line-height: 1.5;
 }
 
 .logo {
@@ -474,10 +129,234 @@ nav a:hover {
     width: 170px;
     height: auto;
 }
+
+/* ========================================
+   NAVIGATION
+======================================== */
+nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.main-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 52px;
+}
+
+.main-nav-links a {
+    white-space: nowrap;
+}
+
+.language-link {
+    padding: 0.45rem 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    line-height: 1;
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    width: fit-content;
+    padding: 10px 18px;
+    border-radius: 999px;
+
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+
+    text-decoration: none;
+}
+
+.petition-button {
+    background: #E85D9E;
+    color: #FFFFFF;
+    border: none;
+}
+
+.petition-form-button {
+    background: transparent;
+    color: #F9F6EB;
+    border: 2px solid rgba(249, 246, 235, .8);
+}
+
+.support-button {
+    margin-top: 18px;
+    margin-bottom: 45px;
+    background: #6B4EFF;
+    color: #FFFFFF;
+    border: none;
+}
+
+.mobile-sticky-petition {
+    display: inline-flex;
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 999;
+
+    padding: 10px 18px;
+    border: none;
+    border-radius: 999px;
+
+    background: #E85D9E;
+    color: #FFFFFF;
+
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.petition-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.petition-buttons .petition-form-button {
+    width: 320px;
+    justify-content: center;
+}
+
+.petition-form-button:hover {
+    background: rgba(249, 246, 235, 0.08);
+    border-color: #F9F6EB;
+}
+
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    padding: 70px var(--section-padding);
+    background: #3D3938;
+    color: #FFFFFF;
+}
+
+footer p {
+    margin: 0 0 14px;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+.footer-logo {
+    display: block;
+    width: 120px;
+    height: auto;
+    margin-bottom: 35px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 35px;
+}
+
+.footer-links a,
+.footer-links a:visited {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: #FFFFFF;
+    border-radius: 0;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 35px;
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+.copyright a,
+.copyright a:visited {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.copyright a:hover {
+    text-decoration: underline;
+}
+
+/* ========================================
+   KOMPONENTEN
+======================================== */
+
+/* Einheitliche Section-Kicker */
+
+.section-label {
+    display: block;
+    margin: 0 0 18px;
+    padding: 0;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+/* Einheitlicher Abstand zwischen Kicker und Überschrift */
+
+.section-label+h1,
+.section-label+h2 {
+    margin-top: 0;
+}
+
+/* Back to top */
+
 .back-to-top {
+    position: absolute;
+    left: var(--section-padding);
+    bottom: 50px;
     display: inline-block;
     width: auto;
-    margin-top: 50px;
+    margin: 0;
     padding: 0;
     background: transparent;
     color: inherit;
@@ -490,90 +369,2134 @@ nav a:hover {
 .back-to-top:hover {
     opacity: 0.6;
 }
-/* Farbfolge der sieben Sections */
 
-#start {
+/* Scroll-Navigation */
+
+.section-scroll-nav {
+    position: fixed;
+    left: 24px;
+    top: 50%;
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    transform: translateY(-50%);
+}
+
+.section-scroll-nav a {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: 1.5px solid #3A305B;
+    border-radius: 50%;
+    opacity: 1;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.section-scroll-nav.is-on-purple a {
+    background: transparent;
+    border-color: #BFD2B5;
+}
+
+.section-scroll-nav a:hover,
+.section-scroll-nav a:focus,
+.section-scroll-nav a:focus-visible,
+.section-scroll-nav a:active {
+    background: #3A305B;
+    border-color: #3A305B;
+    opacity: 1;
+    outline: none;
+    transform: scale(1.25);
+}
+
+.section-scroll-nav.is-on-purple a:hover,
+.section-scroll-nav.is-on-purple a:focus,
+.section-scroll-nav.is-on-purple a:focus-visible,
+.section-scroll-nav.is-on-purple a:active {
+    background: #BFD2B5;
+    border-color: #BFD2B5;
+}
+
+/* Wissenskarten */
+
+.wissen-themen-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+    margin-top: 48px;
+}
+
+.wissen-thema {
+    grid-column: span 3;
+    min-height: 150px;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 28px;
+    text-decoration: none;
+}
+
+.wissen-thema span {
+    font-size: 0.9rem;
+}
+
+.wissen-thema h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Vergleich Luzern / Augsburg */
+
+.vergleich-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.vergleich-card {
+    background: #fff;
+    border-radius: 18px;
+    padding: 1.6rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+}
+
+.vergleich-card h3 {
+    margin: 0 0 1.5rem;
+    font-size: 2rem;
+    color: #3A305B;
+    text-align: center;
+}
+
+.vergleich-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(58, 48, 91, 0.12);
+    font-size: var(--font-size-body);
+}
+
+.vergleich-row:last-child {
+    border-bottom: none;
+}
+
+.vergleich-row span {
+    color: #555;
+}
+
+.vergleich-row strong {
+    color: #3A305B;
+    font-weight: 700;
+    text-align: right;
+}
+
+.vergleich-hinweis {
+    margin-top: 2.5rem;
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.vergleich-pdf-button {
+    display: none;
+}
+
+/* FAQ */
+
+.faq-list {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0;
+}
+
+.faq-item {
+    border-top: 1px solid #403B3B;
+}
+
+.faq-item:last-child {
+    border-bottom: 1px solid #403B3B;
+}
+
+.faq-item summary {
+    position: relative;
+    padding: 28px 60px 28px 0;
+    font-size: var(--font-size-body);
+    font-weight: 700;
+    line-height: 1.3;
+    cursor: pointer;
+    list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    color: #3A305B;
+    font-size: 34px;
+    font-weight: 400;
+    transform: translateY(-50%);
+}
+
+.faq-item[open] summary::after {
+    content: "−";
+}
+
+.faq-item p {
+    max-width: 820px;
+    margin: 0;
+    padding: 0 60px 30px 0;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.faq-more {
+    margin-top: 1.25rem;
+    margin-bottom: 0;
+}
+
+.faq-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.65rem 1rem;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.faq-link:hover,
+.faq-link:focus-visible {
+    background-color: #3d3938;
+    color: #fff;
+    border-color: #3d3938;
+}
+
+/* Aufklappbare Stimmen-Sektion */
+
+.voices-section--compact {
+    min-height: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: #F8E8EE;
+}
+
+.voices-accordion {
+    width: 100%;
+    max-width: var(--wide-content-width);
+    margin: 0;
+}
+
+.voices-accordion summary {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 220px;
+    padding: 58px 90px 58px 0;
+    cursor: pointer;
+    list-style: none;
+}
+
+.voices-accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+.voices-summary-text {
+    display: block;
+}
+
+.voices-summary-title {
+    display: block;
+    width: 100%;
+    max-width: min(1100px, 78vw);
+    color: #43366B;
+    font-size: clamp(48px, 5vw, 78px);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+}
+
+.voices-accordion summary::after {
+    content: "+";
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    color: #43366B;
+    font-size: 56px;
+    font-weight: 300;
+    line-height: 1;
+    transform: translateY(-50%);
+}
+
+.voices-accordion[open] summary::after {
+    content: "−";
+}
+
+.voices-accordion summary:focus-visible {
+    outline: 3px solid #43366B;
+    outline-offset: 8px;
+}
+
+.voices-accordion-content {
+    padding: 0 0 70px;
+}
+
+/* Stimmenkarten */
+
+.voices-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    align-items: start;
+}
+
+.voice-card {
+    position: relative;
+    min-height: 0;
+    padding: 38px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border-radius: 24px;
+}
+
+.quote-mark-open {
+    display: block;
+    margin: 0 0 12px;
+    color: #43366B;
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 0.7;
+}
+
+.voice-card blockquote {
+    margin: 0;
+    color: #3D3938;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.voice-card blockquote::after {
+    content: "\00A0»";
+    color: #43366B;
+    font-size: 2.4rem;
+    font-weight: 800;
+    line-height: 0;
+    vertical-align: -0.16em;
+}
+
+.voice-person {
+    margin-top: 18px;
+    padding-top: 0;
+}
+
+.voice-name {
+    margin: 0 0 6px;
+    color: #43366B;
+    font-weight: 800;
+}
+
+.voice-role {
+    margin: 0;
+    color: #3D3938;
+    font-size: 0.95rem;
+}
+
+.voice-name a,
+.voice-name a:visited {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: #43366B;
+    border-radius: 0;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.voice-name a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.voice-name a:focus-visible {
+    outline: 2px solid #43366B;
+    outline-offset: 4px;
+}
+
+/* Teamkarten */
+
+.about-team {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    width: 100%;
+    max-width: var(--wide-content-width);
+    margin-left: 0;
+}
+
+.team-member img {
+    display: block;
+    width: 100%;
+    border-radius: 18px;
+}
+
+.team-member h3 {
+    margin-top: 16px;
+    font-size: 22px;
+}
+
+/* Game */
+
+.game-frame-wrap {
+    width: 100%;
+    margin: 55px 0 40px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 28px;
+}
+
+.super-pigeon-game {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.game-section .petition-button {
+    background: #B9D986;
+    color: #3A305B;
+}
+
+/* Formulare */
+
+
+/* ========================================
+   STARTSEITE
+======================================== */
+/* Hero */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 70vh;
     background: #B0C1A9;
 }
 
-#warum-es-nicht-reicht {
+.hero h1 {
+    color: #3A305B;
+}
+
+.hero .petition-button {
+    background: #E85D9E;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.hero .section-label,
+.hero h1,
+.hero>p,
+.hero .button {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-pigeon {
+    position: absolute;
+    right: 8%;
+    left: auto;
+    bottom: 2%;
+    z-index: 1;
+
+    width: min(34vw, 470px);
+    height: auto;
+
+    opacity: 0.55;
+    transform: translateY(-70px);
+    pointer-events: none;
+}
+
+.hero-pigeon-background {
+    position: absolute;
+    right: 8%;
+    top: 45%;
+    width: 270px;
+    opacity: 0.55;
+    filter: none;
+    z-index: 0;
+
+    transform: translateY(-70px);
+    pointer-events: none;
+}
+
+.hero-pigeon-third {
+    position: absolute;
+    right: 20%;
+    top: 20%;
+    width: 150px;
+    height: auto;
+    opacity: 0.55;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Kurzfassung */
+
+#kurzfassung {
+    background: #F9F6EB;
+    color: #403B3B;
+}
+
+#kurzfassung h2,
+#kurzfassung p {
+    color: #403B3B;
+}
+
+/* Ausgangslage */
+
+#ausgangslage {
+    background: #B0C1A9;
+    color: #403B3B;
+}
+
+#ausgangslage h2,
+#ausgangslage p {
+    color: #3A305B;
+}
+
+/* Domestikation */
+
+#domestikation {
+    background: #FFFFFF;
+    color: #403B3B;
+}
+
+#domestikation h2,
+#domestikation p {
+    color: #403B3B;
+}
+
+/* Video */
+
+#video {
     background: #3A305B;
     color: #F9F6EB;
 }
 
-#fuetterung {
-    background: #B0C1A9;
-    color: #3D3938;
+#video h2,
+#video p {
+    color: #F9F6EB;
 }
+
+/* Kennzahlen */
+
+#kennzahlen {
+    background: #403B3B;
+    color: #F9F6EB;
+}
+
+#kennzahlen h2,
+#kennzahlen h3,
+#kennzahlen p,
+#kennzahlen span {
+    color: #F9F6EB;
+}
+
+#kennzahlen .vergleich-card h3 {
+    color: #3A305B;
+}
+
+#kennzahlen .vergleich-row span {
+    color: #5A5553;
+}
+
+#kennzahlen .vergleich-row strong {
+    color: #3A305B;
+}
+
+/* Lösung */
+
+#loesung {
+    background: #F9F6EB;
+    color: #403B3B;
+}
+
+#loesung h2,
+#loesung h3,
+#loesung p,
+#loesung span {
+    color: #403B3B;
+}
+
+/* Vorteile */
+
+#vorteile {
+    background: #3A305B;
+    color: #F9F6EB;
+}
+
+#vorteile h2,
+#vorteile h3,
+#vorteile p,
+#vorteile span {
+    color: #F9F6EB;
+}
+
+/* FAQ */
+
+#faq {
+    background: #FFFFFF;
+    color: #403B3B;
+}
+
+#faq h2,
+#faq h3,
+#faq p,
+#faq summary {
+    color: #403B3B;
+}
+
+/* Stimmen */
+
+.voices-section {
+    background: #F8E8EE;
+}
+
+
+/* Wer wir sind */
+
+.about-section {
+    min-height: auto;
+    height: auto;
+    background: #F9F6EB;
+}
+
+.about-inner {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+
+.about-section h2 {
+    max-width: 650px;
+    margin: 0 0 24px;
+    color: #403566;
+}
+
+.about-intro {
+    max-width: var(--text-column-width);
+    margin-bottom: 60px;
+}
+
+/* Unterstützen */
+
+.support-section {
+    background: #B7C9B1;
+    color: #403A3A;
+}
+
+
+.support-section h2 {
+    color: #403A3A;
+}
+
+.support-section p {
+    max-width: var(--text-column-width);
+}
+
+/* Ideelle Unterstützer */
+
+.supporters {
+    width: 100%;
+    max-width: var(--wide-content-width);
+    margin-top: 0;
+}
+
+.supporters-title {
+    margin: 0 0 28px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+}
+
+.supporters-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 48px;
+    row-gap: 28px;
+    align-items: center;
+    width: 100%;
+}
+
+main .supporter-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 165px;
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    text-decoration: none;
+    overflow: visible;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+main .supporter-logo:hover {
+    transform: translateY(-2px);
+    opacity: 0.92;
+}
+
+main .supporter-logo:focus-visible {
+    outline: 3px solid #6B4EFF;
+    outline-offset: 6px;
+}
+
+.supporter-logo img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Elemental Training */
+
+.supporter-logo--elemental img {
+    width: 220px;
+    max-width: 220px;
+    max-height: 125px;
+}
+
+.supporter-logo--netap img {
+    width: 100%;
+    max-width: 230px;
+}
+
+/* Stiftung ProTier */
+
+.supporter-logo--protier img {
+    max-width: 190px;
+}
+
+/* Club der Rattenfreunde */
+
+.supporter-logo--rattenclub img {
+    width: 300px;
+    max-width: 100%;
+    max-height: 110px;
+    object-fit: contain;
+}
+
+/* AKUT – Arbeitskreis Kirche und Tiere */
+
+.supporter-logo--akut img {
+    width: 260px;
+    max-width: 260px;
+    max-height: 120px;
+}
+
+/* JUSO Luzern */
+
+.supporter-logo--juso-luzern img {
+    width: 250px;
+    max-width: 250px;
+    max-height: 125px;
+}
+
+/* TierWelt */
+
+.supporter-logo--tierwelt img {
+    width: 260px;
+    max-width: 260px;
+    max-height: 95px;
+}
+
+/* Parterre Luzern */
+
+.supporter-logo--parterre img {
+    width: 210px;
+    max-width: 210px;
+    max-height: 125px;
+}
+
+/* Life Farm Forever */
+
+.supporter-logo--lifefarm img {
+    width: 190px;
+    max-width: 190px;
+    max-height: 160px;
+}
+
+/* Stiftung für das Tier im Recht */
+
+.supporter-logo--tir img {
+    width: 220px;
+    max-width: 220px;
+    max-height: 130px;
+}
+
+/* Animal Free Research */
+
+.supporter-logo--animalfree img {
+    width: 260px;
+    max-width: 260px;
+    max-height: 110px;
+}
+
+/* The Official Animal Rights March Switzerland */
+
+.supporter-logo--animalrightsmarch img {
+    width: 165px;
+    max-width: 165px;
+    max-height: 165px;
+}
+
+/* Lebenshof TierMensch */
+
+.supporter-logo--tiermensch img {
+    width: 240px;
+    max-width: 240px;
+    max-height: 120px;
+}
+
+/* Neubad Luzern */
+
+.supporter-logo--neubad img {
+    width: 210px;
+    max-width: 210px;
+    max-height: 120px;
+}
+
+/* Swissveg */
+
+.supporter-logo--swissveg img {
+    width: 190px;
+    max-width: 190px;
+    max-height: 95px;
+}
+
+/* Lebenshof Aurelio */
+
+.supporter-logo--aurelio img {
+    width: 190px;
+    max-width: 190px;
+    max-height: 155px;
+}
+
+/* Das Tier + Wir */
+
+.supporter-logo--tierundwir img {
+    width: 195px;
+    max-width: 195px;
+    max-height: 140px;
+}
+
+/* Lebenshof Änzi */
+
+.supporter-logo--aenzi img {
+    width: 120px;
+    max-width: 120px;
+    max-height: 160px;
+}
+
+/* Advocates for Animals */
+
+.supporter-logo--aaa img {
+    width: 155px;
+    max-width: 155px;
+    max-height: 155px;
+}
+
+/* Sentience */
+
+.supporter-logo--sentience img {
+    width: 260px;
+    max-width: 260px;
+    max-height: 110px;
+}
+
+/* Verbund Tier-Ambulanz-Dienste */
+
+.supporter-logo--vtad img {
+    width: 145px;
+    max-width: 145px;
+    max-height: 145px;
+
+}
+
+/* Simbas Welt */
+
+.supporter-logo--simbaswelt img {
+    width: 150px;
+    max-width: 150px;
+    max-height: 150px;
+
+}
+
+/* Animal Rights Switzerland */
+
+.supporter-logo--animalrights img {
+    width: 230px;
+    max-width: 230px;
+    max-height: 110px;
+}
+
+/* Tierpartei Schweiz */
+
+.supporter-logo--tierpartei img {
+    width: 240px;
+    max-width: 240px;
+    max-height: 135px;
+}
+
+/* Game */
+
+.game-section {
+    background: #3A305B;
+    color: #FFFFFF;
+}
+
+.game-content {
+    width: 100%;
+    max-width: var(--wide-content-width);
+    margin: 0;
+}
+
+.game-section h2 {
+    margin-bottom: 28px;
+}
+
+.game-content>p {
+    max-width: 650px;
+}
+
+/* Gemeinsame Inhaltsbreiten */
+
+.content-column,
+.support-inner {
+    width: 100%;
+    max-width: var(--wide-content-width);
+}
+
+/* Überschriften der Startseite */
+
+#forderung h2,
+#kurzfassung h2,
+#video h2,
+#domestikation h2,
+#ausgangslage h2,
+#kennzahlen h2,
+#loesung h2,
+#vorteile h2,
+.mitmachen h2,
+.support-section h2,
+.faq-section h2,
+.voices-section h2,
+.game-section h2,
+.about-section h2 {
+    width: 100%;
+    max-width: min(1100px, 78vw);
+    margin: 0 0 32px;
+    font-size: clamp(48px, 5vw, 78px);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+}
+
+/* Forderung */
 
 #forderung {
-  background: #3D3938;
-  color: #F9F6EB;
-}
-#forderung h2,
-#forderung h3,
-#forderung p,
-#forderung span,
-#forderung .back-to-top {
-  color: #F9F6EB;
-}
-
-#forderung .forderung::before {
-  background: #F9F6EB;
-}
-
-#forderung .petition-button {
-  display: inline-block;
-  background: #BFD2B5;
-  color: #3D3938;
-  padding: 18px 32px;
-  border-radius: 999px;
-}
-
-#mitmachen {
-    background: #3A305B;
-    color: #F9F6EB;
-}
-.taubenbild {
-    width: 100%;
-    height: 75vh;
-    padding: 0;
     overflow: hidden;
     background: #3D3938;
+    color: #F9F6EB;
 }
 
-.taubenbild img {
+#forderung h2,
+#forderung p {
+    position: relative;
+    z-index: 1;
+    color: #F9F6EB;
+}
+
+#forderung .petition-buttons {
+    position: relative;
+    z-index: 2;
+}
+
+/* Video */
+
+.video-wrap {
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 48px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 28px;
+    background: #000000;
+}
+
+.erklaervideo {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: contain;
-    object-position: center 28%;
+}
+
+/* Lösung */
+
+.loesung-intro {
+    max-width: var(--text-column-width);
+    margin: 0 0 70px;
+    font-size: var(--font-size-lead);
+    line-height: 1.5;
+}
+
+.loesung-grid {
+    width: 100%;
+    max-width: var(--wide-content-width);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+}
+
+.loesung-grid>div {
+    padding-top: 24px;
+    border-top: 1px solid #3D3938;
+}
+
+.loesung-grid span {
     display: block;
+    margin-bottom: 16px;
+    font-size: 18px;
 }
-@media (max-width: 768px) {
-    .taubenbild {
-        height: 70vh;
+
+.loesung-grid h3 {
+    margin: 0 0 16px;
+    font-size: 28px;
+    line-height: 1.15;
+}
+
+.loesung-grid p {
+    margin: 0;
+    font-size: var(--font-size-body);
+    line-height: 1.5;
+}
+
+.loesung-nutzen,
+.loesung-ziel {
+    max-width: var(--text-column-width);
+    font-size: var(--font-size-body);
+}
+
+.loesung-nutzen {
+    margin: 28px 0 0;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.loesung-ziel {
+    margin: 28px 0 0;
+    line-height: 1.35;
+}
+
+.ziel-label {
+    font-weight: 700;
+}
+
+.toetung-hinweis {
+    max-width: 52rem;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid currentColor;
+}
+
+.toetung-hinweis h3 {
+    margin: 0 0 22px;
+    font-size: 1.8rem;
+    line-height: 1.15;
+    font-weight: 700;
+}
+
+/* Vorteile */
+
+.vorteile-grid {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 45px;
+}
+
+.vorteile-grid>div {
+    padding-top: 28px;
+    border-top: 1px solid currentColor;
+}
+
+.vorteile-grid h3 {
+    margin: 0 0 22px;
+    font-size: 1.8rem;
+}
+
+.vorteile-grid p {
+    margin: 0 0 16px;
+}
+
+/* Mitmachen */
+
+.mitmachen {
+    min-height: 70vh;
+    overflow: hidden;
+    background: #3A305B;
+    color: #F9F6EB;
+}
+
+.mitmachen h2,
+.mitmachen p {
+    position: relative;
+    z-index: 2;
+    color: #F9F6EB;
+}
+
+.mitmachen-text {
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+    margin: 0 0 40px;
+    font-size: var(--font-size-lead);
+    line-height: 1.5;
+}
+
+.mitmachen .petition-button {
+    position: relative;
+    z-index: 2;
+}
+
+/* Dekorative Taubenbilder */
+
+.section-pigeon {
+    position: absolute;
+    display: block;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+.section-pigeon-forderung,
+.section-pigeon-mitmachen {
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 38%;
+    max-width: 520px;
+    height: auto;
+    mask-image:
+        linear-gradient(to right, transparent 0%, black 35%, black 100%),
+        linear-gradient(to bottom, transparent 0%, black 25%, black 100%);
+    mask-composite: intersect;
+    -webkit-mask-image:
+        linear-gradient(to right, transparent 0%, black 35%, black 100%),
+        linear-gradient(to bottom, transparent 0%, black 25%, black 100%);
+    -webkit-mask-composite: source-in;
+}
+
+.section-pigeon-forderung {
+    bottom: -60px;
+}
+
+/* Super Pigeon */
+
+.super-pigeon-credit {
+    max-width: 650px;
+    font-size: var(--font-size-small);
+}
+
+.super-pigeon-credit a {
+    margin-left: 10px;
+}
+
+.credit-button {
+    background: #FFFFFF;
+    color: #3D3938;
+    border: none;
+}
+
+/* ========================================
+   WISSENSSEITE
+======================================== */
+
+/* Hero und Themenübersicht */
+
+.wissen-hero {
+    min-height: auto;
+    padding: 70px var(--section-padding) 0;
+}
+
+.wissen-hero-inner,
+.wissen-themen-inner,
+.wissen-kapitel-inner {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0;
+}
+
+.wissen-intro {
+    max-width: 820px;
+}
+
+.wissen-themen {
+    min-height: auto;
+    padding: 15px var(--section-padding) 70px;
+
+}
+
+/* Normale Textlinks und Quellen im ausführlichen Dossier */
+
+.wissen-dossier .knowledge-source,
+.wissen-dossier .sources {
+    width: 100%;
+    max-width: 820px;
+    margin: 12px 0 32px;
+    padding: 0;
+
+    background: transparent;
+    color: #3D3938;
+
+    font-family: inherit;
+    font-size: 18px;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+/* Einheitliche Darstellung aller Dossier-Links */
+
+.wissen-dossier a,
+.wissen-dossier a:visited,
+.wissen-accordion-content a,
+.wissen-accordion-content a:visited {
+    display: inline;
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+    color: #3A305B;
+
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: 400;
+
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+/* Einzelquelle: Beschriftung und Link bleiben auf derselben Zeile */
+
+/* Jede Quelle steht in einer eigenen Zeile */
+
+.wissen-dossier .knowledge-source>a,
+.wissen-dossier .sources>a,
+.wissen-accordion-content .knowledge-source>a,
+.wissen-accordion-content .sources>a {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin: 4px 0 0;
+}
+
+.wissen-dossier a strong,
+.wissen-dossier a b {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+}
+
+.wissen-dossier a:hover,
+.wissen-accordion-content a:hover {
+    background: transparent;
+    color: #3A305B;
+    opacity: 0.7;
+    transform: none;
+}
+
+.wissen-dossier a:focus-visible,
+.wissen-accordion-content a:focus-visible {
+    outline: 2px solid #3A305B;
+    outline-offset: 3px;
+}
+
+/* Wissenskapitel */
+
+.wissen-kapitel {
+    min-height: auto;
+    padding: 40px var(--section-padding) 80px;
+}
+
+.wissen-kapitel h2 {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(30px, 8.5vw, 38px);
+    line-height: 1.04;
+    letter-spacing: -0.025em;
+
+    white-space: normal;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+.wissen-kapitel-lead {
+    max-width: 820px;
+    margin-top: 32px;
+    font-size: 1.35rem;
+    line-height: 1.55;
+}
+
+.wissen-text {
+    max-width: 820px;
+    margin-top: 56px;
+}
+
+.wissen-text p {
+    margin-bottom: 24px;
+    font-size: var(--font-size-body);
+    line-height: 1.7;
+}
+
+.wissen-kapitel-alt {
+    background: #F3F0EB;
+}
+
+.knowledge-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Quellen */
+
+.wissen-quellen {
+    margin-top: 80px;
+}
+
+.wissen-quelle {
+    margin-top: 32px;
+    padding: 40px;
+    border-top: 1px solid #3F3B3B;
+    border-bottom: 1px solid #3F3B3B;
+}
+
+.wissen-quelle+.wissen-quelle {
+    border-top: none;
+}
+
+.wissen-quelle-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 48px;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+}
+
+.wissen-quelle h3 {
+    max-width: var(--text-column-width);
+    margin-bottom: 24px;
+    font-size: 2rem;
+    line-height: 1.15;
+}
+
+.wissen-quelle p {
+    max-width: var(--text-column-width);
+    font-size: var(--font-size-body);
+    line-height: 1.7;
+}
+
+.wissen-quelle-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    width: fit-content;
+    margin-top: 32px;
+    padding: 10px 18px;
+
+    background: #3D3938;
+    color: #FFFFFF;
+    border-radius: 999px;
+
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.wissen-quelle-link:hover {
+    background: #FFFFFF;
+    color: #3D3938;
+    transform: translateY(-2px);
+}
+
+.wissen-quelle-link:focus {
+    outline: none;
+}
+
+.wissen-quelle-link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+}
+
+.wissen-text .wissen-quelle-link {
+    margin-top: 0;
+}
+
+/* Städtebeispiele */
+
+.wissen-staedte {
+    margin-top: 80px;
+}
+
+.wissen-stadt {
+    margin-top: 32px;
+    padding: 28px;
+    overflow: hidden;
+    background: #3F3B3B;
+    color: #F3F0EB;
+    border-radius: 32px;
+}
+
+.wissen-stadt-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 56px;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+}
+
+.wissen-stadt h3,
+.wissen-stadt p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: auto;
+}
+
+.wissen-stadt h3 {
+    margin-bottom: 24px;
+    font-size: 1.45rem;
+    line-height: 1.15;
+}
+
+.wissen-stadt p {
+    font-size: var(--font-size-body);
+    line-height: 1.7;
+}
+
+.wissen-stadt .wissen-quelle-link {
+    background: #F3F0EB;
+    color: #3A305B;
+    padding: 12px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(243, 240, 235, 0.35);
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.wissen-stadt .wissen-quelle-link:hover {
+    background: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+/* Eingebettete Videos */
+
+.wissen-video {
+    max-width: 900px;
+    margin-top: 40px;
+    margin-bottom: 32px;
+    aspect-ratio: 16 / 9;
+}
+
+.wissen-video iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Unterseiten-Navigation */
+
+.subpage-header {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    padding: 28px var(--section-padding) 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 48px;
+    background: rgba(243, 240, 235, 0.92);
+    backdrop-filter: blur(12px);
+}
+
+.subpage-logo {
+    flex-shrink: 0;
+    margin-right: 20px;
+    color: #3F3B3B;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.subpage-logo img {
+    display: block;
+    width: 170px;
+    height: auto;
+    filter: brightness(0) saturate(100%);
+    opacity: 0.75;
+}
+
+.subpage-nav {
+    margin-left: 0;
+    display: flex;
+    gap: 32px;
+    overflow: visible;
+}
+
+.subpage-nav a {
+    color: #3F3B3B;
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.subpage-nav a.is-active {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+/* Rechte Kapitelnavigation */
+
+.wissen-scroll-nav {
+    position: fixed;
+    right: 28px;
+    top: 50%;
+    z-index: 90;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transform: translateY(-50%);
+}
+
+.wissen-scroll-nav a {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid #3D3938;
+    border-radius: 50%;
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.wissen-scroll-nav a:hover {
+    background: #3D3938;
+    border-color: #3D3938;
+    transform: scale(1.25);
+}
+
+
+/* Seitliche Navigation für Agenda und Medien */
+
+.subpage-scroll-nav {
+    position: fixed;
+    right: 28px;
+    top: 50%;
+    z-index: 90;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    transform: translateY(-50%);
+}
+
+.subpage-scroll-nav a {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+    border: 1.5px solid #3D3938;
+    border-radius: 50%;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.subpage-scroll-nav a:hover,
+.subpage-scroll-nav a:focus-visible {
+    background: #3D3938;
+    border-color: #3D3938;
+    outline: none;
+    transform: scale(1.25);
+}
+
+
+/* Wissen-Titel auf grossen Bildschirmen einzeilig */
+
+@media (min-width: 1400px) {
+    .wissen-hero h1 {
+        max-width: none;
+        white-space: nowrap;
+    }
+}
+
+/* ========================================
+   MEDIENSEITE
+======================================== */
+
+/* Seitenabstände */
+
+.medien-hero {
+    min-height: auto;
+    padding: 68px var(--section-padding) 0;
+}
+
+.medien-section {
+    min-height: auto;
+    padding: 60px var(--section-padding) 80px;
+}
+
+#petition-medien {
+    padding-top: 15px;
+}
+
+/* ========================================
+   IMPRESSUM
+======================================== */
+
+
+.legal-section {
+    min-height: auto;
+    padding: 68px var(--section-padding) 100px;
+    background: #F4F0EA;
+    color: #3D3938;
+}
+
+.legal-page .subpage-header {
+    background: #FFFFFF;
+}
+
+.legal-inner {
+    width: 100%;
+    max-width: var(--wide-content-width);
+    margin: 0;
+}
+
+.legal-content {
+    width: 100%;
+    max-width: 820px;
+}
+
+.legal-section h1 {
+    max-width: 850px;
+    margin-bottom: 70px;
+    color: #3D3938;
+}
+
+.legal-content h2 {
+    margin: 42px 0 16px;
+    color: #3D3938;
+    font-size: 32px;
+    line-height: 1.15;
+}
+
+.legal-content h2:first-child {
+    margin-top: 0;
+}
+
+.legal-content h3 {
+    margin: 45px 0 16px;
+    color: #3D3938;
+    font-size: 23px;
+    line-height: 1.25;
+}
+
+.legal-content p {
+    max-width: 820px;
+    margin: 0 0 24px;
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+.legal-content a {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: #3D3938;
+    border-radius: 0;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.legal-content a:hover {
+    opacity: 0.7;
+}
+
+.legal-date {
+    margin-top: 60px !important;
+    font-size: 15px !important;
+    opacity: 0.7;
+}
+
+main .legal-back-link {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 13px 20px;
+    background: #3D3938;
+    color: #FFFFFF;
+    border-radius: 999px;
+    text-decoration: none;
+}
+
+main .legal-back-link:hover {
+    opacity: 0.9;
+}
+
+/* Breitere Textspalten auf grossen Desktop-Bildschirmen */
+
+@media (min-width: 1200px) {
+
+    :root {
+        --text-column-width: 900px;
     }
 
-    .taubenbild img {
-        object-position: center center;
+    .wissen-intro,
+    .wissen-text,
+    .wissen-kapitel-lead,
+    .wissen-dossier .knowledge-source,
+    .wissen-dossier .sources {
+        max-width: 900px;
     }
 }
-@media (max-width: 768px) {
-    header {
-        padding: 24px 6%;
+
+/* ========================================
+   Agenda
+======================================== */
+
+.agenda-hero,
+.agenda-section {
+    min-height: auto;
+}
+
+.agenda-hero {
+    padding: 68px 0 0;
+}
+
+.agenda-section {
+    padding: 75px 0;
+}
+
+.agenda-upcoming {
+    padding-top: 15px;
+}
+
+
+.agenda-inner {
+    width: min(84vw, var(--wide-content-width));
+    margin-left: 8vw;
+    margin-right: auto;
+}
+
+.agenda-intro {
+    max-width: 760px;
+    margin-top: 24px;
+}
+
+.agenda-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 36px;
+}
+
+.agenda-item {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr);
+    gap: 42px;
+
+    padding: 34px 0;
+    border-top: 1px solid rgba(61, 57, 56, 0.25);
+}
+
+.agenda-item:last-child {
+    border-bottom: 1px solid rgba(61, 57, 56, 0.25);
+}
+
+.agenda-date {
+    display: flex;
+    flex-direction: column;
+}
+
+.agenda-day {
+    font-size: 48px;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.agenda-month {
+    margin-top: 8px;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.agenda-category {
+    display: block;
+    margin-bottom: 10px;
+
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.agenda-content h3 {
+    margin: 0 0 16px;
+}
+
+.agenda-content p {
+    max-width: 760px;
+}
+
+.agenda-meta {
+    margin-bottom: 22px;
+    font-weight: 500;
+}
+
+.agenda-past {
+    background: #f3efe9;
+}
+
+
+/* Agenda mobil */
+
+@media (max-width: 700px) {
+
+    .agenda-hero {
+        padding: 60px 0 55px;
     }
 
-    nav {
+    .agenda-section {
+        padding: 55px 0;
+    }
+
+    .agenda-inner {
+        width: auto;
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+
+    .agenda-item {
+        grid-template-columns: 1fr;
         gap: 18px;
-        flex-wrap: wrap;
+        padding: 28px 0;
     }
 
-    nav a {
-        font-size: 14px;
+    .agenda-day {
+        font-size: 38px;
+    }
+}
+
+/* Einheitlicher Abstand zwischen Hero-Einleitung und Folgeabschnitt */
+
+.wissen-intro,
+.agenda-intro,
+.medien-intro {
+    margin-bottom: 60px;
+}
+
+.wissen-themen,
+.agenda-upcoming,
+#petition-medien {
+    padding-top: 0;
+}
+
+.wissen-themen .section-label,
+.agenda-upcoming .section-kicker,
+#petition-medien .section-label {
+    margin-top: 0;
+}
+
+/* ========================================
+   Englische Kurzseite: Abschnittsfarben
+======================================== */
+
+.english-page #why-it-falls-short {
+    background-color: #F3EFE7;
+}
+
+.english-page #augsburg-model {
+    background-color: #B0C1A9;
+}
+
+.english-page #petition {
+    background-color: #3A305B;
+}
+
+.english-page #about-us {
+    background-color: #EEE8DD;
+}
+
+/* Situation */
+
+.english-page #situation {
+    overflow: hidden;
+    background-color: #3D3938;
+    color: #F9F6EB;
+}
+
+.english-page #situation h2,
+.english-page #situation p,
+.english-page #situation .section-label {
+    position: relative;
+    z-index: 2;
+    color: #F9F6EB;
+}
+
+.english-page #situation .section-pigeon {
+    z-index: 1;
+}
+
+.english-page #situation .section-pigeon-forderung {
+    bottom: -2px;
+}
+
+/* Benefits */
+
+.english-page #benefits {
+    background-color: #3D3938;
+    color: #F9F6EB;
+}
+
+.english-page #benefits h2,
+.english-page #benefits h3,
+.english-page #benefits p,
+.english-page #benefits .section-label {
+    color: #F9F6EB;
+}
+
+.english-page #benefits .vorteile-grid>div {
+    border-top-color: #F9F6EB;
+}
+
+/* Further Reading */
+
+.english-page #further-reading {
+    background-color: #F9F6EB;
+    color: #3D3938;
+}
+
+.english-page #further-reading h2,
+.english-page #further-reading p,
+.english-page #further-reading .section-label {
+    color: #3D3938;
+}
+
+.english-page #further-reading .petition-form-button {
+    color: #3D3938;
+    border-color: #3D3938;
+    background-color: transparent;
+}
+
+.english-page #further-reading .petition-form-button:hover {
+    color: #F9F6EB;
+    background-color: #3D3938;
+}
+
+.english-page #why-it-falls-short,
+.english-page #further-reading {
+    min-height: auto;
+    height: auto;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.english-page #further-reading .organisation-link {
+    display: inline;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.english-page #further-reading .organisation-link:hover {
+    background: transparent;
+    color: inherit;
+    opacity: 0.75;
+}
+
+.english-page #situation {
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+
+.english-page #history {
+    margin-top: 0;
+    border-top: 0;
+}
+
+/* Englische Kurzseite: Mobile */
+
+@media (max-width: 768px) {
+    .english-page #situation {
+        padding-bottom: 420px;
     }
 
-    .logo img {
-        width: 180px;
+    .english-page #situation .section-pigeon-forderung {
+        right: -18%;
+        bottom: 0;
+        width: 72%;
+        opacity: 0.72;
+    }
+
+    .english-page #why-it-falls-short,
+    .english-page #further-reading {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .english-page #petition {
+        padding-bottom: 280px;
+    }
+
+    .english-page #petition .section-pigeon-mitmachen {
+        right: -18%;
+        bottom: -8%;
+        width: 78%;
+    }
+
+    .english-page #petition .petition-buttons {
+        position: relative;
+        z-index: 3;
+        padding-right: 20%;
+    }
+
+    .english-page #petition .petition-form-button {
+        position: relative;
+        z-index: 3;
+        transform: translateY(20px);
+    }
+
+    .english-page .copyright {
+        display: block;
+        line-height: 1.7;
+    }
+
+    .english-page .copyright span,
+    .english-page .copyright a {
+        display: inline;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .english-page .hero .section-label {
+        display: inline-block;
+        width: max-content;
+        max-width: none;
+        white-space: nowrap;
+        font-size: 20px;
+    }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+/* Grundlayout und Hauptnavigation */
+
+@media (max-width: 768px) {
+
+    .section-label {
+        font-size: 15px;
+        margin-bottom: 16px;
+        line-height: 1.3;
+
+    }
+
+    .section-scroll-nav {
+        display: none;
+    }
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        padding-bottom: 100px;
     }
 
     main section {
@@ -581,19 +2504,210 @@ nav a:hover {
         padding: 70px 6%;
     }
 
-    h1,
-    .loesung h2,
-    .forderungen h2,
-    .mitmachen h2,
-    .fuetterung h2 {
-        font-size: clamp(38px, 11vw, 58px);
-        line-height: 0.95;
-        letter-spacing: -0.04em;
-    }
-
     p {
         font-size: 18px;
     }
+
+    header {
+        width: 100%;
+        padding: 24px 0;
+        overflow: hidden;
+    }
+
+    header nav,
+    .main-nav {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 22px;
+        text-align: center;
+    }
+
+    .logo {
+        margin: 0 auto 10px;
+    }
+
+    .logo img {
+        width: 180px;
+        max-width: 72vw;
+        margin: 0 auto;
+    }
+
+    .main-nav-links {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .main-nav-links a {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .compact-nav-links {
+        display: none;
+    }
+
+    header.is-compact {
+        padding: 10px 5%;
+    }
+
+    header.is-compact .main-nav {
+        flex-direction: row;
+    }
+
+    header.is-compact .logo img {
+        width: 54px;
+    }
+
+    header.is-compact .compact-nav-links {
+        display: flex;
+        margin-left: auto;
+        gap: 16px;
+    }
+
+    header.is-compact .compact-nav-links a {
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+
+}
+
+/* Mobile Buttons */
+
+@media (max-width: 768px) {
+
+    .hero .petition-button,
+    #forderung .petition-button,
+    .mitmachen .petition-button:not(.petition-form-button) {
+        display: none;
+    }
+
+    #forderung .petition-buttons {
+        margin-top: 36px;
+    }
+
+    .mitmachen .petition-form-button,
+    .support-button,
+    .mobile-sticky-petition {
+        display: inline-flex;
+    }
+
+    .mobile-sticky-petition {
+        right: 18px;
+        bottom: 18px;
+    }
+
+    .game-section .petition-button {
+        display: inline-flex;
+        max-width: 100%;
+        margin-top: 36px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .petition-form-button {
+        margin-top: -16px;
+    }
+}
+
+.petition-form-button+.petition-form-button {
+    margin-top: 14px;
+}
+
+/* Mobile Typografie und Hero */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: auto;
+        padding: 80px 24px 120px;
+    }
+
+    .hero h1,
+    #forderung h2,
+    #kurzfassung h2,
+    #video h2,
+    #domestikation h2,
+    #ausgangslage h2,
+    #kennzahlen h2,
+    #loesung h2,
+    #vorteile h2,
+    .mitmachen h2,
+    .support-section h2,
+    .faq-section h2,
+    .voices-section h2,
+    .game-section h2,
+    .about-section h2 {
+        width: 100%;
+        max-width: 100%;
+        font-size: clamp(30px, 8vw, 38px);
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+
+        white-space: normal;
+        text-wrap: wrap;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .hero p {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .hero {
+        min-height: auto;
+        padding-bottom: 300px;
+    }
+
+    .hero-pigeon {
+        right: 22%;
+        bottom: 70px;
+        width: 230px;
+        transform: none;
+    }
+
+    .hero-pigeon-background {
+        right: 28%;
+        top: auto;
+        bottom: 210px;
+        width: 120px;
+        transform: none;
+    }
+
+    .hero-pigeon-third {
+        display: none;
+    }
+}
+
+/* Einheitliche Fliesstextgrösse */
+
+@media (max-width: 768px) {
+
+    main section p,
+    .loesung-intro,
+    .loesung-nutzen,
+    .loesung-ziel,
+    .mitmachen-text,
+    .voice-card blockquote,
+    .faq-item p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+}
+
+/* Mobile Grids */
+
+@media (max-width: 768px) {
 
     .fakten-grid,
     .loesung-grid,
@@ -602,8 +2716,8 @@ nav a:hover {
         display: block;
     }
 
-    .fakten-grid > div,
-    .loesung-grid > div,
+    .fakten-grid>div,
+    .loesung-grid>div,
     .forderung {
         margin-bottom: 45px;
         padding-left: 0;
@@ -614,2003 +2728,559 @@ nav a:hover {
         font-size: 52px;
         white-space: normal;
     }
-
-    .taubenbild {
-        height: 70vh;
-    }
-}
-footer .footer-links a,
-footer .footer-links a:visited {
-    color: #FFFFFF !important;
-    text-decoration: none;
-}
-.mobile-sticky-petition {
-    display: inline-flex;
-    position: fixed;
-    right: 24px;
-    bottom: 24px;
-    z-index: 999;
-    padding: 12px 18px;
-    border-radius: 999px;
-    background: #E85D9E;
-    color: #FFFFFF;
-    font-weight: 700;
-    text-decoration: none;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
-@media (max-width: 768px) {
-  .mobile-sticky-petition {
-    display: inline-flex;
-    position: fixed;
-    right: 12px;
-    bottom: 12px;
-    z-index: 999;
-    padding: 12px 18px;
-    border-radius: 999px;
-    background: #E85D9E;
-    color: #FFFFFF;
-    font-weight: 700;
-    text-decoration: none;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    padding-bottom: 100px;
-  }
-}
-
-.hero h1,
-.loesung h2,
-.forderungen h2 {
-  color: #3A305B;
-}
-
-@media (max-width: 768px) {
-  html,
-  body {
-    width: 100%;
-    overflow-x: hidden;
-  }
-
-  header {
-    width: 100%;
-  }
-
-  nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-  }
-
-  nav .logo img {
-    width: 180px;
-    max-width: 70vw;
-  }
-
-  .hero h1 {
-    font-size: clamp(42px, 12vw, 58px);
-    line-height: 0.95;
-    max-width: 100%;
-    overflow-wrap: break-word;
-  }
-
-  .hero {
-    min-height: auto;
-    padding: 80px 24px 120px;
-  }
-
-  .hero p {
-    max-width: 100%;
-  }
-
-  .mobile-sticky-petition {
-    right: 18px;
-    bottom: 18px;
-  }
-}
-@media (max-width: 768px) {
-  .loesung h2,
-  .hero h1,
-  .forderungen h2 {
-    max-width: 100%;
-    font-size: clamp(38px, 11vw, 52px);
-    line-height: 0.95;
-    overflow-wrap: anywhere;
-    word-break: break-word;
-  }
-}
-@media (max-width: 768px) {
-  header nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 22px;
-    text-align: center;
-  }
-
-  header nav .logo {
-    margin: 0 auto;
-  }
-
-  header nav .logo img {
-    display: block;
-    margin: 0 auto;
-    width: 220px;
-    max-width: 70vw;
-  }
-
-  header nav > a:not(.logo) {
-    display: block;
-    margin: 0 auto;
-  }
-
-  .forderung {
-    padding: 44px 0 56px 0;
-  }
-
-  .forderung::before {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .petition-widget-placeholder {
-    width: 100%;
-    box-sizing: border-box;
-    min-height: 420px;
-    padding: 32px 24px;
-    overflow: hidden;
-  }
-
-  .petition-widget-placeholder p {
-    overflow-wrap: anywhere;
-    word-break: break-word;
-  }
-
-  .mitmachen {
-    overflow-x: hidden;
-  }
-}
-@media (max-width: 768px) {
-  header > nav,
-  header > nav > nav {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 22px;
-    text-align: center;
-  }
-
-  header .logo {
-    margin: 0 auto 10px;
-  }
-
-  header .logo img {
-    display: block;
-    width: 220px;
-    max-width: 72vw;
-    margin: 0 auto;
-  }
-
-  header nav a:not(.logo) {
-    display: block;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-  }
-
-  .mitmachen {
-    padding-left: 24px;
-    padding-right: 24px;
-    overflow-x: hidden;
-  }
-
-  .petition-widget-placeholder {
-    width: calc(100vw - 48px);
-    max-width: calc(100vw - 48px);
-    box-sizing: border-box;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 32px 24px;
-  }
-
-  .petition-widget-placeholder p {
-    max-width: 100%;
-    font-size: 18px;
-    line-height: 1.45;
-    overflow-wrap: break-word;
-  }
-
-  .mitmachen .petition-button {
-    display: none;
-  }
-}
-.petition-button {
-  font-weight: 700;
-}
-@media (max-width: 768px) {
-  header {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  header > nav,
-  header > nav > nav {
-    width: 100vw !important;
-    max-width: none !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    box-sizing: border-box;
-    align-items: center !important;
-  }
-
-  header .logo {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    align-self: center !important;
-    transform: none !important;
-  }
-
-  .forderung:nth-child(even) {
-    padding-left: 0;
-}
-.forderung {
-    padding-top: 30px;
-    padding-bottom: 35px;
-}
-.forderung::before {
-    width: 100% !important;
-    margin-left: 0 !important;
-}
-}
-.hero .petition-button, .mitmachen .petition-button { font-weight: 700 !important; }
-
-.loesung-nutzen {
-    font-size: 24px;
-    line-height: 1.25;
-    font-weight: 600;
-    color: #3A305B;
-    margin-top: 20px;
-}
-
-.loesung-ziel {
-  max-width: 760px;
-  margin: 28px 0 0;
-  font-size: 24px;
-  line-height: 1.35;
-}
-
-.ziel-label {
-  font-weight: 700;
-}
-
-.loesung-nutzen,
-.toetung-hinweis h3 {
-  font-size: 24px;
-  line-height: 1.25;
-  font-weight: 600;
-}
-
-.loesung-intro {
-    margin-bottom: 20px;
-}
-.hero .petition-button,
-.mitmachen .petition-button {
-    background: #EC5795 !important;
-    color: #FFFFFF !important;
-}
-@media (max-width: 768px) {
-  .hero .petition-button {
-    display: none;
-  }
-}
-h1,
-h2,
-h3 {
-    hyphens: none;
-    -webkit-hyphens: none;
-    word-break: normal;
-    overflow-wrap: normal;
-}
 @media (max-width: 480px) {
-    .loesung h2 {
+    #loesung h2 {
         font-size: 36px;
         line-height: 1;
     }
 }
 
-/* WER WIR SIND */
+/* Mobile Vergleich und Startseiten-Komponenten */
 
-.about-section h2 {
-    font-size: clamp(48px, 6vw, 92px);
-    line-height: 0.95;
-    letter-spacing: -0.04em;
-    color: #403566;
-    max-width: 650px;
-}
-.about-section {
-  background: #f4f0ea;
-  padding: 100px 40px;
-}
+@media (max-width: 768px) {
 
-.about-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+    /* Vergleich Luzern / Augsburg */
 
-.about-section .section-kicker {
-  margin-bottom: 0px;
-}
+    .vergleich-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-top: 40px;
+    }
 
-.about-section h2 {
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
+    .vergleich-card {
+        width: 100%;
+        min-width: 0;
+        padding: 26px 22px;
+    }
 
-.about-intro {
-  max-width: 760px;
-  font-size: 20px;
-  line-height: 1.6;
-  margin-bottom: 60px;
-}
+    .vergleich-card h3 {
+        margin-bottom: 18px;
+        font-size: 1.7rem;
+    }
 
-.about-team {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 24px;
-  margin-left: 8%;
-}
+    .vergleich-row {
+        align-items: flex-start;
+        gap: 16px;
+        padding: 14px 0;
+        font-size: 18px;
+    }
 
-.about-section .back-to-top {
-  margin-left: 8%;
-}
+    .vergleich-row span,
+    .vergleich-row strong {
+        width: 50%;
+        min-width: 0;
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
 
-.team-member img {
-  width: 100%;
-  display: block;
-  border-radius: 18px;
-}
+    .vergleich-row strong {
+        text-align: right;
+    }
 
-.team-member h3 {
-  margin-top: 16px;
-  font-size: 22px;
-}
+    .vergleich-hinweis {
+        margin-top: 32px;
+        font-size: 18px;
+        line-height: 1.6;
+        text-align: left;
+    }
 
-.about-section {
-  min-height: auto;
-  height: auto;
-}
+    #kennzahlen .vergleich-grid,
+    #kennzahlen .vergleich-hinweis {
+        display: none;
+    }
 
-.about-inner {
-  max-width: none;
-  margin: 0;
-}
+    .vergleich-pdf-button {
+        display: inline-flex;
+        margin-top: 28px;
+        background: #F9F6EB;
+        color: #3A305B;
+        border: none;
+    }
 
-  .about-section .section-kicker,
-.about-section h2,
-.about-section .about-intro {
-  margin-left: 8%;
-}
-.about-team {
-  max-width: 1200px;
+
+    /* Erklärvideo */
+
+    .video-wrap {
+        margin-top: 36px;
+        border-radius: 18px;
+    }
+
+    /* Lösung */
+
+
+    .loesung-grid>div {
+        margin-bottom: 40px;
+    }
+
+    .loesung-grid h3 {
+        font-size: 26px;
+        line-height: 1.15;
+    }
+
+    .loesung-nutzen,
+    .loesung-ziel {
+        max-width: 100%;
+        font-size: 21px;
+    }
+
+    .toetung-hinweis {
+        margin-top: 48px;
+    }
+
+    /* Mitmachen und dekorative Taubenbilder */
+
+    #forderung,
+    .mitmachen {
+        padding-bottom: 55vw;
+    }
+
+    .section-pigeon-forderung,
+    .section-pigeon-mitmachen {
+        width: 58%;
+        max-width: 320px;
+    }
+
+    /* Super Pigeon */
+
+    .game-frame-wrap {
+        display: none;
+    }
+
+    .super-pigeon-credit {
+        margin-top: 32px;
+        font-size: 16px;
+    }
+
+    .super-pigeon-credit a {
+        margin-left: 0;
+        margin-top: 12px;
+    }
 }
 @media (max-width: 768px) {
+    .english-page #situation .section-pigeon-forderung {
+        right: 0;
+        width: 68%;
+        max-width: none;
+    }
+}
+
+/* Mobile Vorteile */
+
+@media (max-width: 700px) {
+    .vorteile-section {
+        padding: 75px 7%;
+    }
+
+    .vorteile-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .vorteile-section>h2 {
+        margin-bottom: 45px;
+    }
+}
+
+
+/* Mobile FAQ */
+
+@media (max-width: 700px) {
+    .faq-section {
+        padding: 75px 7%;
+    }
+
+    .faq-section h2 {
+        margin-bottom: 40px;
+    }
+
+    .faq-item summary {
+        padding: 24px 45px 24px 0;
+        font-size: 20px;
+    }
+
+    .faq-item p {
+        padding: 0 45px 28px 0;
+        font-size: 18px;
+    }
+}
+
+/* Mobile ideelle Unterstützer */
+
+@media (max-width: 768px) {
+
+    .supporters-grid {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 26px;
+    }
+
+    main .supporter-logo {
+        display: block;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .supporter-logo img {
+        display: block;
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+    .supporter-logo--elemental img {
+        width: 240px;
+        max-width: 80vw;
+    }
+
+    .supporter-logo--tierwelt img {
+        width: 230px;
+        max-width: 78vw;
+        height: auto;
+    }
+
+    .supporter-logo--parterre img {
+        width: 200px;
+        max-width: 72vw;
+        height: auto;
+    }
+
+    /* Life Farm Forever */
+
+    .supporter-logo--lifefarm img {
+        width: 180px;
+        max-width: 62vw;
+        height: auto;
+    }
+
+    /* Stiftung ProTier */
+
+    .supporter-logo--protier img {
+        max-width: 160px;
+    }
+
+    /* Stiftung für das Tier im Recht */
+
+    .supporter-logo--tir img {
+        display: block;
+        width: 220px;
+        max-width: 78vw;
+        height: auto;
+        max-height: 130px;
+        margin: 0 auto;
+    }
+
+    .supporter-logo--animalrightsmarch img {
+        width: 150px;
+        max-width: 48vw;
+    }
+
+    .supporter-logo--tiermensch img {
+        width: 220px;
+        max-width: 78vw;
+    }
+
+    .supporter-logo--aurelio img {
+        width: 130px;
+        max-width: 130px;
+        max-height: 135px;
+    }
+
+    .supporter-logo--tierundwir img {
+        width: 170px;
+        max-width: 170px;
+        max-height: 125px;
+    }
+
+    .supporter-logo--aenzi img {
+        width: 115px;
+        max-width: 42vw;
+    }
+
+    .supporter-logo--aaa img {
+        width: 170px;
+        max-width: 58vw;
+        margin-top: 20px;
+    }
+
+    .supporter-logo--swissveg img {
+        width: 165px;
+        max-width: 100%;
+    }
+
+    .supporter-logo--sentience img {
+        width: 200px;
+        max-width: 68vw;
+    }
+
+    .supporter-logo--vtad img {
+        width: 145px;
+        max-width: 48vw;
+    }
+
+    .supporter-logo--simbaswelt img {
+        width: 145px;
+        max-width: 48vw;
+    }
+
+    .supporter-logo--animalrights img {
+        width: 220px;
+        max-width: 75vw;
+    }
+
+    .supporter-logo--tierpartei img {
+        width: 220px;
+        max-width: 78vw;
+    }
+
+    .supporter-logo--neubad img {
+        width: 130px;
+        max-width: 42vw;
+        height: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .supporter-logo--akut img {
+        width: 220px;
+        max-width: 100%;
+        max-height: 100px;
+    }
+
+    .supporter-logo--rattenclub img {
+        width: 240px;
+        max-height: 90px;
+    }
+}
+
+@media (max-width: 600px) {
+    .supporter-logo--juso-luzern img {
+        width: 220px;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Ende Mobile ideelle Unterstützer */
+
+
+/* Mobile Stimmenkarten */
+
+@media (max-width: 768px) {
+
+    .voices-section--compact {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+    .voices-accordion summary {
+        min-height: 190px;
+        padding: 48px 58px 48px 0;
+    }
+
+    .voices-summary-title {
+        width: 100%;
+        max-width: 100%;
+        font-size: clamp(30px, 8vw, 38px);
+        line-height: 1.08;
+        letter-spacing: -0.02em;
+        white-space: normal;
+        text-wrap: wrap;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .voices-accordion summary::after {
+        right: 0;
+        font-size: 46px;
+    }
+
+    .voices-accordion-content {
+        padding-bottom: 55px;
+    }
+
+    .voices-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .voice-card {
+        min-height: 0;
+        padding: 38px 30px 32px;
+    }
+}
+
+/* Mobile Teamkarten */
+
+@media (max-width: 768px) {
     .about-team {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: flex-start !important;
-        gap: 34px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 34px;
     }
 
     .team-member img {
-        width: 100% !important;
-        max-width: 320px !important;
-        height: auto !important;
+        width: 100%;
+        max-width: 320px;
+        height: auto;
     }
 
     .team-member h3 {
-        font-size: 28px !important;
-        margin-top: 12px !important;
+        margin-top: 12px;
+        font-size: 28px;
     }
 }
-.support-section {
-  background: #b7c9b1;
-  color: #403a3a;
-  padding: 120px 8%;
-}
 
-.support-section .section-kicker {
-  color: #403a3a;
-}
+/* Mobile Wissensseite */
 
-.support-section h2 {
-  color: #403a3a;
-  font-size: clamp(48px, 6vw, 92px);
-  line-height: 0.95;
-  letter-spacing: -0.04em;
-  margin: 20px 0 32px;
-  max-width: 650px;
-}
+@media (max-width: 768px) {
 
-.support-section p {
-  font-size: 21px;
-  line-height: 1.6;
-  max-width: 760px;
-}
+    .wissen-hero {
+        padding: 60px 6% 30px;
+    }
 
-.support-button {
-  height: 60px;
-  padding: 0 44px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  margin-top: 38px;
-  background: #6B4EFF;
-  color: #FFFFFF;
-  text-decoration: none;
-  border-radius: 999px;
-  font-weight: 700;
-}
-.kennzahlen-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin-top: 3rem;
-}
+    .wissen-intro,
+    .wissen-text,
+    .wissen-kapitel-lead {
+        max-width: 100%;
+    }
 
-.kennzahl {
-    display: flex;
-    flex-direction: column;
-    padding-top: 1.5rem;
-    border-top: 2px solid currentColor;
-}
-
-.kennzahl-zahl {
-    display: block;
-    font-size: clamp(3.5rem, 7vw, 7rem);
-    font-weight: 700;
-    line-height: 1;
-    margin-bottom: 1rem;
-}
-
-.kennzahl-text {
-    display: block;
-    font-size: 1.1rem;
-    line-height: 1.5;
-    max-width: 24rem;
-}
-
-@media (max-width: 700px) {
-    .kennzahlen-grid {
+    .wissen-themen-grid {
         grid-template-columns: 1fr;
+        gap: 18px;
     }
-}
-.toetung-hinweis {
-    margin-top: 4rem;
-    padding-top: 2rem;
-    border-top: 2px solid currentColor;
-    max-width: 52rem;
-}
 
-.toetung-hinweis h3 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: 24px;
-  line-height: 1.25;
-  font-weight: 600;
-}
-
-/* Vorteile */
-
-.vorteile-section {
-  padding: 110px 8%;
-}
-
-.vorteile-section > p,
-.vorteile-section > h2 {
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.vorteile-section > h2 {
-  margin-bottom: 32px;
-}
-
-.vorteile-grid {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 28px 45px;
-}
-
-.vorteile-grid > div {
-  border-top: 1px solid #403b39;
-  padding-top: 28px;
-}
-
-.vorteile-grid h3 {
-  font-size: 1.8rem;
-  margin: 0 0 22px;
-}
-
-.vorteile-grid p {
-  margin: 0 0 16px;
-}
-
-@media (max-width: 700px) {
-  .vorteile-section {
-    padding: 75px 7%;
-  }
-
-  .vorteile-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .vorteile-section > h2 {
-    margin-bottom: 45px;
-  }
-}
-/* FAQ */
-
-.faq-section {
-  padding: 110px 8%;
-  background: #f5f0e8;
-}
-
-.faq-section > p,
-.faq-section > h2,
-.faq-list {
-  max-width: 1050px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.faq-section > p {
-  margin-bottom: 28px;
-  font-size: 20px;
-}
-
-.faq-section h2 {
-    margin-top: 0;
-    margin-bottom: 60px;
-    font-size: clamp(48px, 6vw, 92px);
-    line-height: 0.95;
-    letter-spacing: -0.04em;
-    color: #3A305B;
-    max-width: 650px;
-}
-
-.faq-item {
-  border-top: 1px solid #403b3b;
-}
-
-.faq-item:last-child {
-  border-bottom: 1px solid #403b3b;
-}
-
-.faq-item summary {
-  position: relative;
-  padding: 28px 60px 28px 0;
-  font-size: 25px;
-  font-weight: 700;
-  line-height: 1.3;
-  cursor: pointer;
-  list-style: none;
-}
-
-.faq-item summary::-webkit-details-marker {
-  display: none;
-}
-
-.faq-item summary::after {
-  content: "+";
-  position: absolute;
-  right: 5px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 34px;
-  font-weight: 400;
-  color: #3A305B;
-}
-
-.faq-item[open] summary::after {
-  content: "−";
-}
-
-.faq-item p {
-  max-width: 820px;
-  padding: 0 60px 30px 0;
-  margin: 0;
-  font-size: 20px;
-  line-height: 1.6;
-}
-@media (max-width: 700px) {
-  .faq-section {
-    padding: 75px 7%;
-  }
-
-.faq-section h2 {
-    font-size: 40px;
-    margin-bottom: 40px;
-    line-height: 1.05;
-}
-
-  .faq-item summary {
-    font-size: 20px;
-    padding: 24px 45px 24px 0;
-  }
-
-  .faq-item p {
-    font-size: 18px;
-    padding: 0 45px 28px 0;
-  }
-}
-
-/* PETITIONSBUTTON PINK */
-
-.petition-button {
-  background: #EC4F91;
-  color: #ffffff;
-}
-
-#forderung .petition-button {
-  background: #EC4F91;
-  color: #ffffff;
-}
-/* KURZFASSUNG – BEIGE */
-
-#kurzfassung {
-  background: #F9F6EB;
-  color: #403B3B;
-}
-
-#kurzfassung h2,
-#kurzfassung p {
-  color: #403B3B;
-}/* DOMESTIKATION – WEISS */
-
-#domestikation {
-  background: #ffffff;
-  color: #403B3B;
-}
-
-#domestikation h2,
-#domestikation p {
-  color: #403B3B;
-}
-/* VIDEO – VIOLETT */
-
-#video {
-  background: #3A305B;
-  color: #F9F6EB;
-}
-
-#video h2,
-#video p {
-  color: #F9F6EB;
-}
-
-/* AUSGANGSLAGE – LINDENGRÜN */
-
-#ausgangslage {
-  background: #C4D8BA;
-  color: #403B3B;
-}
-
-#ausgangslage h2,
-#ausgangslage p {
-  color: #3A305B;
-}
-/* KENNZAHLEN – ANTHRAZIT */
-
-#kennzahlen {
-  background: #403B3B;
-  color: #F9F6EB;
-}
-
-#kennzahlen h2,
-#kennzahlen h3,
-#kennzahlen p,
-#kennzahlen span {
-  color: #F9F6EB;
-}
-/* LÖSUNG – BEIGE */
-
-#loesung {
-  background: #F9F6EB;
-  color: #403B3B;
-}
-
-#loesung h2,
-#loesung h3,
-#loesung p,
-#loesung span {
-  color: #403B3B;
-}
-/* VORTEILE – VIOLETT */
-
-#vorteile {
-  background: #3A305B;
-  color: #F9F6EB;
-}
-
-#vorteile h2,
-#vorteile h3,
-#vorteile p,
-#vorteile span {
-  color: #F9F6EB;
-}
-/* FAQ – WEISS */
-
-#faq {
-  background: #ffffff;
-  color: #403B3B;
-}
-
-#faq h2,
-#faq h3,
-#faq p,
-#faq summary {
-  color: #403B3B;
-}
-/* PETITIONSBUTTONS – EINHEITLICHE GRÖSSE */
-
-.petition-button {
-  padding: 12px 18px !important;
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-}
-/* NACH OBEN – UNTEN LINKS IN JEDER SECTION */
-
-section {
-  position: relative;
-}
-
-.back-to-top {
-  position: absolute;
-  left: 8%;
-  bottom: 50px;
-  margin: 0;
-}
-/* EINHEITLICHE LINKE AUSRICHTUNG ALLER SECTIONS */
-
-:root {
-  --section-padding: 8%;
-}
-
-main section {
-  padding-left: var(--section-padding);
-  padding-right: var(--section-padding);
-  box-sizing: border-box;
-}
-
-/* Wer wir sind */
-
-.about-section {
-  padding-left: var(--section-padding);
-  padding-right: var(--section-padding);
-}
-
-.about-section .section-kicker,
-.about-section h2,
-.about-section .about-intro,
-.about-team,
-.about-section .back-to-top {
-  margin-left: 0;
-}
-
-/* Vorteile */
-
-.vorteile-section > p,
-.vorteile-section > h2,
-.vorteile-grid {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-/* FAQ */
-
-.faq-section > p,
-.faq-section > h2,
-.faq-list {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-/* Nach oben */
-
-.back-to-top {
-  left: var(--section-padding);
-}
-.support-button {
-  padding: 12px 18px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-}
-
-.game-section {
-    background: #3A305B;
-    color: #ffffff;
-    padding: 100px 8%;
-}
-
-.game-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.game-section .section-label {
-    margin-bottom: 18px;
-}
-
-.game-section h2 {
-    font-size: clamp(3rem, 7vw, 6rem);
-    line-height: 0.95;
-    margin: 0 0 28px;
-    max-width: 650px;
-}
-
-.game-section > p,
-.game-content > p {
-    max-width: 650px;
-}
-
-.game-frame-wrap {
-    margin: 55px 0 40px;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    border-radius: 28px;
-}
-
-.super-pigeon-game {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    display: block;
-}
-
-/* MOBILE – BUTTONS */
-
-@media (max-width: 768px) {
-  .petition-button {
-    display: none !important;
-  }
-
-  .support-button,
-  .mobile-sticky-petition {
-    display: inline-flex !important;
-  }
-}
-/* Stimmen aus Luzern */
-
-.voices-section {
-  background: #f8e8ee;
-  padding: 120px 8%;
-}
-
-.voices-inner {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-.voices-section h2 {
-  color: #43366b;
-  font-size: clamp(3rem, 5vw, 5.5rem);
-  line-height: 1;
-  max-width: 650px;
-  margin: 20px 0 80px;
-}
-
-.voices-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
-}
-
-.voice-card {
-  position: relative;
-  background: #ffffff;
-  border-radius: 24px;
-  padding: 45px 38px 38px;
-  min-height: 300px;
-  display: flex;
-  flex-direction: column;
-}
-
-.quote-mark {
-  display: block;
-  color: #43366b;
-  font-size: 4rem;
-  font-weight: 800;
-  line-height: 0.5;
-}
-
-.quote-mark-open {
-  margin-bottom: 0px;
-}
-
-.quote-mark-close {
-  align-self: flex-end;
-  margin-top: 20px;
-  margin-bottom: 12px;
-}
-
-.voice-card blockquote {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.45;
-  font-weight: 500;
-  color: #3d3938;
-}
-
-.voice-person {
-  margin-top: auto;
-  padding-top: 12px;
-}
-
-.voice-name {
-  margin: 0 0 6px;
-  font-weight: 800;
-  color: #43366b;
-}
-
-.voice-role {
-  margin: 0;
-  font-size: 0.95rem;
-  color: #3d3938;
-}
-/* Stimmen aus Luzern – Mobile */
-
-@media (max-width: 768px) {
-  .voices-section h2 {
-    font-size: clamp(2.6rem, 11vw, 3.6rem);
-    line-height: 1.05;
-    max-width: 100%;
-    overflow-wrap: break-word;
-    margin: 18px 0 55px;
-  }
-
-  .voices-section h2 {
-    font-size: clamp(2.8rem, 13vw, 4rem);
-    margin: 18px 0 55px;
-  }
-
-  .voices-grid {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-
-  .voice-card {
-    padding: 45px 38px 38px;
-    min-height: 300px;
-  }
-}
-.section-pigeon {
-  position: absolute;
-  display: block;
-  object-fit: cover;
-  pointer-events: none;
-}
-
-.section-pigeon-voices {
-  right: 0;
-  bottom: 0;
-  width: 420px;
-  height: 520px;
-
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 45%
-  );
-
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 45%
-  );
-}
-.section-pigeon-mitmachen {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 38%;
-  max-width: 520px;
-  height: auto;
-  z-index: 0;
-
-  -webkit-mask-image:
-    linear-gradient(to right, transparent 0%, black 35%, black 100%),
-    linear-gradient(to bottom, transparent 0%, black 25%, black 100%);
-
-  -webkit-mask-composite: source-in;
-
-  mask-image:
-    linear-gradient(to right, transparent 0%, black 35%, black 100%),
-    linear-gradient(to bottom, transparent 0%, black 25%, black 100%);
-
-  mask-composite: intersect;
-}
-#mitmachen > p,
-#mitmachen > h2,
-#mitmachen > a {
-    position: relative;
-    z-index: 2;
-}
-.section-pigeon-forderung {
-position: absolute;
-right: 0;
-bottom: 0;
-width: 38%;
-max-width: 520px;
-height: auto;
-z-index: 0;
-
-  -webkit-mask-image:
-    linear-gradient(to right, transparent 0%, black 35%, black 100%),
-    linear-gradient(to bottom, transparent 0%, black 25%, black 100%);
-
-  -webkit-mask-composite: source-in;
-
-  mask-image:
-    linear-gradient(to right, transparent 0%, black 35%, black 100%),
-    linear-gradient(to bottom, transparent 0%, black 25%, black 100%);
-
-  mask-composite: intersect;
-}
-
-#forderung .back-to-top {
-  position: absolute;
-  left: 8%;
-  bottom: 5%;
-  z-index: 2;
-}
-
-#forderung > p,
-#forderung > h2,
-#forderung > a {
-  position: relative;
-  z-index: 1;
-}
-@media (max-width: 768px) {
-  #forderung {
-    min-height: 100vh;
-    padding-bottom: 55vw;
-  }
-
-  .section-pigeon-forderung {
-    right: 0;
-    bottom: 0;
-    width: 58%;
-    max-width: 320px;
-    height: auto;
-  }
-  }
-  @media (max-width: 768px) {
-    .game-frame-wrap {
-        aspect-ratio: auto;
-        height: auto;
-        border-radius: 24px;
-        background: rgba(255, 255, 255, 0.08);
+    .wissen-thema,
+    .wissen-thema:nth-child(5),
+    .wissen-thema:nth-child(6),
+    .wissen-thema:nth-child(7) {
+        grid-column: auto;
+        min-height: 145px;
+        padding: 26px 28px;
+    }
+
+    .wissen-kapitel {
+        padding: 60px 6%;
+    }
+
+    .wissen-kapitel h2 {
+        width: 100%;
+        max-width: 100%;
+        font-size: clamp(36px, 11vw, 52px);
+        line-height: 1;
+        letter-spacing: -0.03em;
+        overflow-wrap: anywhere;
+    }
+
+    .wissen-quelle {
         padding: 28px;
     }
 
-    .super-pigeon-game {
+    .wissen-quelle-meta,
+    .wissen-stadt-meta {
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 28px;
+    }
+
+    .wissen-stadt {
+        padding: 24px;
+    }
+
+    .wissen-video {
+        margin-top: 28px;
+    }
+
+    .wissen-scroll-nav {
         display: none;
     }
+}
+
+@media (max-width: 600px) {
+    .wissen-quelle-link {
+        padding: 0.9rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* Mobile Unterseiten-Navigation */
 
 @media (max-width: 768px) {
-    .game-frame-wrap {
-        display: none;
+
+    .subpage-header {
+        padding: 22px 6%;
+        flex-direction: column;
+        gap: 20px;
     }
 
-    .super-pigeon-game {
-        display: none;
+    .subpage-logo {
+        margin: 0;
     }
 
-    .game-section .petition-button {
-        display: inline-flex !important;
-        margin-top: 36px;
-        max-width: 100%;
-        text-align: center;
+    .subpage-logo img {
+        width: 180px;
+    }
+
+    .subpage-nav {
+        width: 100%;
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .subpage-nav a {
+        font-size: 14px;
     }
 }
+
+/* Mobile Medienseite */
+
+@media (max-width: 768px) {
+    .medien-hero {
+        min-height: auto;
+        padding: 60px 6% 30px;
     }
 
-.game-section .petition-button {
-    background: #B9D986;
-    color: #3A305B;
-}
-@media (max-width: 768px) {
-    .game-section .petition-button {
-        display: inline-flex !important;
+    .medien-section {
+        min-height: auto;
+        padding: 45px 6% 65px;
     }
 }
-.support-button {
-  height: auto !important;
-  padding: 12px 18px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  box-sizing: border-box !important;
-}
-/* SEITLICHE SECTION-NAVIGATION */
-
-.section-scroll-nav {
-    position: fixed;
-    left: 24px;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 900;
-
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-
-    padding: 18px 8px;
-    background: #3A305B;
-    border-radius: 999px;
-}
-
-.section-scroll-nav a {
-    width: 8px;
-    height: 8px;
-    background: #FFFFFF;
-    border-radius: 50%;
-    display: block;
-    opacity: 0.6;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.section-scroll-nav a:hover {
-    opacity: 1;
-    transform: scale(1.4);
-}
-
-.section-scroll-nav.is-on-purple {
-    background: #BFD2B5;
-}
-
-.section-scroll-nav.is-on-purple a {
-    background: #3F3B3A;
-}
-.section-scroll-nav a:hover {
-  opacity: 1;
-  transform: scale(1.4);
-}
-
-.section-scroll-nav.is-on-purple {
-  background: #BFD2B5;
-}
-
-.section-scroll-nav.is-on-purple a {
-    background: #3F3B3A;
-}
 
 @media (max-width: 768px) {
-  .section-scroll-nav {
-    display: none;
-  }
-}
-/* ========================================
-   WISSEN
-======================================== */
 
-.wissen-hero {
-  min-height: auto;
-  padding: 100px 8% 30px;
-}
-
-.wissen-hero-inner,
-.wissen-themen-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.wissen-intro {
-  max-width: 820px;
-}
-
-.wissen-themen {
-  padding: 30px 8% 50px;
-}
-.wissen-themen-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 16px;
-  margin-top: 48px;
-}
-
-.wissen-thema {
-  grid-column: span 3;
-}
-
-.wissen-thema:nth-child(5) {
-  grid-column: 2 / span 3;
-}
-
-.wissen-thema:nth-child(6),
-.wissen-thema:nth-child(7) {
-  grid-column: span 3;
-}
-
-.wissen-thema {
-  min-height: 110px;
-  padding: 20px 24px;
-  border-radius: 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-decoration: none;
-}
-
-.wissen-thema span {
-  font-size: 0.9rem;
-}
-
-.wissen-thema h3 {
-  margin: 0;
-  font-size: 1.15rem;
-  line-height: 1.2;
-  overflow-wrap: break-word;
-  hyphens: auto;
-}
-.wissen-kapitel {
-  padding: 80px 8%;
-}
-
-.wissen-kapitel-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.wissen-kapitel h2 {
-  max-width: 760px;
-}
-
-.wissen-kapitel-lead {
-  max-width: 820px;
-  font-size: 1.35rem;
-  line-height: 1.55;
-  margin-top: 32px;
-}
-.wissen-text {
-  max-width: 820px;
-  margin-top: 56px;
-}
-
-.wissen-text p {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin-bottom: 24px;
-}
-.wissen-quellen {
-  margin-top: 80px;
-}
-
-.wissen-quelle {
-  margin-top: 32px;
-  padding: 40px;
-  border-top: 1px solid #3f3b3b;
-  border-bottom: 1px solid #3f3b3b;
-}
-
-.wissen-quelle-meta {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  margin-bottom: 48px;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-}
-
-.wissen-quelle h3 {
-  max-width: 760px;
-  font-size: 2rem;
-  line-height: 1.15;
-  margin-bottom: 24px;
-}
-
-.wissen-quelle p {
-  max-width: 760px;
-  font-size: 1.05rem;
-  line-height: 1.7;
-}
-
-.wissen-quelle-link {
-  display: inline-block;
-  margin-top: 32px;
-  font-weight: 600;
-  text-decoration: none;
-}
-.wissen-kapitel-alt {
-  background: #f3f0eb;
-}
-.wissen-quelle + .wissen-quelle {
-  border-top: none;
-}
-.wissen-staedte {
-  margin-top: 80px;
-}
-
-.wissen-stadt {
-  margin-top: 32px;
-  padding: 48px;
-  background: #3f3b3b;
-  color: #f3f0eb;
-  border-radius: 32px;
-}
-
-.wissen-stadt-meta {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  margin-bottom: 56px;
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-}
-
-.wissen-stadt h3 {
-  max-width: 760px;
-  font-size: 2rem;
-  line-height: 1.15;
-  margin-bottom: 24px;
-}
-
-.wissen-stadt p {
-  max-width: 760px;
-  font-size: 1.05rem;
-  line-height: 1.7;
-}
-
-.wissen-stadt .wissen-quelle-link {
-  color: #f3f0eb;
-}
-.wissen-video {
-  margin-top: 40px;
-  margin-bottom: 32px;
-  max-width: 900px;
-  aspect-ratio: 16 / 9;
-}
-
-.wissen-video iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-.subpage-header {
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 20;
-  padding: 24px 8%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(243, 240, 235, 0.92);
-  backdrop-filter: blur(12px);
-}
-
-.subpage-logo,
-.subpage-nav a {
-  color: #3f3b3b;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.subpage-nav {
-  display: flex;
-  gap: 28px;
-}
-.wissen-quelle-link:focus,
-.wissen-quelle-link:focus-visible {
-  outline: none;
-  box-shadow: none;
-}
-.main-nav-links {
-  display: flex;
-  align-items: center;
-  gap: 52px;
-}
-
-.main-nav-links a {
-  white-space: nowrap;
-}
-
-/* Navigation Wissensseite */
-
-.subpage-header {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 48px;
-  padding: 28px 8% 20px;
-}
-
-.subpage-logo {
-  flex-shrink: 0;
-  margin-right: 20px;
-}
-
-.subpage-logo img {
-  width: 170px;
-  height: auto;
-  display: block;
-  filter: brightness(0) saturate(100%);
-  opacity: 0.75;
-}
-
-.subpage-nav {
-  margin-left: 0;
-  display: flex;
-  gap: 32px;
-  overflow: visible;
-}
-
-.subpage-nav a {
-  white-space: nowrap;
-}
-
-/* Seitliche Kapitelnavigation Wissensseite */
-
-.wissen-scroll-nav {
-  position: fixed;
-  right: 28px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 90;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.wissen-scroll-nav a {
-  width: 10px;
-  height: 10px;
-  border: 1.5px solid #3D3938;
-  border-radius: 50%;
-  display: block;
-  transition: background 0.2s ease, transform 0.2s ease;
-}
-
-.wissen-scroll-nav a:hover {
-    background: #3D3938;
-    border-color: #3D3938;
-    transform: scale(1.25);
-}
-
-/* Mobile-Fix Hauptnavigation */
-
-@media (max-width: 768px) {
-  header {
-    overflow: hidden;
-  }
-
-  header nav,
-  .main-nav {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .logo {
-    margin-right: 0;
-  }
-
-  .main-nav-links {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
-  }
-
-  .compact-nav-links {
-    display: none;
-  }
-
-  header.is-compact .main-nav {
-    flex-direction: row;
-  }
-
-  header.is-compact .compact-nav-links {
-    display: flex;
-    margin-left: auto;
-    gap: 16px;
-  }
-}
-  header.is-compact {
-    padding: 10px 5%;
-  }
-
-  header.is-compact .logo img {
-    width: 54px;
-  }
-
-  header.is-compact .compact-nav-links a {
-    font-size: 0.8rem;
-    white-space: nowrap;
-  }
-.game-section .petition-button {
-  background: #B9D986 !important;
-  color: #3A305B !important;
-}
-.wissen-themen {
-  min-height: auto !important;
-  padding-bottom: 20px !important;
-}
-
-.wissen-kapitel {
-  min-height: auto !important;
-  padding-top: 40px !important;
-}
-/* WISSEN – THEMENKARTEN MOBILE */
-
-@media (max-width: 768px) {
-  .wissen-themen {
-    padding-left: 6%;
-    padding-right: 6%;
-  }
-
-  .wissen-themen-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-
-  .wissen-thema,
-  .wissen-thema:nth-child(5),
-  .wissen-thema:nth-child(6),
-  .wissen-thema:nth-child(7) {
-    grid-column: auto;
-    width: 100%;
-    max-width: 100%;
-    min-height: 145px;
-    padding: 26px 28px;
-    box-sizing: border-box;
-  }
-
-  .wissen-thema h3 {
-    font-size: 1.25rem;
-    line-height: 1.2;
-    overflow-wrap: normal;
-    word-break: normal;
-    hyphens: none;
-  }
-}
-/* SUBPAGES – MOBILE NAVIGATION WIE HAUPTSEITE */
-
-@media (max-width: 768px) {
-  .subpage-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 22px;
-    padding: 28px 6% 36px;
-  }
-
-  .subpage-logo {
-    margin: 0;
-  }
-
-  .subpage-logo img {
-    width: 220px;
-    max-width: 72vw;
-    margin: 0 auto;
-  }
-
-  .subpage-nav {
-    flex-direction: column;
-    align-items: center;
-    gap: 22px;
-  }
-
-  .subpage-nav a {
-    font-size: 18px;
-  }
-}
-/* WISSEN – THEMENKARTEN MOBILE FINAL */
-
-@media (max-width: 768px) {
-  .wissen-themen-grid {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 22px !important;
-  }
-
-  .wissen-thema,
-  .wissen-thema:nth-child(5),
-  .wissen-thema:nth-child(6),
-  .wissen-thema:nth-child(7) {
-    display: flex !important;
-    width: 100% !important;
-    min-width: 0 !important;
-    max-width: 100% !important;
-    grid-column: auto !important;
-    min-height: 145px !important;
-    padding: 26px 28px !important;
-    box-sizing: border-box !important;
-  }
-
-  .wissen-thema h3 {
-    white-space: normal !important;
-    word-break: normal !important;
-    overflow-wrap: break-word !important;
-    hyphens: none !important;
-  }
-}
-/* WISSEN – PUNKTNAVIGATION AUF MOBILE AUSBLENDEN */
-
-@media (max-width: 768px) {
-  .wissen-scroll-nav {
-    display: none !important;
-  }
-}
-/* MEDIEN – ABSTÄNDE */
-
-.medien-hero {
-  min-height: auto !important;
-  padding: 80px 8% 40px !important;
-}
-
-.medien-section {
-  min-height: auto !important;
-  padding: 60px 8% 80px !important;
-}
-/* WISSEN – SCROLLPUNKTE AUF MOBILE AUSBLENDEN */
-
-@media (max-width: 900px) {
-  nav.wissen-scroll-nav {
-    display: none !important;
-    visibility: hidden !important;
-  }
-}
-/* Mobile-Fix Wissensseite */
-
-@media (max-width: 768px) {
-  .wissen-kapitel,
-  .wissen-hero,
-  .wissen-themen {
-    padding-left: 6%;
-    padding-right: 6%;
-  }
-
-  .wissen-kapitel-inner,
-  .wissen-hero-inner,
-  .wissen-themen-inner {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .wissen-quelle {
-    padding: 28px 0;
-    width: 100%;
-  }
-
-  .wissen-quelle-meta {
-    flex-direction: column;
-    gap: 8px;
-    margin-bottom: 28px;
-  }
-
-  .wissen-quelle h3 {
-    max-width: 100%;
-    font-size: 1.45rem;
-    line-height: 1.2;
-    overflow-wrap: break-word;
-  }
-
-  .wissen-quelle p {
-    max-width: 100%;
-    font-size: 1rem;
-    line-height: 1.65;
-  }
-
-  .wissen-stadt {
-    padding: 28px;
-  }
-
-  .wissen-stadt h3 {
-    font-size: 1.45rem;
-  }
-}
-.wissen-stadt {
-  padding: 28px;
-  overflow: hidden;
-}
-
-.wissen-stadt h3,
-.wissen-stadt p {
-  max-width: 100%;
-  overflow-wrap: break-word;
-  word-break: normal;
-  hyphens: auto;
-}
-
-.wissen-stadt h3 {
-  font-size: 1.45rem;
-}
-/* ========================================
-   TYPOGRAFIE – EINHEITLICHE FLIESSTEXTE
-======================================== */
-
-.hero p,
-#kurzfassung p,
-#domestikation p,
-#video p,
-#ausgangslage p,
-#kennzahlen p,
-#loesung p,
-#vorteile p,
-#forderung p,
-#mitmachen p,
-.about-intro,
-.support-section p,
-.game-section p,
-.faq-item p {
-  font-size: var(--font-size-body);
-  line-height: var(--line-height-body);
-}
-/* ========================================
-   DESKTOP – SECTION-HÖHEN HARMONISIEREN
-======================================== */
-
-@media (min-width: 769px) {
-  #start,
-  #forderung,
-  #kurzfassung,
-  #domestikation,
-  #video,
-  #ausgangslage,
-  #kennzahlen,
-  #loesung,
-  #vorteile,
-  #faq,
-  #mitmachen,
-  .support-section,
-  .game-section,
-  .voices-section,
-  .about-section {
-    min-height: 80vh;
-    height: auto;
-  }
-}
-/* ========================================
-   DESKTOP – EINHEITLICHE SECTION-ABSTÄNDE
-======================================== */
-
-@media (min-width: 769px) {
-  main section,
-  .vorteile-section,
-  .faq-section,
-  .support-section,
-  .game-section,
-  .voices-section,
-  .about-section {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-}
-@media (min-width: 769px) {
-    #mitmachen > p,
-    #mitmachen > h2,
-    #mitmachen > a {
-        transform: translateY(-45px);
+    .legal-section {
+        padding: 60px 6%;
     }
-}
-/* ========================================
-   EINHEITLICHER BUTTON-STIL
-======================================== */
 
-.petition-button,
-.mobile-sticky-petition,
-.support-button,
-.super-pigeon-credit a {
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  box-sizing: border-box !important;
+    .legal-section h1 {
+        margin-bottom: 50px;
+        font-size: clamp(38px, 11vw, 52px);
+        line-height: 1;
+    }
 
-  height: 48px !important;
-  padding: 0 18px !important;
+    .legal-content h2 {
+        margin-top: 52px;
+        font-size: 27px;
+    }
 
-  border-radius: 999px !important;
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  font-size: 16px !important;
-  line-height: 1 !important;
-  font-weight: 700 !important;
-  text-decoration: none !important;
-  white-space: nowrap;
-  transition: all 0.2s ease;
-}
-.super-pigeon-credit a {
-    margin-left: 10px;
-    background: #ffffff;
-    color: #3D3938;
-}
+    .legal-content h3 {
+        margin-top: 38px;
+        font-size: 21px;
+    }
 
-.game-section .petition-button {
-    background: #B9D986 !important;
-    color: #3A305B !important;
-}
-/* ========================================
-   EINHEITLICHES CONTENT-RASTER
-======================================== */
-
-:root {
-    --text-column-width: 760px;
-    --wide-content-width: 1200px;
-}
-
-/* ----------------------------------------
-   TEXTSPALTE
-   Überschrift und zugehöriger Text
-   erhalten dieselbe Breite
----------------------------------------- */
-
-#kurzfassung > p,
-#kurzfassung > h2,
-
-#domestikation > p,
-#domestikation > h2,
-
-#video > p,
-#video > h2,
-
-#ausgangslage > p,
-#ausgangslage > h2,
-
-#kennzahlen > p,
-#kennzahlen > h2,
-
-#loesung > p,
-#loesung > h2,
-#loesung .loesung-intro,
-#loesung .loesung-nutzen,
-#loesung .loesung-ziel,
-
-#vorteile > p,
-#vorteile > h2,
-
-#forderung > p,
-#forderung > h2,
-
-#mitmachen > p,
-#mitmachen > h2,
-#mitmachen .mitmachen-text,
-
-.support-section > p,
-.support-section > h2,
-
-.game-content > p,
-.game-content > h2,
-
-.voices-section .section-kicker,
-.voices-section h2,
-
-.about-section .section-kicker,
-.about-section h2,
-.about-section .about-intro,
-
-.faq-section > p,
-.faq-section > h2 {
-    width: 100%;
-    max-width: var(--text-column-width);
-}
-
-/* Überschriften möglichst ausgewogen umbrechen */
-
-#kurzfassung h2,
-#domestikation h2,
-#video h2,
-#ausgangslage h2,
-#kennzahlen h2,
-#loesung h2,
-#vorteile h2,
-#forderung h2,
-#mitmachen h2,
-.support-section h2,
-.game-section h2,
-.voices-section h2,
-.about-section h2,
-.faq-section h2 {
-    text-wrap: balance;
-}
-
-/* ----------------------------------------
-   BREITE INHALTE
-   Einheitliche Maximalbreite für Grids,
-   Karten und mehrspaltige Bereiche
----------------------------------------- */
-
-.kennzahlen-grid,
-.loesung-grid,
-.forderungen-grid,
-.vorteile-grid,
-.faq-list,
-.game-content,
-.voices-inner,
-.about-team {
-    width: 100%;
-    max-width: var(--wide-content-width);
-    margin-left: 0;
-    margin-right: 0;
-}
-/* ========================================
-   SEITLICHE NAVIGATION – TRANSPARENT
-======================================== */
-
-.section-scroll-nav,
-.section-scroll-nav.is-on-purple {
-    padding: 0;
-    background: transparent;
-    border-radius: 0;
-    gap: 12px;
-}
-
-/* Helle Sections */
-
-.section-scroll-nav a {
-    width: 10px;
-    height: 10px;
-    background: transparent;
-    border: 1.5px solid #3A305B;
-    border-radius: 50%;
-    opacity: 1;
-    transition: background 0.2s ease, transform 0.2s ease;
-}
-
-/* Dunkle/Violette Sections */
-
-.section-scroll-nav.is-on-purple a {
-    background: transparent;
-    border-color: #BFD2B5;
-}
-
-/* Hover */
-
-.section-scroll-nav a:hover {
-    transform: scale(1.2);
-    opacity: 1;
-}
-/* Scrollpunkte beim Berühren oder Anklicken ausfüllen */
-
-.section-scroll-nav a:hover,
-.section-scroll-nav a:focus,
-.section-scroll-nav a:focus-visible,
-.section-scroll-nav a:active {
-    background: #3A305B;
-    border-color: #3A305B;
-    opacity: 1;
-    transform: scale(1.25);
-    outline: none;
-}
-
-/* Auf dunklen Sections lindengrün ausfüllen */
-
-.section-scroll-nav.is-on-purple a:hover,
-.section-scroll-nav.is-on-purple a:focus,
-.section-scroll-nav.is-on-purple a:focus-visible,
-.section-scroll-nav.is-on-purple a:active {
-    background: #BFD2B5;
-    border-color: #BFD2B5;
+    .legal-content p {
+        font-size: 18px;
+        line-height: 1.65;
+    }
 }
