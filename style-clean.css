@@ -822,7 +822,7 @@ footer p {
 
 .hero .section-label,
 .hero h1,
-.hero > p,
+.hero>p,
 .hero .button {
     position: relative;
     z-index: 2;
@@ -1303,7 +1303,7 @@ main .supporter-logo:focus-visible {
     margin-bottom: 28px;
 }
 
-.game-content > p {
+.game-content>p {
     max-width: 650px;
 }
 
@@ -1464,7 +1464,7 @@ main .supporter-logo:focus-visible {
     gap: 28px 45px;
 }
 
-.vorteile-grid > div {
+.vorteile-grid>div {
     padding-top: 28px;
     border-top: 1px solid currentColor;
 }
@@ -1634,10 +1634,10 @@ main .supporter-logo:focus-visible {
 
 /* Jede Quelle steht in einer eigenen Zeile */
 
-.wissen-dossier .knowledge-source > a,
-.wissen-dossier .sources > a,
-.wissen-accordion-content .knowledge-source > a,
-.wissen-accordion-content .sources > a {
+.wissen-dossier .knowledge-source>a,
+.wissen-dossier .sources>a,
+.wissen-accordion-content .knowledge-source>a,
+.wissen-accordion-content .sources>a {
     display: block;
     width: fit-content;
     max-width: 100%;
@@ -1727,7 +1727,7 @@ main .supporter-logo:focus-visible {
     border-bottom: 1px solid #3F3B3B;
 }
 
-.wissen-quelle + .wissen-quelle {
+.wissen-quelle+.wissen-quelle {
     border-top: none;
 }
 
@@ -2341,7 +2341,7 @@ main .legal-back-link:hover {
     color: #F9F6EB;
 }
 
-.english-page #benefits .vorteile-grid > div {
+.english-page #benefits .vorteile-grid>div {
     border-top-color: #F9F6EB;
 }
 
@@ -2426,12 +2426,12 @@ main .legal-back-link:hover {
     }
 
     .english-page #petition {
-        padding-bottom: 170px;
+        padding-bottom: 280px;
     }
 
     .english-page #petition .section-pigeon-mitmachen {
         right: -18%;
-        bottom: -2%;
+        bottom: -8%;
         width: 78%;
     }
 
@@ -2444,7 +2444,7 @@ main .legal-back-link:hover {
     .english-page #petition .petition-form-button {
         position: relative;
         z-index: 3;
-        transform: translateY(90px);
+        transform: translateY(20px);
     }
 
     .english-page .copyright {
@@ -2459,6 +2459,7 @@ main .legal-back-link:hover {
         padding: 0;
     }
 }
+
 @media (min-width: 769px) {
     .english-page .hero .section-label {
         display: inline-block;
@@ -2615,7 +2616,7 @@ main .legal-back-link:hover {
     }
 }
 
-.petition-form-button + .petition-form-button {
+.petition-form-button+.petition-form-button {
     margin-top: 14px;
 }
 
