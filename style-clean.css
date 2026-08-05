@@ -2664,29 +2664,26 @@ main .legal-back-link:hover {
 }
 
 @media (max-width: 700px) {
-
     .hero {
         min-height: auto;
         padding-bottom: 300px;
     }
 
     .hero-pigeon {
-        right: 6%;
-        bottom: 35px;
-        width: 210px;
+        right: 22%;
+        bottom: 70px;
+        width: 230px;
         transform: none;
     }
 
     .hero-pigeon-background {
-        right: 15%;
+        right: 28%;
         top: auto;
-        bottom: 225px;
-        width: 135px;
+        bottom: 210px;
+        width: 120px;
         transform: none;
     }
-}
 
-@media (max-width: 700px) {
     .hero-pigeon-third {
         display: none;
     }
