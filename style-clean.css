@@ -2858,6 +2858,13 @@ main .legal-back-link:hover {
         margin-top: 12px;
     }
 }
+@media (max-width: 768px) {
+    .english-page #situation .section-pigeon-forderung {
+        right: 0;
+        width: 68%;
+        max-width: none;
+    }
+}
 
 /* Mobile Vorteile */
 
