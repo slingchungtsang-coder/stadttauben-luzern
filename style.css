@@ -1096,6 +1096,14 @@ main .supporter-logo:focus-visible {
     object-fit: contain;
 }
 
+/* JGLP – Junge Grüne Luzern */
+
+.supporter-logo--jglp img {
+    width: 88%;
+    height: auto;
+    object-fit: contain;
+}
+
 /* Elemental Training */
 
 .supporter-logo--elemental img {
@@ -2404,26 +2412,15 @@ main .legal-back-link:hover {
     margin-top: 0;
     border-top: 0;
 }
-/* Englischer Footer: Copyright-Zeile auf Desktop */
+/* Englischer Footer: Copyright und Rechtliches auf einer Zeile */
 
-@media (min-width: 769px) {
-    .english-page footer .copyright {
-        display: flex;
-        width: 100%;
-        max-width: none;
-        flex-wrap: nowrap;
-        align-items: center;
-        white-space: nowrap;
-    }
+.english-page .copyright {
+    max-width: none;
+    flex-wrap: nowrap;
+}
 
-    .english-page footer .copyright span,
-    .english-page footer .copyright a {
-        display: inline;
-        flex: 0 0 auto;
-        margin: 0;
-        padding: 0;
-        white-space: nowrap;
-    }
+.english-page .copyright a {
+    white-space: nowrap;
 }
 
 /* Englische Kurzseite: Mobile */
