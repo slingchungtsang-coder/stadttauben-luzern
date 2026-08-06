@@ -2404,6 +2404,27 @@ main .legal-back-link:hover {
     margin-top: 0;
     border-top: 0;
 }
+/* Englischer Footer: Copyright-Zeile auf Desktop */
+
+@media (min-width: 769px) {
+    .english-page footer .copyright {
+        display: flex;
+        width: 100%;
+        max-width: none;
+        flex-wrap: nowrap;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    .english-page footer .copyright span,
+    .english-page footer .copyright a {
+        display: inline;
+        flex: 0 0 auto;
+        margin: 0;
+        padding: 0;
+        white-space: nowrap;
+    }
+}
 
 /* Englische Kurzseite: Mobile */
 
