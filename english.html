@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sustainable and Humane Pigeon Management in Lucerne | Stadttauben Luzern</title>
+    <meta name="description" content="Petition for sustainable and humane feral pigeon management in Lucerne:
+  managed lofts, controlled feeding, egg replacement and better animal welfare.">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,8 +70,8 @@
 
 
         <section id="situation">
-            <img loading="lazy" src="20250609_Stadttauben_Schweiz_4.jpg" alt="" class="section-pigeon section-pigeon-forderung"
-                width="1199" height="2000">
+            <img loading="lazy" src="20250609_Stadttauben_Schweiz_4.jpg" alt=""
+                class="section-pigeon section-pigeon-forderung" width="1199" height="2000">
 
             <p class="section-label">THE SITUATION IN LUCERNE</p>
 
@@ -497,14 +499,14 @@
         let scrollNavUpdateScheduled = false;
 
         function scheduleScrollNavUpdate() {
-          if (scrollNavUpdateScheduled) return;
+            if (scrollNavUpdateScheduled) return;
 
-          scrollNavUpdateScheduled = true;
+            scrollNavUpdateScheduled = true;
 
-          requestAnimationFrame(() => {
-            updateScrollNavColor();
-            scrollNavUpdateScheduled = false;
-          });
+            requestAnimationFrame(() => {
+                updateScrollNavColor();
+                scrollNavUpdateScheduled = false;
+            });
         }
 
         window.addEventListener('scroll', scheduleScrollNavUpdate, { passive: true });
