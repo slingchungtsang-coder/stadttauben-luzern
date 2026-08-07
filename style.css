@@ -191,9 +191,16 @@ nav a:hover {
 }
 
 .petition-button {
-    background: #E85D9E;
+    background: #C93D7C;
     color: #FFFFFF;
     border: none;
+}
+
+.petition-button:focus-visible,
+.mobile-sticky-petition:focus-visible {
+    outline: 3px solid #FFFFFF;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 6px #3A305B;
 }
 
 .petition-form-button {
@@ -221,7 +228,7 @@ nav a:hover {
     border: none;
     border-radius: 999px;
 
-    background: #E85D9E;
+    background: #C93D7C;
     color: #FFFFFF;
 
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
@@ -379,7 +386,7 @@ footer p {
     z-index: 900;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 0;
     padding: 0;
     background: transparent;
     border-radius: 0;
@@ -388,39 +395,56 @@ footer p {
 
 .section-scroll-nav a {
     display: block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.section-scroll-nav a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 10px;
     height: 10px;
     background: transparent;
     border: 1.5px solid #3A305B;
     border-radius: 50%;
-    opacity: 1;
+    transform: translate(-50%, -50%);
     transition:
         background 0.2s ease,
+        border-color 0.2s ease,
         transform 0.2s ease;
 }
 
-.section-scroll-nav.is-on-purple a {
-    background: transparent;
+.section-scroll-nav.is-on-purple a::before {
     border-color: #BFD2B5;
 }
 
-.section-scroll-nav a:hover,
-.section-scroll-nav a:focus,
-.section-scroll-nav a:focus-visible,
-.section-scroll-nav a:active {
+.section-scroll-nav a:hover::before,
+.section-scroll-nav a:focus::before,
+.section-scroll-nav a:active::before {
     background: #3A305B;
     border-color: #3A305B;
-    opacity: 1;
-    outline: none;
-    transform: scale(1.25);
+    transform: translate(-50%, -50%) scale(1.25);
 }
 
-.section-scroll-nav.is-on-purple a:hover,
-.section-scroll-nav.is-on-purple a:focus,
-.section-scroll-nav.is-on-purple a:focus-visible,
-.section-scroll-nav.is-on-purple a:active {
+.section-scroll-nav a:focus-visible {
+    outline: 3px solid #3A305B;
+    outline-offset: 2px;
+}
+
+.section-scroll-nav.is-on-purple a:hover::before,
+.section-scroll-nav.is-on-purple a:focus::before,
+.section-scroll-nav.is-on-purple a:active::before {
     background: #BFD2B5;
     border-color: #BFD2B5;
+}
+
+.section-scroll-nav.is-on-purple a:focus-visible {
+    outline-color: #BFD2B5;
 }
 
 /* Wissenskarten */
@@ -815,7 +839,7 @@ footer p {
 }
 
 .hero .petition-button {
-    background: #E85D9E;
+    background: #C93D7C;
     color: #FFFFFF;
     font-weight: 600;
 }
@@ -1942,25 +1966,46 @@ main .supporter-logo:focus-visible {
     z-index: 90;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 0;
     transform: translateY(-50%);
 }
 
 .wissen-scroll-nav a {
     display: block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.wissen-scroll-nav a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 10px;
     height: 10px;
+    background: transparent;
     border: 1.5px solid #3D3938;
     border-radius: 50%;
+    transform: translate(-50%, -50%);
     transition:
         background 0.2s ease,
+        border-color 0.2s ease,
         transform 0.2s ease;
 }
 
-.wissen-scroll-nav a:hover {
+.wissen-scroll-nav a:hover::before,
+.wissen-scroll-nav a:focus::before,
+.wissen-scroll-nav a:active::before {
     background: #3D3938;
     border-color: #3D3938;
-    transform: scale(1.25);
+    transform: translate(-50%, -50%) scale(1.25);
+}
+
+.wissen-scroll-nav a:focus-visible {
+    outline: 3px solid #3D3938;
+    outline-offset: 2px;
 }
 
 
