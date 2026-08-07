@@ -1120,6 +1120,27 @@ main .supporter-logo:focus-visible {
     object-fit: contain;
 }
 
+/* Bio Shop Viktoria */
+.supporter-logo--bioshop-viktoria img {
+    width: 250px;
+    max-width: 250px;
+    max-height: 95px;
+}
+
+/* Karl's Kraut */
+.supporter-logo--karls-kraut img {
+    width: 125px;
+    max-width: 125px;
+    max-height: 145px;
+}
+
+/* Tier im Fokus */
+.supporter-logo--tif img {
+    width: 235px;
+    max-width: 235px;
+    max-height: 100px;
+}
+
 /* JGLP – Junge Grüne Luzern */
 
 .supporter-logo--jglp img {
