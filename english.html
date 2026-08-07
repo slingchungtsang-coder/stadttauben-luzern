@@ -494,8 +494,21 @@
             scrollNav.classList.toggle('is-on-purple', isDarkBackground);
         }
 
-        window.addEventListener('scroll', updateScrollNavColor);
-        window.addEventListener('resize', updateScrollNavColor);
+        let scrollNavUpdateScheduled = false;
+
+        function scheduleScrollNavUpdate() {
+          if (scrollNavUpdateScheduled) return;
+
+          scrollNavUpdateScheduled = true;
+
+          requestAnimationFrame(() => {
+            updateScrollNavColor();
+            scrollNavUpdateScheduled = false;
+          });
+        }
+
+        window.addEventListener('scroll', scheduleScrollNavUpdate, { passive: true });
+        window.addEventListener('resize', scheduleScrollNavUpdate);
         updateScrollNavColor();
     </script>
 
