@@ -3011,7 +3011,6 @@ main .legal-back-link:hover {
 /* Mobile ideelle Unterstützer */
 
 @media (max-width: 768px) {
-
     .supporters-grid {
         width: 100%;
         display: flex;
@@ -3036,138 +3035,91 @@ main .legal-back-link:hover {
         margin: 0 auto;
         object-fit: contain;
     }
-
-    .supporter-logo--elemental img {
-        width: 240px;
-        max-width: 80vw;
-    }
-
-    .supporter-logo--tierwelt img {
-        width: 230px;
-        max-width: 78vw;
-        height: auto;
-    }
-
-    .supporter-logo--parterre img {
-        width: 200px;
-        max-width: 72vw;
-        height: auto;
-    }
-
-    /* Life Farm Forever */
-
-    .supporter-logo--lifefarm img {
-        width: 180px;
-        max-width: 62vw;
-        height: auto;
-    }
-
-    /* Stiftung ProTier */
-
-    .supporter-logo--protier img {
-        max-width: 160px;
-    }
-
-    /* Stiftung für das Tier im Recht */
-
-    .supporter-logo--tir img {
-        display: block;
-        width: 220px;
-        max-width: 78vw;
-        height: auto;
-        max-height: 130px;
-        margin: 0 auto;
-    }
-
-    .supporter-logo--animalrightsmarch img {
-        width: 150px;
-        max-width: 48vw;
-    }
-
-    .supporter-logo--tiermensch img {
-        width: 220px;
-        max-width: 78vw;
-    }
-
-    .supporter-logo--aurelio img {
-        width: 130px;
-        max-width: 130px;
-        max-height: 135px;
-    }
-
-    .supporter-logo--tierundwir img {
-        width: 170px;
-        max-width: 170px;
-        max-height: 125px;
-    }
-
-    .supporter-logo--aenzi img {
-        width: 115px;
-        max-width: 42vw;
-    }
-
-    .supporter-logo--aaa img {
-        width: 170px;
-        max-width: 58vw;
-        margin-top: 20px;
-    }
-
-    .supporter-logo--swissveg img {
-        width: 165px;
-        max-width: 100%;
-    }
-
-    .supporter-logo--sentience img {
-        width: 200px;
-        max-width: 68vw;
-    }
-
-    .supporter-logo--vtad img {
-        width: 145px;
-        max-width: 48vw;
-    }
-
-    .supporter-logo--simbaswelt img {
-        width: 145px;
-        max-width: 48vw;
-    }
-
-    .supporter-logo--animalrights img {
-        width: 220px;
-        max-width: 75vw;
-    }
-
-    .supporter-logo--tierpartei img {
-        width: 220px;
-        max-width: 78vw;
-    }
-
-    .supporter-logo--neubad img {
-        width: 130px;
-        max-width: 42vw;
-        height: auto;
-    }
 }
 
 @media (max-width: 700px) {
-    .supporter-logo--akut img {
-        width: 220px;
-        max-width: 100%;
-        max-height: 100px;
+    main .supporters-grid {
+        gap: 18px;
     }
 
-    .supporter-logo--rattenclub img {
-        width: 240px;
-        max-height: 90px;
+    main .supporters-grid .supporter-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 150px;
+        margin: 0 auto;
+    }
+
+    main .supporters-grid .supporter-logo img {
+        display: block;
+        width: auto;
+        height: auto;
+        max-width: 280px;
+        max-height: 125px;
+        margin: 0 auto;
+        object-fit: contain;
     }
 }
 
-@media (max-width: 600px) {
-    .supporter-logo--juso-luzern img {
-        width: 220px;
-        max-width: 100%;
-        height: auto;
-    }
+/* Optischer Ausgleich einzelner Unterstützer-Logos */
+
+main .supporters-grid .supporter-logo--jglp img {
+    max-width: 220px;
+    max-height: 108px;
+}
+
+main .supporters-grid .supporter-logo--tierpartei img {
+    max-width: 225px;
+    max-height: 110px;
+}
+
+main .supporters-grid .supporter-logo--aaa img {
+    max-width: 155px;
+    max-height: 112px;
+}
+
+main .supporters-grid .supporter-logo--animalrights img {
+    max-width: 245px;
+    max-height: 112px;
+}
+
+main .supporters-grid .supporter-logo--elemental img {
+    max-width: 250px;
+    max-height: 110px;
+}
+
+main .supporters-grid .supporter-logo--swissveg img {
+    max-width: 250px;
+    max-height: 110px;
+}
+
+main .supporters-grid .supporter-logo--animalrightsmarch img {
+    max-width: 140px;
+    max-height: 140px;
+}
+
+/* Weitere optische Feinjustierung auf Mobile */
+
+main .supporters-grid .supporter-logo--aurelio img {
+    max-width: 145px;
+    max-height: 145px;
+}
+
+main .supporters-grid .supporter-logo--karls-kraut img {
+    max-width: 125px;
+    max-height: 145px;
+}
+
+main .supporters-grid .supporter-logo--aenzi img {
+    max-width: 125px;
+    max-height: 145px;
+}
+
+main .supporters-grid .supporter-logo--simbaswelt img,
+main .supporters-grid .supporter-logo--vtad img {
+    max-width: 150px;
+    max-height: 150px;
 }
 
 /* Ende Mobile ideelle Unterstützer */
