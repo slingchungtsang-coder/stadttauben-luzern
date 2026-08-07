@@ -1610,6 +1610,10 @@ main .supporter-logo:focus-visible {
     bottom: -60px;
 }
 
+.section-pigeon-mitmachen {
+    bottom: -60px;
+}
+
 /* Super Pigeon */
 
 .super-pigeon-credit {
@@ -1916,9 +1920,7 @@ main .supporter-logo:focus-visible {
 .wissen-stadt .wissen-quelle-link {
     background: #F3F0EB;
     color: #3A305B;
-    padding: 12px 18px;
     border-radius: 999px;
-    border: 1px solid rgba(243, 240, 235, 0.35);
     transition:
         background 0.2s ease,
         transform 0.2s ease;
