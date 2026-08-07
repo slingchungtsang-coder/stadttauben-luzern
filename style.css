@@ -1120,6 +1120,20 @@ main .supporter-logo:focus-visible {
     object-fit: contain;
 }
 
+/* meinRAD */
+.supporter-logo--meinrad img {
+    width: 360px;
+    max-width: 360px;
+    max-height: 135px;
+}
+
+/* HEV Luzern */
+.supporter-logo--hev img {
+    width: 225px;
+    max-width: 225px;
+    max-height: 105px;
+}
+
 /* Bio Shop Viktoria */
 .supporter-logo--bioshop-viktoria img {
     width: 250px;
@@ -1141,10 +1155,11 @@ main .supporter-logo:focus-visible {
     max-height: 100px;
 }
 
+
 /* JGLP – Junge Grüne Luzern */
 
 .supporter-logo--jglp img {
-    width: 88%;
+    width: 60%;
     height: auto;
     object-fit: contain;
 }
@@ -1157,9 +1172,12 @@ main .supporter-logo:focus-visible {
     max-height: 125px;
 }
 
+/* NetAP */
+
 .supporter-logo--netap img {
-    width: 100%;
-    max-width: 230px;
+    width: 250px;
+    max-width: 250px;
+    max-height: 105px;
 }
 
 /* Stiftung ProTier */
@@ -1220,8 +1238,8 @@ main .supporter-logo:focus-visible {
 /* Stiftung für das Tier im Recht */
 
 .supporter-logo--tir img {
-    width: 220px;
-    max-width: 220px;
+    width: 300px;
+    max-width: 300px;
     max-height: 130px;
 }
 
@@ -1268,9 +1286,9 @@ main .supporter-logo:focus-visible {
 /* Lebenshof Aurelio */
 
 .supporter-logo--aurelio img {
-    width: 190px;
-    max-width: 190px;
-    max-height: 155px;
+    width: 250px;
+    max-width: 250px;
+    max-height: 200px;
 }
 
 /* Das Tier + Wir */
@@ -1300,9 +1318,9 @@ main .supporter-logo:focus-visible {
 /* Sentience */
 
 .supporter-logo--sentience img {
-    width: 260px;
-    max-width: 260px;
-    max-height: 110px;
+    width: 350px;
+    max-width: 350px;
+    max-height: 100px;
 }
 
 /* Verbund Tier-Ambulanz-Dienste */
