@@ -249,6 +249,8 @@ nav a:hover {
 
 .petition-buttons .petition-form-button {
     width: 320px;
+    max-width: 100%;
+    box-sizing: border-box;
     justify-content: center;
 }
 
@@ -256,8 +258,6 @@ nav a:hover {
     background: rgba(249, 246, 235, 0.08);
     border-color: #F9F6EB;
 }
-
-
 
 /* ========================================
    FOOTER
