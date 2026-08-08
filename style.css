@@ -467,11 +467,17 @@ footer p {
     text-decoration: none;
 }
 
+.wissen-thema:focus-visible {
+    outline: 3px solid #3A305B;
+    outline-offset: 4px;
+}
+
 .wissen-thema span {
     font-size: 0.9rem;
 }
 
-.wissen-thema h3 {
+.wissen-thema .wissen-thema-title {
+    display: block;
     margin: 0;
     font-size: 1.15rem;
     line-height: 1.2;
@@ -1991,6 +1997,12 @@ main .supporter-logo:focus-visible {
     text-decoration: none;
     font-weight: 600;
     white-space: nowrap;
+}
+
+.subpage-nav a:focus-visible {
+    outline: 3px solid #3A305B;
+    outline-offset: 4px;
+    border-radius: 4px;
 }
 
 .subpage-nav a.is-active {
