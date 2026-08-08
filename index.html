@@ -5,15 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stadttauben Luzern</title>
-  <meta name="description"
-    content="Petition für ein nachhaltiges und tiergerechtes Stadttaubenmanagement in Luzern:
+  <meta name="description" content="Petition für ein nachhaltiges und tiergerechtes Stadttaubenmanagement in Luzern:
     betreute Taubenschläge, kontrollierte Fütterung und Eiertausch.">
 
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
     rel="stylesheet">
 </head>
 
@@ -69,6 +67,92 @@
       <a href="#petition-formular" class="button petition-button">
         Petition unterschreiben
       </a>
+
+      <button type="button" class="button petition-form-button share-petition-button" id="share-petition-top">
+        Petition teilen
+      </button>
+
+      <div id="share-panel" class="share-panel" hidden aria-label="Petition teilen">
+                <p class="share-panel-title">Petition teilen</p>
+
+                <div class="share-links">
+
+                  <a href="#" class="share-icon-button" id="share-whatsapp" target="_blank" rel="noopener"
+                    aria-label="Petition über WhatsApp teilen" title="WhatsApp">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path fill="currentColor"
+                        d="M12.04 2a9.84 9.84 0 0 0-8.41 14.95L2.05 22l5.18-1.53A9.93 9.93 0 1 0 12.04 2Zm0 17.98a8.09 8.09 0 0 1-4.12-1.13l-.3-.18-3.07.91.92-2.99-.2-.31a8.12 8.12 0 1 1 6.77 3.7Zm4.45-6.08c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1.03-.38-1.96-1.21-.72-.64-1.21-1.44-1.35-1.68-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.19-.47-.39-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.39 1.37.5.58.18 1.1.16 1.51.1.46-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z" />
+                    </svg>
+                  </a>
+
+                  <a href="#" class="share-icon-button share-icon-letter" id="share-facebook" target="_blank" rel="noopener"
+                    aria-label="Petition über Facebook teilen" title="Facebook">
+                    <span aria-hidden="true">f</span>
+                  </a>
+
+                  <a href="#" class="share-icon-button" id="share-x" target="_blank" rel="noopener"
+                    aria-label="Petition über X teilen" title="X">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path fill="currentColor"
+                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                  </a>
+
+                  <a href="#" class="share-icon-button" id="share-bluesky" target="_blank" rel="noopener"
+                    aria-label="Petition über Bluesky teilen" title="Bluesky">
+                    <svg viewBox="0 0 600 530" aria-hidden="true">
+                      <path fill="currentColor"
+                        d="M135.72 44.03C202.216 93.951 273.738 195.17 300 249.49c26.262-54.316 97.784-155.539 164.28-205.46C512.26 8.009 590-19.862 590 68.825c0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.38-3.69-10.832-3.708-7.896-.017-2.936-1.193.516-3.707 7.896-13.714 40.255-67.233 197.356-189.63 71.766-64.444-66.128-34.605-132.256 82.697-152.22-67.108 11.421-142.55-7.449-163.25-81.433C20.155 217.613 10 86.537 10 68.825 10-19.862 87.742 8.009 135.72 44.03Z" />
+                    </svg>
+                  </a>
+
+                  <a href="#" class="share-icon-button" id="share-mastodon" target="_blank" rel="noopener"
+                    aria-label="Petition über Mastodon teilen" title="Mastodon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path fill="currentColor"
+                        d="M21.58 13.41c-.31 1.62-2.82 3.4-5.7 3.74-1.5.18-2.98.34-4.56.27-2.59-.12-4.63-.62-4.63-.62 0 .25.02.49.05.72.34 2.56 2.53 2.71 4.61 2.78 2.1.07 3.98-.52 3.98-.52l.09 1.9s-1.47.79-4.1.94c-1.45.08-3.26-.04-5.36-.59-4.55-1.19-5.33-5.98-5.45-10.84-.04-1.44-.01-2.8-.01-3.94 0-4.98 3.26-6.44 3.26-6.44C5.4.06 8.22 0 11.96 0h.09c3.74 0 6.56.06 8.2.81 0 0 3.26 1.46 3.26 6.44 0 0 .04 3.67-.93 6.16ZM18.19 7.6c0-1.23-.31-2.2-.93-2.91-.64-.71-1.47-1.08-2.5-1.08-1.19 0-2.09.46-2.69 1.38L11.5 6l-.57-1.01c-.6-.92-1.5-1.38-2.69-1.38-1.03 0-1.86.37-2.5 1.08-.62.71-.93 1.68-.93 2.91v5.99h2.37V7.78c0-1.22.51-1.84 1.53-1.84 1.13 0 1.7.73 1.7 2.18v3.18h2.18V8.12c0-1.45.57-2.18 1.7-2.18 1.02 0 1.53.62 1.53 1.84v5.81h2.37Z" />
+                    </svg>
+                  </a>
+
+                  <a href="#" class="share-icon-button" id="share-telegram" target="_blank" rel="noopener"
+                    aria-label="Petition über Telegram teilen" title="Telegram">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path
+                        d="M21 4 3.8 10.6c-.9.3-.9.9-.2 1.1l4.4 1.4 1.7 5.2c.2.6.1.8.7.8.5 0 .7-.2 1-.5l2.1-2 4.4 3.2c.8.4 1.4.2 1.6-.8L22 5.4c.3-1-.4-1.5-1-1.4Z"
+                        fill="currentColor" />
+                      <path d="m9 13 8.8-5.5c.4-.2.8-.1.5.2l-7.3 6.6-.3 3.3Z" fill="#F9F6EB" />
+                    </svg>
+                  </a>
+
+                  <a href="#" class="share-icon-button" id="share-email" aria-label="Petition per E-Mail teilen"
+                    title="E-Mail">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" />
+                      <path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </a>
+
+                  <button type="button" class="share-icon-button" id="share-copy" aria-label="Link zur Petition kopieren"
+                    title="Link kopieren">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <rect x="8" y="8" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" />
+                      <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" fill="none" stroke="currentColor"
+                        stroke-width="1.8" />
+                    </svg>
+                  </button>
+
+                </div>
+
+                <div class="share-qr">
+                  <p>Oder mit dem Smartphone öffnen:</p>
+
+                  <img src="qr-petition.svg" alt="QR-Code zur Petition auf www.stadttauben-luzern.ch" width="180" height="180"
+                    loading="lazy">
+                </div>
+
+                <span id="share-status" class="share-status" aria-live="polite"></span>
+              </div>
     </section>
 
 
@@ -1191,6 +1275,8 @@
           Petition online unterschreiben
         </a>
 
+
+
       </div>
 
     </section>
@@ -1602,6 +1688,137 @@
     window.addEventListener('resize', scheduleScrollNavUpdate);
     updateScrollNavColor();
   </script>
+
+  <script>
+  const shareButton = document.getElementById('share-petition-top');
+  const sharePanel = document.getElementById('share-panel');
+  const shareStatus = document.getElementById('share-status');
+
+  const shareWhatsApp = document.getElementById('share-whatsapp');
+  const shareFacebook = document.getElementById('share-facebook');
+  const shareX = document.getElementById('share-x');
+  const shareBluesky = document.getElementById('share-bluesky');
+  const shareMastodon = document.getElementById('share-mastodon');
+  const shareTelegram = document.getElementById('share-telegram');
+  const shareEmail = document.getElementById('share-email');
+  const shareCopy = document.getElementById('share-copy');
+
+  const shareUrl = 'https://www.stadttauben-luzern.ch/';
+
+  const shareTitle =
+    'Petition für ein nachhaltiges und tiergerechtes Stadttaubenmanagement in Luzern';
+
+  const shareText =
+    'Unterstützen Sie die Petition für ein nachhaltiges und tiergerechtes Stadttaubenmanagement in Luzern.';
+
+  const encodedUrl = encodeURIComponent(shareUrl);
+  const encodedTitle = encodeURIComponent(shareTitle);
+  const encodedShareText = encodeURIComponent(shareText);
+  const encodedText = encodeURIComponent(
+    `${shareText}\n\n${shareUrl}`
+  );
+
+  if (
+    shareButton &&
+    sharePanel &&
+    shareStatus &&
+    shareWhatsApp &&
+    shareFacebook &&
+    shareX &&
+    shareBluesky &&
+    shareMastodon &&
+    shareTelegram &&
+    shareEmail &&
+    shareCopy
+  ) {
+    shareButton.setAttribute('aria-controls', 'share-panel');
+    shareButton.setAttribute('aria-expanded', 'false');
+
+    shareWhatsApp.href =
+      `https://wa.me/?text=${encodedText}`;
+
+    shareFacebook.href =
+      `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+
+    shareX.href =
+      `https://x.com/intent/tweet?text=${encodedText}`;
+
+    shareBluesky.href =
+      `https://bsky.app/intent/compose?text=${encodedText}`;
+
+    shareMastodon.href =
+      `https://share.joinmastodon.org/#text=${encodedText}`;
+
+    shareTelegram.href =
+      `https://t.me/share/url?url=${encodedUrl}&text=${encodedShareText}`;
+
+    shareEmail.href =
+      `mailto:?subject=${encodedTitle}&body=${encodedText}`;
+
+    const useNativeShare = () =>
+      'share' in navigator &&
+      window.matchMedia('(max-width: 900px)').matches;
+
+    shareButton.addEventListener('click', async () => {
+      shareStatus.textContent = '';
+
+      if (useNativeShare()) {
+        try {
+          await navigator.share({
+            title: shareTitle,
+            text: shareText,
+            url: shareUrl
+          });
+        } catch (error) {
+          if (error.name !== 'AbortError') {
+            shareStatus.textContent =
+              'Teilen ist derzeit nicht möglich.';
+          }
+        }
+
+        return;
+      }
+
+      sharePanel.hidden = !sharePanel.hidden;
+
+      shareButton.setAttribute(
+        'aria-expanded',
+        String(!sharePanel.hidden)
+      );
+    });
+
+    shareCopy.addEventListener('click', async () => {
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(shareUrl);
+        } else {
+          const textArea = document.createElement('textarea');
+          textArea.value = shareUrl;
+          textArea.style.position = 'fixed';
+          textArea.style.opacity = '0';
+
+          document.body.appendChild(textArea);
+          textArea.select();
+          document.execCommand('copy');
+          textArea.remove();
+        }
+
+        shareStatus.textContent = 'Link kopiert.';
+      } catch (error) {
+        shareStatus.textContent =
+          'Link konnte nicht kopiert werden.';
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !sharePanel.hidden) {
+        sharePanel.hidden = true;
+        shareButton.setAttribute('aria-expanded', 'false');
+        shareButton.focus();
+      }
+    });
+  }
+</script>
 
 </body>
 
