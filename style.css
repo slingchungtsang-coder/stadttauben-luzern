@@ -151,9 +151,9 @@ nav a:hover {
 }
 
 .main-nav-links {
-  display: flex;
-  align-items: center;
-  gap: 32px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
 }
 
 .main-nav-links a {
@@ -258,33 +258,39 @@ nav a:hover {
     background: rgba(249, 246, 235, 0.08);
     border-color: #F9F6EB;
 }
+
 /* Petition teilen */
 
 .share-petition-button {
     cursor: pointer;
 }
+
 #share-petition-top {
     display: flex;
-    width: fit-content;
-    margin-top: 14px;
+    width: 320px;
+    max-width: 100%;
+    margin-top: 40px;
 }
 
-#share-petition-hero {
-    width: fit-content;
+/* Einheitliche Breite für übereinanderstehende Hero-Buttons */
+
+.hero-button-group>.button,
+.hero-buttons>.button {
+    width: 320px;
+    max-width: 100%;
 }
 
-.hero-button-group {
+.hero-button-group,
+.hero-buttons {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 40px;
 }
 
-.hero-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
+.hero>.petition-button {
+    width: 320px;
+    max-width: 100%;
 }
 
 .share-panel {
@@ -338,14 +344,51 @@ nav a:hover {
     height: 25px;
 }
 
-.share-icon-letter {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 1;
+#share-facebook {
+    padding: 0;
+    background: transparent;
+    overflow: hidden;
 }
 
-.share-icon-linkedin {
-    font-size: 20px;
+#share-facebook svg {
+    display: block;
+    width: 52px;
+    height: 52px;
+}
+
+#share-facebook .facebook-circle {
+    fill: #F9F6EB;
+}
+
+#share-facebook .facebook-f {
+    fill: #3A305B;
+    transform: scale(0.82);
+    transform-origin: center bottom;
+    transform-box: fill-box;
+}
+
+#share-whatsapp svg {
+    width: 35px;
+    height: 35px;
+}
+
+#share-telegram svg {
+    width: 45px;
+    height: 45px;
+}
+
+#share-email svg {
+    width: 30px;
+    height: 30px;
+}
+
+#share-copy svg {
+    width: 30px;
+    height: 30px;
+}
+
+.share-icon-letter {
+    font-size: 30px;
     font-weight: 700;
     line-height: 1;
 }
@@ -370,6 +413,7 @@ nav a:hover {
     font-size: 13px;
     line-height: 1.4;
 }
+
 .share-qr {
     margin-top: 20px;
 }
@@ -389,6 +433,29 @@ nav a:hover {
 
     background: #F9F6EB;
     border-radius: 12px;
+}
+
+/* Einheitlicher Abstand zwischen Text und CTA-Button */
+
+#petition-formular h2+.mitmachen-text {
+    margin-bottom: 0;
+}
+
+#petition-formular .petition-buttons {
+    margin-top: 40px;
+}
+
+#petition-formular .petition-buttons>.button {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.support-section .support-inner>h2+p {
+    margin-bottom: 0;
+}
+
+.support-section .support-button {
+    margin-top: 40px;
 }
 
 /* ========================================
@@ -2528,7 +2595,10 @@ main .legal-back-link:hover {
 .english-page .petition-buttons {
     gap: 40px;
 }
-.english-page .petition-buttons > .button {
+
+.english-page .petition-buttons>.button {
+    width: 320px;
+    max-width: 100%;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -2555,6 +2625,8 @@ main .legal-back-link:hover {
     overflow: hidden;
     background-color: #3D3938;
     color: #F9F6EB;
+    margin-bottom: 0;
+    border-bottom: 0;
 }
 
 .english-page #situation h2,
@@ -2650,6 +2722,7 @@ main .legal-back-link:hover {
     margin-top: 0;
     border-top: 0;
 }
+
 /* Englischer Footer: Copyright und Rechtliches auf einer Zeile */
 
 .english-page .copyright {
@@ -2668,12 +2741,6 @@ main .legal-back-link:hover {
         padding-bottom: 420px;
     }
 
-    .english-page #situation .section-pigeon-forderung {
-        right: -18%;
-        bottom: 0;
-        width: 72%;
-        opacity: 0.72;
-    }
 
     .english-page #why-it-falls-short,
     .english-page #further-reading {
@@ -3114,6 +3181,7 @@ main .legal-back-link:hover {
         margin-top: 12px;
     }
 }
+
 @media (max-width: 768px) {
     .english-page #situation .section-pigeon-forderung {
         right: 0;
@@ -3213,7 +3281,7 @@ main .legal-back-link:hover {
         max-height: 125px;
         margin: 0 auto;
         object-fit: contain;
-    }
+    
 }
 
 /* Optischer Ausgleich einzelner Unterstützer-Logos */
@@ -3274,6 +3342,7 @@ main .supporters-grid .supporter-logo--simbaswelt img,
 main .supporters-grid .supporter-logo--vtad img {
     max-width: 150px;
     max-height: 150px;
+}
 }
 
 /* Ende Mobile ideelle Unterstützer */
