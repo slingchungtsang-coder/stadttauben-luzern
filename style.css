@@ -383,8 +383,8 @@ nav a:hover {
 }
 
 #share-copy svg {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 .share-icon-letter {
@@ -1355,8 +1355,8 @@ main .supporter-logo:focus-visible {
 
 /* Tier im Fokus */
 .supporter-logo--tif img {
-    width: 300px;
-    max-width: 300px;
+    width: 350px;
+    max-width: 350px;
     max-height: 150px;
 }
 
