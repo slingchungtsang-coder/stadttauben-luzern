@@ -2855,6 +2855,10 @@ main .legal-back-link:hover {
         padding-bottom: 70px;
     }
 
+    .english-page #further-reading .petition-form-button {
+        margin-top: 24px;
+    }
+
     .english-page #petition {
         padding-bottom: 280px;
     }
@@ -2874,6 +2878,7 @@ main .legal-back-link:hover {
     .english-page #petition .petition-form-button {
         position: relative;
         z-index: 3;
+        margin-top: -8px;
         transform: translateY(20px);
     }
 
@@ -2907,7 +2912,6 @@ main .legal-back-link:hover {
         font-size: 20px;
     }
 }
-
 
 /* Mobile Buttons */
 
