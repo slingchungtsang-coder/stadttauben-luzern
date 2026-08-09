@@ -1341,9 +1341,9 @@ main .supporter-logo:focus-visible {
 
 /* Bio Shop Viktoria */
 .supporter-logo--bioshop-viktoria img {
-    width: 250px;
-    max-width: 250px;
-    max-height: 95px;
+    width: 270px;
+    max-width: 270px;
+    max-height: 130px;
 }
 
 /* Karl's Kraut */
@@ -1355,9 +1355,9 @@ main .supporter-logo:focus-visible {
 
 /* Tier im Fokus */
 .supporter-logo--tif img {
-    width: 235px;
-    max-width: 235px;
-    max-height: 100px;
+    width: 300px;
+    max-width: 300px;
+    max-height: 150px;
 }
 
 
@@ -1483,9 +1483,9 @@ main .supporter-logo:focus-visible {
 /* Swissveg */
 
 .supporter-logo--swissveg img {
-    width: 190px;
-    max-width: 190px;
-    max-height: 95px;
+    width: 250px;
+    max-width: 250px;
+    max-height: 150px;
 }
 
 /* Lebenshof Aurelio */
@@ -1514,7 +1514,7 @@ main .supporter-logo:focus-visible {
 
 /* Advocates for Animals */
 
-.supporter-logo--aaa img {
+.supporter-logo--a4a img {
     width: 155px;
     max-width: 155px;
     max-height: 155px;
@@ -3308,7 +3308,7 @@ main .legal-back-link:hover {
         max-height: 110px;
     }
 
-    main .supporters-grid .supporter-logo--aaa img {
+    main .supporters-grid .supporter-logo--a4a img {
         max-width: 155px;
         max-height: 112px;
     }
@@ -3319,8 +3319,8 @@ main .legal-back-link:hover {
     }
 
     main .supporters-grid .supporter-logo--elemental img {
-        max-width: 250px;
-        max-height: 110px;
+        max-width: 270px;
+        max-height: 130px;
     }
 
     main .supporters-grid .supporter-logo--swissveg img {
