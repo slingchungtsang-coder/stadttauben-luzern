@@ -3011,13 +3011,13 @@ main .legal-back-link:hover {
         transform: none;
     }
 
-    .hero-pigeon-background {
-        right: 28%;
-        top: auto;
-        bottom: 210px;
-        width: 120px;
-        transform: none;
-    }
+.hero-pigeon-background {
+    right: 28%;
+    top: auto;
+    bottom: 190px;
+    width: 120px;
+    transform: none;
+}
 
     .hero-pigeon-third {
         display: none;
