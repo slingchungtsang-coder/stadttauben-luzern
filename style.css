@@ -1975,7 +1975,7 @@ main .supporter-logo:focus-visible {
 
 .wissen-text {
     max-width: 820px;
-    margin-top: 56px;
+    margin-top: 32px;
 }
 
 .wissen-text p {
@@ -2002,12 +2002,13 @@ main .supporter-logo:focus-visible {
 
 .wissen-quelle {
     margin-top: 32px;
-    padding: 40px;
+    padding: 28px 40px;
     border-top: 1px solid #3F3B3B;
     border-bottom: 1px solid #3F3B3B;
 }
 
 .wissen-quelle+.wissen-quelle {
+    margin-top: 0;
     border-top: none;
 }
 
@@ -3011,13 +3012,13 @@ main .legal-back-link:hover {
         transform: none;
     }
 
-.hero-pigeon-background {
-    right: 28%;
-    top: auto;
-    bottom: 190px;
-    width: 120px;
-    transform: none;
-}
+    .hero-pigeon-background {
+        right: 28%;
+        top: auto;
+        bottom: 190px;
+        width: 120px;
+        transform: none;
+    }
 
     .hero-pigeon-third {
         display: none;
