@@ -2878,7 +2878,7 @@ main .legal-back-link:hover {
     .english-page #petition .petition-form-button {
         position: relative;
         z-index: 3;
-        margin-top: -8px;
+        margin-top: -12px;
         transform: translateY(20px);
     }
 
