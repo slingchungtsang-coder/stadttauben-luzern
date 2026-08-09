@@ -2734,65 +2734,6 @@ main .legal-back-link:hover {
     white-space: nowrap;
 }
 
-/* Englische Kurzseite: Mobile */
-
-@media (max-width: 768px) {
-    .english-page #situation {
-        padding-bottom: 420px;
-    }
-
-
-    .english-page #why-it-falls-short,
-    .english-page #further-reading {
-        padding-top: 70px;
-        padding-bottom: 70px;
-    }
-
-    .english-page #petition {
-        padding-bottom: 280px;
-    }
-
-    .english-page #petition .section-pigeon-mitmachen {
-        right: -18%;
-        bottom: -8%;
-        width: 78%;
-    }
-
-    .english-page #petition .petition-buttons {
-        position: relative;
-        z-index: 3;
-        padding-right: 20%;
-    }
-
-    .english-page #petition .petition-form-button {
-        position: relative;
-        z-index: 3;
-        transform: translateY(20px);
-    }
-
-    .english-page .copyright {
-        display: block;
-        line-height: 1.7;
-    }
-
-    .english-page .copyright span,
-    .english-page .copyright a {
-        display: inline;
-        margin: 0;
-        padding: 0;
-    }
-}
-
-@media (min-width: 769px) {
-    .english-page .hero .section-label {
-        display: inline-block;
-        width: max-content;
-        max-width: none;
-        white-space: nowrap;
-        font-size: 20px;
-    }
-}
-
 /* ========================================
    MOBILE
 ======================================== */
@@ -2900,6 +2841,73 @@ main .legal-back-link:hover {
     }
 
 }
+
+/* Englische Kurzseite: Mobile */
+
+@media (max-width: 768px) {
+    .english-page #situation {
+        padding-bottom: 420px;
+    }
+
+    .english-page #why-it-falls-short,
+    .english-page #further-reading {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .english-page #petition {
+        padding-bottom: 280px;
+    }
+
+    .english-page #petition .section-pigeon-mitmachen {
+        right: -18%;
+        bottom: -8%;
+        width: 78%;
+    }
+
+    .english-page #petition .petition-buttons {
+        position: relative;
+        z-index: 3;
+        padding-right: 20%;
+    }
+
+    .english-page #petition .petition-form-button {
+        position: relative;
+        z-index: 3;
+        transform: translateY(20px);
+    }
+
+    .english-page .hero {
+        padding-bottom: 330px;
+    }
+
+    .english-page #share-petition-hero {
+        margin-top: 24px;
+    }
+
+    .english-page .copyright {
+        display: block;
+        line-height: 1.7;
+    }
+
+    .english-page .copyright span,
+    .english-page .copyright a {
+        display: inline;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .english-page .hero .section-label {
+        display: inline-block;
+        width: max-content;
+        max-width: none;
+        white-space: nowrap;
+        font-size: 20px;
+    }
+}
+
 
 /* Mobile Buttons */
 
@@ -3281,68 +3289,68 @@ main .legal-back-link:hover {
         max-height: 125px;
         margin: 0 auto;
         object-fit: contain;
-    
-}
 
-/* Optischer Ausgleich einzelner Unterstützer-Logos */
+    }
 
-main .supporters-grid .supporter-logo--jglp img {
-    max-width: 220px;
-    max-height: 108px;
-}
+    /* Optischer Ausgleich einzelner Unterstützer-Logos */
 
-main .supporters-grid .supporter-logo--tierpartei img {
-    max-width: 225px;
-    max-height: 110px;
-}
+    main .supporters-grid .supporter-logo--jglp img {
+        max-width: 220px;
+        max-height: 108px;
+    }
 
-main .supporters-grid .supporter-logo--aaa img {
-    max-width: 155px;
-    max-height: 112px;
-}
+    main .supporters-grid .supporter-logo--tierpartei img {
+        max-width: 225px;
+        max-height: 110px;
+    }
 
-main .supporters-grid .supporter-logo--animalrights img {
-    max-width: 245px;
-    max-height: 112px;
-}
+    main .supporters-grid .supporter-logo--aaa img {
+        max-width: 155px;
+        max-height: 112px;
+    }
 
-main .supporters-grid .supporter-logo--elemental img {
-    max-width: 250px;
-    max-height: 110px;
-}
+    main .supporters-grid .supporter-logo--animalrights img {
+        max-width: 245px;
+        max-height: 112px;
+    }
 
-main .supporters-grid .supporter-logo--swissveg img {
-    max-width: 250px;
-    max-height: 110px;
-}
+    main .supporters-grid .supporter-logo--elemental img {
+        max-width: 250px;
+        max-height: 110px;
+    }
 
-main .supporters-grid .supporter-logo--animalrightsmarch img {
-    max-width: 140px;
-    max-height: 140px;
-}
+    main .supporters-grid .supporter-logo--swissveg img {
+        max-width: 250px;
+        max-height: 110px;
+    }
 
-/* Weitere optische Feinjustierung auf Mobile */
+    main .supporters-grid .supporter-logo--animalrightsmarch img {
+        max-width: 140px;
+        max-height: 140px;
+    }
 
-main .supporters-grid .supporter-logo--aurelio img {
-    max-width: 145px;
-    max-height: 145px;
-}
+    /* Weitere optische Feinjustierung auf Mobile */
 
-main .supporters-grid .supporter-logo--karls-kraut img {
-    max-width: 125px;
-    max-height: 145px;
-}
+    main .supporters-grid .supporter-logo--aurelio img {
+        max-width: 145px;
+        max-height: 145px;
+    }
 
-main .supporters-grid .supporter-logo--aenzi img {
-    max-width: 125px;
-    max-height: 145px;
-}
+    main .supporters-grid .supporter-logo--karls-kraut img {
+        max-width: 125px;
+        max-height: 145px;
+    }
 
-main .supporters-grid .supporter-logo--simbaswelt img,
-main .supporters-grid .supporter-logo--vtad img {
-    max-width: 150px;
-    max-height: 150px;
-}
+    main .supporters-grid .supporter-logo--aenzi img {
+        max-width: 125px;
+        max-height: 145px;
+    }
+
+    main .supporters-grid .supporter-logo--simbaswelt img,
+    main .supporters-grid .supporter-logo--vtad img {
+        max-width: 150px;
+        max-height: 150px;
+    }
 }
 
 /* Ende Mobile ideelle Unterstützer */
